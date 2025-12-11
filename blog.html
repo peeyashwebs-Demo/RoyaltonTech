@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <title>Peeyashwebs — Blog</title>
+    <meta
+      name="description"
+      content="Peeyashwebs blog — tips, case studies and guides about web design and digital growth."
+    />
+
+    <!-- Fav icon (optional) -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+
+    <!-- CSS: Bootstrap + FontAwesome + Optional libs -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS (Animate On Scroll) for simple scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Site CSS (adjust path if you prefer assets/css/) -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+      /* Core theme colors: blue, green, orange */
+      :root {
+        --brand-blue: #0b63d4;
+        --brand-green: #2bb673;
+        --brand-orange: #ff7a2d;
+        --muted: #6c757d;
+      }
+      body {
+        font-family: Rubik, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        color: #222;
+      }
+      .top-bar {
+        background: #f8f9fb;
+        font-size: 0.95rem;
+        padding: 0.45rem 0;
+      }
+      .top-bar a {
+        color: #333;
+        text-decoration: none;
+      }
+      .navbar-brand img {
+        max-height: 64px;
+      }
+      .bg-primary-custom {
+        background: linear-gradient(90deg, var(--brand-blue), #1b6fb8);
+      }
+
+      .py-5 text-center {
+        background: linear-gradient(
+            rgba(11, 99, 212, 0.8),
+            rgba(43, 182, 115, 0.7)
+          ),
+          url("images/ac\ all.jpg") center/cover no-repeat;
+        min-height: 320px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+      }
+
+      .text-accent {
+        color: var(--brand-orange);
+      }
+      .post-image img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+      }
+      .post-date {
+        position: absolute;
+        left: 12px;
+        top: 12px;
+        background: rgba(11, 99, 212, 0.95);
+        color: #fff;
+        padding: 6px 10px;
+        font-size: 0.85rem;
+        border-radius: 4px;
+      }
+      .blog-classic {
+        margin-bottom: 20px;
+      }
+      .post {
+        background: #fff;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+        position: relative;
+      }
+      .post-desc {
+        padding: 18px;
+      }
+      .post-title h5 {
+        margin: 0 0 8px 0;
+        font-size: 1.05rem;
+      }
+      .post-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 18px 18px;
+      }
+      .post-btn {
+        color: var(--brand-blue);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .footer {
+        background: #121217;
+        color: #cfcfcf;
+        padding-top: 36px;
+      }
+      .footer a {
+        color: #cfcfcf;
+        text-decoration: none;
+      }
+      .working-hours h5 {
+        color: #fff;
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+      }
+      .media-icon li {
+        display: inline-block;
+        margin-right: 12px;
+      }
+      .contact-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 999;
+        background: var(--brand-orange);
+        color: #fff;
+        padding: 12px 18px;
+        border-radius: 999px;
+        box-shadow: 0 10px 24px rgba(255, 122, 45, 0.18);
+        text-decoration: none;
+      }
+      /* Responsive tweaks */
+      @media (max-width: 767px) {
+        .post-image img {
+          height: 160px;
+        }
+      }
+
+      .wa-panel {
+        position: fixed;
+        right: 20px;
+        bottom: 80px;
+        z-index: 9999;
+        width: 74px;
+        transition: width 220ms ease;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      }
+      .wa-panel.open {
+        width: 320px;
+      }
+      .wa-panel .header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #25d366, #128c7e);
+        color: white;
+        cursor: pointer;
+      }
+      .wa-panel .header .title {
+        font-weight: 700;
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .wa-panel .body {
+        background: #ffffff;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        margin-top: 8px;
+        padding: 12px;
+        display: none;
+      }
+      .wa-panel.open .body {
+        display: block;
+      }
+      .quick-btn {
+        display: inline-block;
+        padding: 8px 10px;
+        margin: 6px 6px 0 0;
+        border-radius: 8px;
+        background: #f3f4f6;
+        cursor: pointer;
+        font-size: 13px;
+      }
+      .open-chat {
+        margin-top: 12px;
+        display: block;
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #25d366, #128c7e);
+        color: white;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- TOP BAR -->
+      <div class="top-bar">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-5 col-sm-12">
+              <div class="topbar-link">
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a href="mailto:Royaltontech@gmail.com"
+                      ><i class="far fa-envelope-open"></i>
+                      Royaltontech@gmail.com</a
+                    >
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="tel:+2348037157380"
+                      ><i class="fas fa-mobile-alt"></i> +234 803 715 7380</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-2 d-none d-md-block text-center">
+              <!-- logo center on larger screens -->
+              <a class="navbar-brand" href="index.html">
+                <!-- replace with your logo file -->
+                <img
+                  src="images/ChatGPT_Image_Dec_10__2025__05_48_43_AM-removebg-preview.png"
+                  alt="royaltontech logo"
+                />
+              </a>
+            </div>
+
+            <div class="col-md-5 col-sm-12 text-end">
+              <div class="social-icons">
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HEADER / NAV -->
+      <header id="site-header" class="header">
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-white border-bottom"
+        >
+          <div class="container">
+            <a class="navbar-brand d-lg-none" href="index.html">
+              <img
+                src="assets/images/logo-placeholder.png"
+                alt="Peeyashwebs"
+                style="height: 44px"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <!-- Services dropdown (collapsing arrow works on mobile) -->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="servicesDrop"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Services
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="servicesDrop">
+                    <li>
+                      <a class="dropdown-item" href="services.html#web"
+                        >AC Installation</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="services.html#branding"
+                        >AC Repair</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="services.html#seo"
+                        >Maintenance</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="services.html#seo"
+                        >Indoor Air Quality</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+
+              <div class="d-none d-lg-block ms-lg-3">
+                <a class="btn btn-outline-primary" href="contact.html"
+                  >Get a Quote</a
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- PAGE HEADER -->
+      <section class="py-5 text-center" style="background: #f6f8fb">
+        <div class="container" data-aos="fade-up">
+          <h2 class="mb-2">Our Insights</h2>
+          <p class="text-muted">
+            Latest tips, case studies and guides about web design and digital
+            growth.
+          </p>
+        </div>
+      </section>
+
+      <!-- BLOG LISTING -->
+      <section class="py-5">
+        <div class="container">
+          <!-- FIRST ROW -->
+          <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up">
+              <div class="blog-classic">
+                <div class="post">
+                  <div class="post-image position-relative">
+                    <img
+                      src="images/Guide split installation.jpg"
+                      alt="How To Install Split System AC"
+                    />
+                    <div class="post-date">14 July, 2025</div>
+                  </div>
+                  <div class="post-desc">
+                    <div class="post-title">
+                      <h5>
+                        <a
+                          href="how-to-install-split-system-ac.html"
+                          class="text-decoration-none"
+                          >How To Install Split System Air Conditioning</a
+                        >
+                      </h5>
+                    </div>
+                    <p class="small text-muted">
+                      Understand how split systems are installed so you can
+                      choose the right installer for your job.
+                    </p>
+                  </div>
+                  <div class="post-bottom">
+                    <div class="post-meta">
+                      <small class="text-muted">By Admin</small>
+                    </div>
+                    <a
+                      class="post-btn"
+                      href="how-to-install-split-system-ac.html"
+                      >Read More <i class="ms-2 fas fa-long-arrow-alt-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+              <div class="blog-classic">
+                <div class="post">
+                  <div class="post-image position-relative">
+                    <img
+                      src="images/HVAC list of good companyis.jpg"
+                      alt="Hiring HVAC"
+                    />
+                    <div class="post-date">20 July, 2025</div>
+                  </div>
+                  <div class="post-desc">
+                    <div class="post-title">
+                      <h5>
+                        <a
+                          href="a-guide-to-hiring-the-best-hvac-company.html"
+                          class="text-decoration-none"
+                          >A Guide to Hiring the Best HVAC Company</a
+                        >
+                      </h5>
+                    </div>
+                    <p class="small text-muted">
+                      Short guide to help make selecting the right HVAC
+                      contractor easier.
+                    </p>
+                  </div>
+                  <div class="post-bottom">
+                    <div class="post-meta">
+                      <small class="text-muted">By Admin</small>
+                    </div>
+                    <a
+                      class="post-btn"
+                      href="a-guide-to-hiring-the-best-hvac-company.html"
+                      >Read More <i class="ms-2 fas fa-long-arrow-alt-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+              <div class="blog-classic">
+                <div class="post">
+                  <div class="post-image position-relative">
+                    <img
+                      src="images/Company list in lagos.jpg"
+                      alt="List of HVAC"
+                    />
+                    <div class="post-date">28 July, 2025</div>
+                  </div>
+                  <div class="post-desc">
+                    <div class="post-title">
+                      <h5>
+                        <a
+                          href="List of HVAC Companies In Lagos.html"
+                          class="text-decoration-none"
+                          >List of HVAC Companies In Lagos</a
+                        >
+                      </h5>
+                    </div>
+                    <p class="small text-muted">
+                      A compact list of HVAC companies to help you begin your
+                      search.
+                    </p>
+                  </div>
+                  <div class="post-bottom">
+                    <div class="post-meta">
+                      <small class="text-muted">By Admin</small>
+                    </div>
+                    <a
+                      class="post-btn"
+                      href="List of HVAC Companies In Lagos.html"
+                      >Read More <i class="ms-2 fas fa-long-arrow-alt-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECOND ROW -->
+          <div class="row g-4 mt-1">
+            <div class="col-md-4" data-aos="fade-up">
+              <div class="blog-classic">
+                <div class="post">
+                  <div class="post-image position-relative">
+                    <img
+                      src="images/How to Improve indoor air quality.jpg"
+                      alt="Improve IAQ"
+                    />
+                    <div class="post-date">20 August, 2025</div>
+                  </div>
+                  <div class="post-desc">
+                    <div class="post-title">
+                      <h5>
+                        <a
+                          href="How To Improve Indoor Air Quality (IAQ).html"
+                          class="text-decoration-none"
+                          >How To Improve Indoor Air Quality (IAQ)</a
+                        >
+                      </h5>
+                    </div>
+                    <p class="small text-muted">
+                      Key HVAC solutions to improve comfort and air quality
+                      indoors.
+                    </p>
+                  </div>
+                  <div class="post-bottom">
+                    <div class="post-meta">
+                      <small class="text-muted">By Admin</small>
+                    </div>
+                    <a
+                      class="post-btn"
+                      href="How To Improve Indoor Air Quality (IAQ).html"
+                      >Read More <i class="ms-2 fas fa-long-arrow-alt-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+              <div class="blog-classic">
+                <div class="post">
+                  <div class="post-image position-relative">
+                    <img
+                      src="images/Reason AC not cooling Enough.jpg"
+                      alt="AC Not Cooling"
+                    />
+                    <div class="post-date">25 August, 2025</div>
+                  </div>
+                  <div class="post-desc">
+                    <div class="post-title">
+                      <h5>
+                        <a
+                          href="What’s the Reason Behind AC Not Cooling Enough.html"
+                          class="text-decoration-none"
+                          >What’s the Reasons Behind the AC Not Cooling
+                          Enough?</a
+                        >
+                      </h5>
+                    </div>
+                    <p class="small text-muted">
+                      Common causes and quick checks if your AC is not cooling
+                      sufficiently.
+                    </p>
+                  </div>
+                  <div class="post-bottom">
+                    <div class="post-meta">
+                      <small class="text-muted">By Admin</small>
+                    </div>
+                    <a
+                      class="post-btn"
+                      href="What’s the Reason Behind AC Not Cooling Enough.html"
+                      >Read More <i class="ms-2 fas fa-long-arrow-alt-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+              <div class="blog-classic">
+                <div class="post">
+                  <div class="post-image position-relative">
+                    <img
+                      src="images/Is It Bad To Keep Turning AC On And Off.jpg"
+                      alt="Turning AC On and Off"
+                    />
+                    <div class="post-date">28 August, 2025</div>
+                  </div>
+                  <div class="post-desc">
+                    <div class="post-title">
+                      <h5>
+                        <a
+                          href="Is It Bad To Keep Turning AC On And Off.html"
+                          class="text-decoration-none"
+                          >Is It Bad To Keep Turning AC On And Off?</a
+                        >
+                      </h5>
+                    </div>
+                    <p class="small text-muted">
+                      Answering the common question about on/off cycling and
+                      efficiency.
+                    </p>
+                  </div>
+                  <div class="post-bottom">
+                    <div class="post-meta">
+                      <small class="text-muted">By Admin</small>
+                    </div>
+                    <a
+                      class="post-btn"
+                      href="Is It Bad To Keep Turning AC On And Off.html"
+                      >Read More <i class="ms-2 fas fa-long-arrow-alt-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- THIRD ROW -->
+          <div class="row g-4 mt-1">
+            <div class="col-md-4" data-aos="fade-up">
+              <div class="blog-classic">
+                <div class="post">
+                  <div class="post-image position-relative">
+                    <img
+                      src="images/5 Signs It's Time To Replace Your Cooling System.jpg"
+                      alt="Replace Cooling System"
+                    />
+                    <div class="post-date">15 September, 2025</div>
+                  </div>
+                  <div class="post-desc">
+                    <div class="post-title">
+                      <h5>
+                        <a
+                          href="5 Signs It's Time To Replace Your Cooling System.html"
+                          class="text-decoration-none"
+                          >5 Signs It's Time To Replace Your Cooling System</a
+                        >
+                      </h5>
+                    </div>
+                    <p class="small text-muted">
+                      Key signs that a replacement is more cost-effective than
+                      repair.
+                    </p>
+                  </div>
+                  <div class="post-bottom">
+                    <div class="post-meta">
+                      <small class="text-muted">By Admin</small>
+                    </div>
+                    <a
+                      class="post-btn"
+                      href="5 Signs It's Time To Replace Your Cooling System.html"
+                      >Read More <i class="ms-2 fas fa-long-arrow-alt-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+              <div class="blog-classic">
+                <div class="post">
+                  <div class="post-image position-relative">
+                    <img
+                      src="images/Tips To Make Indoor Air Safer To Breathe.jpg"
+                      alt="Indoor Air Safer"
+                    />
+                    <div class="post-date">23 September, 2025</div>
+                  </div>
+                  <div class="post-desc">
+                    <div class="post-title">
+                      <h5>
+                        <a
+                          href="Tips To Make Indoor Air Safer To Breathe.html"
+                          class="text-decoration-none"
+                          >Tips To Make Indoor Air Safer To Breathe</a
+                        >
+                      </h5>
+                    </div>
+                    <p class="small text-muted">
+                      Reduce risks to respiratory health with these practical
+                      tips.
+                    </p>
+                  </div>
+                  <div class="post-bottom">
+                    <div class="post-meta">
+                      <small class="text-muted">By Admin</small>
+                    </div>
+                    <a
+                      class="post-btn"
+                      href="Tips To Make Indoor Air Safer To Breathe.html"
+                      >Read More <i class="ms-2 fas fa-long-arrow-alt-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+              <div class="blog-classic">
+                <div class="post">
+                  <div class="post-image position-relative">
+                    <img
+                      src="images/ac all.jpg"
+                      alt="AC Problems and Solutions"
+                    />
+                    <div class="post-date">29 September, 2025</div>
+                  </div>
+                  <div class="post-desc">
+                    <div class="post-title">
+                      <h5>
+                        <a
+                          href="How To Fix Common AC Problems.html"
+                          class="text-decoration-none"
+                          >How To Fix Common AC Problems</a
+                        >
+                      </h5>
+                    </div>
+                    <p class="small text-muted">
+                      Small issues to spot between maintenance visits and what
+                      to do about them.
+                    </p>
+                  </div>
+                  <div class="post-bottom">
+                    <div class="post-meta">
+                      <small class="text-muted">By Admin</small>
+                    </div>
+                    <a
+                      class="post-btn"
+                      href="How To Fix Common AC Problems.html"
+                      >Read More <i class="ms-2 fas fa-long-arrow-alt-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FOURTH ROW (continue with the rest of posts) -->
+          <div class="row g-4 mt-1">
+            <!-- add more posts or reuse patterns above -->
+            <div class="col-md-4" data-aos="fade-up">
+              <div class="blog-classic">
+                <div class="post">
+                  <div class="post-image position-relative">
+                    <img src="images/repairing.jpg" alt="Energy Efficient" />
+                    <div class="post-date">15 October, 2025</div>
+                  </div>
+                  <div class="post-desc">
+                    <div class="post-title">
+                      <h5>
+                        <a
+                          href="4 Ways To Make Your Home More Energy Efficient.html"
+                          class="text-decoration-none"
+                          >4 Ways To Make Your Home More Energy Efficient</a
+                        >
+                      </h5>
+                    </div>
+                    <p class="small text-muted">
+                      Practical approaches to reduce energy and lower bills.
+                    </p>
+                  </div>
+                  <div class="post-bottom">
+                    <div class="post-meta">
+                      <small class="text-muted">By Admin</small>
+                    </div>
+                    <a
+                      class="post-btn"
+                      href="4 Ways To Make Your Home More Energy Efficient.html"
+                      >Read More <i class="ms-2 fas fa-long-arrow-alt-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+              <div class="blog-classic">
+                <div class="post">
+                  <div class="post-image position-relative">
+                    <img src="images/repairr.jpg" alt="Duct Cleaning" />
+                    <div class="post-date">22 October, 2025</div>
+                  </div>
+                  <div class="post-desc">
+                    <div class="post-title">
+                      <h5>
+                        <a
+                          href="What You Need To Know About Cleaning Your AC Duct.html"
+                          class="text-decoration-none"
+                          >What You Need To Know About Cleaning Your AC Duct</a
+                        >
+                      </h5>
+                    </div>
+                    <p class="small text-muted">
+                      When duct cleaning makes sense and how it improves air
+                      quality.
+                    </p>
+                  </div>
+                  <div class="post-bottom">
+                    <div class="post-meta">
+                      <small class="text-muted">By Admin</small>
+                    </div>
+                    <a
+                      class="post-btn"
+                      href="What You Need To Know About Cleaning Your AC Duct.html"
+                      >Read More <i class="ms-2 fas fa-long-arrow-alt-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+              <div class="blog-classic">
+                <div class="post">
+                  <div class="post-image position-relative">
+                    <img
+                      src="images/Top 3 Things That Can Be Damaging Your AC.jpg"
+                      alt="Top 3 things damaging AC"
+                    />
+                    <div class="post-date">28 October, 2023</div>
+                  </div>
+                  <div class="post-desc">
+                    <div class="post-title">
+                      <h5>
+                        <a
+                          href="Top 3 Things That Can Be Damaging Your AC.html"
+                          class="text-decoration-none"
+                          >Top 3 Things That Can Be Damaging Your AC</a
+                        >
+                      </h5>
+                    </div>
+                    <p class="small text-muted">
+                      Small mistakes homeowners make that shorten AC lifespan.
+                    </p>
+                  </div>
+                  <div class="post-bottom">
+                    <div class="post-meta">
+                      <small class="text-muted">By Admin</small>
+                    </div>
+                    <a
+                      class="post-btn"
+                      href="Top 3 Things That Can Be Damaging Your AC.html"
+                      >Read More <i class="ms-2 fas fa-long-arrow-alt-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PAGINATION -->
+          <div class="row mt-5">
+            <div class="col-md-12">
+              <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled">
+                    <a
+                      class="page-link"
+                      href="#"
+                      tabindex="-1"
+                      aria-disabled="true"
+                      >Previous</a
+                    >
+                  </li>
+                  <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="wa-panel" id="waPanel" aria-live="polite">
+        <div
+          class="header"
+          id="waHeader"
+          role="button"
+          aria-expanded="false"
+          tabindex="0"
+        >
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20.52 3.48A11.95 11.95 0 0 0 12 0C5.373 0 .001 5.373.001 12c0 2.11.553 4.163 1.6 5.98L0 24l6.377-1.665A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12 0-3.2-1.19-6.193-3.48-8.52Z"
+              fill="#fff"
+            />
+            <path
+              d="M17.24 14.98c-.29-.14-1.7-.84-1.96-.94-.26-.11-.44-.16-.62.15-.18.3-.7.94-.86 1.13-.16.19-.33.22-.61.07-.28-.15-1.19-.44-2.27-1.4-.84-.74-1.4-1.66-1.57-1.94-.17-.29-.02-.44.13-.59.13-.13.29-.33.43-.5.14-.17.19-.28.29-.46.1-.18.05-.34-.02-.48-.07-.14-.62-1.5-.85-2.05-.22-.54-.45-.47-.62-.48-.16-.01-.35-.01-.53-.01-.18 0-.48.07-.73.34-.25.27-.96.93-.96 2.27 0 1.34.98 2.64 1.12 2.82.14.18 1.94 2.9 4.7 4.06 3.05 1.35 3.05.9 3.6.83.55-.07 1.7-.69 1.94-1.36.25-.67.25-1.24.17-1.36-.08-.12-.29-.18-.58-.32Z"
+              fill="#128C7E"
+            />
+          </svg>
+          <div class="title">Chat with us</div>
+        </div>
+
+        <div class="body" id="waBody">
+          <div>Hi! Choose a quick topic:</div>
+          <div>
+            <button class="quick-btn" data-msg="Hello, I'd like pricing info.">
+              Pricing
+            </button>
+            <button class="quick-btn" data-msg="I need support with my order.">
+              Support
+            </button>
+            <button class="quick-btn" data-msg="I want to schedule a demo.">
+              Demo
+            </button>
+          </div>
+
+          <button class="open-chat" id="waOpenChat">Open in WhatsApp</button>
+        </div>
+      </div>
+
+      <script>
+        const WA_PANEL = document.getElementById("waPanel");
+        const HEADER = document.getElementById("waHeader");
+        const BODY = document.getElementById("waBody");
+        const OPEN_CHAT = document.getElementById("waOpenChat");
+        const WA_NUMBER = "2348037157380";
+        const DEFAULT_TEXT = "Hello, I found you on the website and need help.";
+
+        let chosenText = DEFAULT_TEXT;
+
+        HEADER.addEventListener("click", togglePanel);
+        HEADER.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") togglePanel();
+        });
+
+        function togglePanel() {
+          const open = WA_PANEL.classList.toggle("open");
+          HEADER.setAttribute("aria-expanded", open ? "true" : "false");
+        }
+
+        document.querySelectorAll(".quick-btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            chosenText = btn.getAttribute("data-msg") || DEFAULT_TEXT;
+            // open right away or let user confirm
+            const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
+              chosenText
+            )}`;
+            window.open(url, "_blank", "noopener");
+          });
+        });
+
+        OPEN_CHAT.addEventListener("click", () => {
+          const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
+            chosenText
+          )}`;
+          window.open(url, "_blank", "noopener");
+        });
+      </script>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="primary-footer py-5">
+          <div class="container">
+            <div class="row gy-4">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-logo mb-3">
+                  <img
+                    src="images/ChatGPT_Image_Dec_10__2025__05_48_43_AM-removebg-preview.png"
+                    alt="royaltontech logo"
+                    style="height: 150px"
+                  />
+                </div>
+                <p>
+                  Providing reliable HVAC installation, repair, and maintenance
+                  services to keep your home or business comfortable all year
+                  round.
+                </p>
+                <div class="footer-logo mt-3">
+                  <img src="" alt="" style="height: 34px" />
+                </div>
+                <ul class="list-unstyled working-hours mt-3">
+                  <h5>Working <span class="text-accent">hours</span></h5>
+                  <li><span>Mon - Sat</span> 8:00 to 6:00</li>
+                  <li><span>Sunday</span> Closed</li>
+                </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <h5>Quick <span class="text-accent">Links</span></h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="about.html"
+                      ><i class="fas fa-angle-right me-2"></i>About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a href="services.html"
+                      ><i class="fas fa-angle-right me-2"></i>Services</a
+                    >
+                  </li>
+                  <li>
+                    <a href="portfolio.html"
+                      ><i class="fas fa-angle-right me-2"></i>Portfolios</a
+                    >
+                  </li>
+                  <li>
+                    <a href="blog.html"
+                      ><i class="fas fa-angle-right me-2"></i>Blog</a
+                    >
+                  </li>
+                  <li>
+                    <a href="contact.html"
+                      ><i class="fas fa-angle-right me-2"></i>Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <h5>Our <span class="text-accent">Solutions</span></h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="services.html#web"
+                      ><i class="fas fa-angle-right me-2"></i>AC Installation</a
+                    >
+                  </li>
+                  <li>
+                    <a href="services.html#branding"
+                      ><i class="fas fa-angle-right me-2"></i>AC Repair</a
+                    >
+                  </li>
+                  <li>
+                    <a href="services.html#seo"
+                      ><i class="fas fa-angle-right me-2"></i>Maintenance</a
+                    >
+                  </li>
+                  <li>
+                    <a href="portfolio.html"
+                      ><i class="fas fa-angle-right me-2"></i>Portfolio</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <h5>Contact <span class="text-accent">Us</span></h5>
+                <ul class="list-unstyled small">
+                  <li>
+                    <strong>Address:</strong><br />92a Dolphin Estate, Ikoyi,
+                    Lagos 101222, Lagos
+                  </li>
+                  <li class="mt-2">
+                    <strong>Phone:</strong><br /><a href="tel:+2348037157380"
+                      >+234 803 715 7380</a
+                    >
+                  </li>
+                  <li class="mt-2">
+                    <strong>Email:</strong><br /><a
+                      href="mailto:Royaltontech@gmail.com"
+                      >Royaltontech@gmail.com</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="secondary-footer py-3 border-top"
+          style="border-color: rgba(255, 255, 255, 0.03) !important"
+        >
+          <div class="container text-center small">
+            <div>
+              © <span id="siteYear"></span> ROYALTON TECH • All Rights Reserved
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Get a Quote floating button -->
+      <a class="contact-btn" href="contact.html">Get a Quote</a>
+    </div>
+    <!-- page-wrapper end -->
+
+    <!-- JS: Bootstrap, AOS, site script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      // Init AOS
+      if (window.AOS) AOS.init({ duration: 650, once: true });
+
+      // Set year
+      document.getElementById("siteYear").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
