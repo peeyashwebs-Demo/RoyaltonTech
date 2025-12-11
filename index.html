@@ -85,8 +85,8 @@
       }
 
       .brand-track img {
-        height: 100px;
-        margin-right: 45px;
+        height: 70px;
+        margin-right: 20px;
         opacity: 0.8;
       }
 
@@ -700,30 +700,6 @@
         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
         position: relative;
       }
-      .post-desc,
-      .service-desc {
-        padding: 18px;
-      }
-      .post-title h5,
-      .service-title {
-        margin: 0 0 8px 0;
-        font-size: 1.05rem;
-      }
-      .post-bottom,
-      .service-bottom {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 12px 18px 18px;
-      }
-      .post-btn,
-      .service-btn {
-        color: var(--brand-blue);
-        text-decoration: none;
-        font-weight: 600;
-      }
-
-
 </style>
   </head>
 
@@ -1691,5 +1667,22 @@ Our warehouse needed a complete HVAC overhaul, and Royalton Tech delivered perfe
         updateCounter();
       });
     </script>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const docWidth = document.documentElement.offsetWidth;
+
+    [].forEach.call(
+      document.querySelectorAll('*'),
+      function(el) {
+        if (el.offsetWidth > docWidth) {
+          console.warn("Overflowing element:", el);
+          el.style.outline = "2px solid red";
+        }
+      }
+    );
+  });
+</script>
+
   </body>
 </html>
