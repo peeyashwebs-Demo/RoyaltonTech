@@ -98,69 +98,49 @@
           transform: translateX(-100%);
         }
       }
+.team-section {
+  background: #121217;
+}
 
-      .team-section {
-        background: #121217; /* Black section */
-      }
+.team-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
 
-      .text-brand-orange {
-        color: #ff7a2d !important;
-      }
+  scrollbar-width: none; 
+}
 
-      .team-card {
-        background: #1a1a1f;
-        border-radius: 12px;
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-        transition: 0.3s ease;
-      }
+.team-row::-webkit-scrollbar {
+  display: none;
+}
 
-      .team-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 10px 22px rgba(255, 122, 45, 0.25);
-      }
+.team-card {
+  background: #1a1a1f;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  flex: 0 0 280px; /* Perfect fit for Android */
+  transition: 0.3s ease;
+}
 
-      .team-row {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: nowrap; /* prevents cards from going under */
-      }
-      .team-card {
-        flex: 0 0 350px; /* fixed width for each card */
-      }
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(255, 122, 45, 0.25);
+}
 
-      .team-img img {
-        border-radius: 12px;
-        height: 240px;
-        object-fit: cover;
-        width: 100%;
-        box-shadow: 0 6px 12px rgba(255, 122, 45, 0.2);
-      }
+.team-img img {
+  border-radius: 12px;
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 6px 12px rgba(255, 122, 45, 0.2);
+}
 
-      .team-row {
-        display: flex;
-        gap: 20px;
-        overflow-x: auto; /* Allow scroll */
-        padding-bottom: 10px;
-        scrollbar-width: none; /* Hide scrollbar (Firefox) */
-      }
-
-      .team-row::-webkit-scrollbar {
-        display: none; /* Hide scrollbar (Chrome/Safari) */
-      }
-
-      .team-card {
-        flex: 0 0 350px; /* Fixed width */
-      }
-
-      .team-wrapper {
-        max-width: 1100px;
-        margin: 0 auto;
-      }
-
-      .team-card {
-        flex: 0 0 300px;
-      }
+@media (min-width: 768px) {
+  .team-card {
+    flex: 0 0 300px;
+  }
+}
 
       .text-brand-white {
         color: #f3f4f6;
@@ -192,7 +172,18 @@
         text-align: center;
       }
 
-      
+      @media (max-width: 600px) {
+  .counter-section {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px 10px;
+  }
+
+  .counter-box h2 {
+    font-size: 28px;
+  }
+}
+
       .wa-panel {
         position: fixed;
         right: 20px;
