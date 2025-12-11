@@ -85,24 +85,7 @@
       }
 
       .brand-track img {
-        height: 100px;
-        margin-right: 45px;
-        opacity: 0.8;
-      }
-
-      /* project slider */
-      .project-slider {
-        overflow: hidden;
-        white-space: nowrap;
-      }
-
-      .project-track {
-        display: inline-flex;
-        animation: scroll 25s linear infinite;
-      }
-
-      .project-track img {
-        height: 160px;
+        height: 70px;
         margin-right: 45px;
         opacity: 0.8;
       }
@@ -148,7 +131,7 @@
 .team-img img {
   border-radius: 12px;
   height: 220px;
-  width: 80%;
+  width: 100%;
   object-fit: cover;
   box-shadow: 0 6px 12px rgba(255, 122, 45, 0.2);
 }
@@ -319,6 +302,26 @@
         color: #fff;
         font-weight: 600;
       }
+      .offer-section {
+        background: #f8f9fa;
+        padding: 80px 0;
+      }
+      .offer-box {
+        background: #fff;
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+        transition: 0.3s;
+      }
+      .offer-box:hover {
+        transform: translateY(-5px);
+      }
+      .offer-box i {
+        font-size: 2rem;
+        color: var(--brand-orange);
+        margin-bottom: 10px;
+      }
+
       .cta-section {
         background: var(--brand-blue);
         color: #fff;
@@ -357,55 +360,19 @@
         max-height: 64px;
       }
 
-
-.choose-section-title{
-    text-align: center;
-}
-
-      .hero-home {
-        min-height: 340px;
+      .hero-about {
+        background: linear-gradient(
+            rgba(11, 99, 212, 0.8),
+            rgba(43, 182, 115, 0.7)
+          ),
+          url("images/ac\ all.jpg") center/cover no-repeat;
+        min-height: 320px;
         display: flex;
         align-items: center;
+        justify-content: center;
+        text-align: center;
         color: #fff;
-        background-size: cover;
-        background-position: center;
-        animation: heroSlide 12s infinite linear;
       }
-      .hero-home h1 {
-        font-weight: 700;
-      }
-
-      @keyframes heroSlide {
-        0% {
-          background-image: linear-gradient(
-              rgba(11, 99, 212, 0.85),
-              rgba(43, 182, 115, 0.6)
-            ),
-            url("images/ac.jpg");
-        }
-        33% {
-          background-image: linear-gradient(
-              rgba(11, 99, 212, 0.85),
-              rgba(43, 182, 115, 0.6)
-            ),
-            url("images/Air\ Conditioner\ Installation.jpg");
-        }
-        66% {
-          background-image: linear-gradient(
-              rgba(11, 99, 212, 0.85),
-              rgba(43, 182, 115, 0.6)
-            ),
-            url("images/Cool\ system\ replacement.jpg");
-        }
-        100% {
-          background-image: linear-gradient(
-              rgba(11, 99, 212, 0.85),
-              rgba(43, 182, 115, 0.6)
-            ),
-            url("images/plumbing.jpg");
-        }
-      }
-
 
       .section-title {
         font-weight: 700;
@@ -413,67 +380,10 @@
         margin-bottom: 20px;
       }
 
-      .about-section {
-        margin-top: 80px;
-        margin-bottom: 80px;
+      .about-content img {
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
       }
-
-      .about-wrapper {
-        display: flex;
-        gap: 40px;
-        align-items: center;
-        background: #ffffff;
-        padding: 40px;
-        border-radius: 20px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
-        border-left: 6px solid var(--brand-blue);
-      }
-
-      .about-content {
-        flex: 1;
-      }
-
-      .about-heading {
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-        color: var(--brand-blue);
-        font-weight: 700;
-      }
-
-      .about-content p {
-        margin-bottom: 15px;
-        line-height: 1.7;
-        color: #444;
-      }
-
-      .about-image {
-        flex: 1;
-      }
-
-      .about-image img {
-        width: 100%;
-        border-radius: 15px;
-        object-fit: cover;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-      }
-
-      .btn-about {
-        display: inline-block;
-        padding: 12px 24px;
-        margin-top: 15px;
-        background: var(--brand-blue);
-        color: #fff;
-        font-weight: 600;
-        border-radius: 8px;
-        text-decoration: none;
-        transition: 0.3s ease;
-      }
-
-      .btn-about:hover {
-        background: var(--brand-green);
-        color: #fff;
-      }
-
 
       .stat-box {
         text-align: center;
@@ -490,6 +400,26 @@
       .stat-box h3 {
         font-size: 2rem;
         font-weight: 700;
+      }
+
+      .offer-section {
+        background: #f8f9fa;
+        padding: 80px 0;
+      }
+      .offer-box {
+        background: #fff;
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+        transition: 0.3s;
+      }
+      .offer-box:hover {
+        transform: translateY(-5px);
+      }
+      .offer-box i {
+        font-size: 2rem;
+        color: var(--brand-orange);
+        margin-bottom: 10px;
       }
 
       .cta-section {
@@ -525,94 +455,6 @@
         color: #000;
       }
       
-      .choose-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-        margin-top: 30px;
-      }
-
-      .choose-card {
-        display: flex;
-        align-items: flex-start;
-        background: #ffffff;
-        margin-bottom: 40px;
-        padding: 36px;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        transition: 0.3s ease;
-      }
-
-      .choose-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-      }
-
-      .icon-box {
-        width: 45px;
-        height: 45px;
-        background: #fff4d9;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-        margin-right: 15px;
-      }
-
-      .icon-box i {
-        color: #ff9800;
-        font-size: 20px;
-      }
-
-      .choose-card p {
-        margin: 0;
-        font-size: 16px;
-        line-height: 1.5;
-      }
-
-      .review-slider {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.review-track {
-  display: flex;
-  gap: 25px;
-  animation: slideReviews 13s linear infinite;
-}
-
-.review-card {
-  min-width: 400px; /* Adjust width here */
-  background: #fff;
-  border-radius: 14px;
-  padding: 30px;
-  padding-bottom: 80px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-  transition: 1ms ease;
-}
-
-.review-card:hover {
-  transform: translateY(-4px);
-}
-
-@keyframes slideReviews {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Mobile fix */
-@media (max-width: 768px) {
-  .review-card {
-    min-width: 280px;
-  }
-}
-
 
       /* FOOTER FIX */
       body {
@@ -672,58 +514,6 @@
       .text-brand-orange{
         color: var(--brand-orange);
       }
-      .card-service img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        display: block;
-      }
-      .service-date {
-        position: absolute;
-        left: 12px;
-        top: 12px;
-        background: rgba(11, 99, 212, 0.95);
-        color: #fff;
-        padding: 6px 10px;
-        font-size: 0.85rem;
-        border-radius: 4px;
-      }
-      .blog-classic,
-      .service-card {
-        margin-bottom: 20px;
-      }
-      .post,
-      .service-card .card {
-        background: #fff;
-        border-radius: 6px;
-        overflow: hidden;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-        position: relative;
-      }
-      .post-desc,
-      .service-desc {
-        padding: 18px;
-      }
-      .post-title h5,
-      .service-title {
-        margin: 0 0 8px 0;
-        font-size: 1.05rem;
-      }
-      .post-bottom,
-      .service-bottom {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 12px 18px 18px;
-      }
-      .post-btn,
-      .service-btn {
-        color: var(--brand-blue);
-        text-decoration: none;
-        font-weight: 600;
-      }
-
-
 </style>
   </head>
 
@@ -880,62 +670,87 @@
         </nav>
       </header>
 
-      <!-- HERO (converted to homepage) -->
-      <section class="hero-home text-center">
-        <div class="container" data-aos="fade-up">
-          <h1 class="display-4">
-            Trusted HVAC Experts for Cooling, Heating & Air Quality.
-          </h1>
-          <p class="lead mt-3 text-white-50">
-            Professional AC installation, maintenance, and repair services
-            designed to improve comfort and efficiency
+      <!-- Hero -->
+      <section class="hero-about">
+        <div class="container">
+          <h1 class="display-5 fw-bold">About Royalton Tech Service</h1>
+          <p class="lead text-white-50">
+            We deliver smart, reliable heating and cooling solutions.
           </p>
-          <div class="mt-4">
-            <a class="btn btn-light btn-lg me-2" href="portfolio.html"
-              >View Portfolio</a
-            >
-            <a class="btn btn-outline-light btn-lg" href="contact.html"
-              >Get a Quote</a
-            >
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section class="about-content py-5">
+        <div class="container">
+          <div class="row align-items-center gy-4">
+            <div class="col-lg-6" data-aos="fade-right">
+              <img
+                src="images/knkk.png"
+                class="img-fluid rounded shadow"
+                alt="AC technician"
+              />
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+              <h2 class="fw-bold">About Our Company</h2>
+              <p>
+                ROYALTON TECH is a leading HVAC solutions provider dedicated to
+                delivering reliable, energy-efficient, and high-performance
+                climate systems for residential, commercial, and industrial
+                spaces. With a commitment to excellence, we specialize in
+                air-conditioning installation, maintenance, repairs, ventilation
+                systems, and indoor air-quality improvement services tailored to
+                the unique needs of our clients.
+              </p>
+              <p>
+                At ROYALTON TECH, we believe comfort should never be
+                compromised. Our team of certified technicians combines advanced
+                technology, modern diagnostics, and industry-best practices to
+                ensure every project meets the highest standards of safety,
+                efficiency, and durability. Whether we’re cooling a home,
+                optimizing airflow in an office, or upgrading a complex
+                commercial facility, we approach every task with precision and
+                professionalism. Driven by integrity, innovation, and
+                outstanding customer care, ROYALTON TECH continues to set the
+                benchmark for HVAC reliability in Nigeria. We don’t just install
+                systems — we build long-lasting comfort, trust, and value. Your
+                comfort. Our expertise. Always reliable.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- ABOUT OUR COMPANY -->
-      <section id="about" class="about-section">
+      <!-- WHO WE ARE -->
+      <section class="about-content py-5">
         <div class="container">
-
-
-          <div class="about-wrapper" data-aos="fade-up">
-            <div class="about-content">
-              <h3 class="about-heading">We Are ROYALTON TECH HVAC Services</h3>
-
-              <p>
-                ROYALTON TECH is a trusted heating, ventilation, and
-                air-conditioning company dedicated to delivering reliable
-                comfort solutions for homes, offices, and commercial facilities.
-              </p>
-
-              <p>
-                We specialize in HVAC installation, maintenance, repairs, and
-                energy-efficient climate systems designed to improve indoor air
-                quality and reduce operational costs.
-              </p>
-
-              <p>
-                From HVAC system design to performance-driven climate solutions,
-                ROYALTON TECH delivers excellence, efficiency, and reliable
-                results.
-              </p>
-
-              <a href="#more-about" class="btn-about">Read More</a>
-            </div>
-
-            <div class="about-image">
+          <div class="row align-items-center gy-4 flex-lg-row-reverse">
+            <div class="col-lg-6" data-aos="fade-left">
               <img
-                src="assets/images/about-hvac.jpg"
-                alt="About Royalton Tech HVAC"
+                src="images/kkkl.png"
+                class="img-fluid rounded shadow"
+                alt="Technician working"
               />
+            </div>
+            <div class="col-lg-6" data-aos="fade-right">
+              <h2 class="fw-bold">Who We Are</h2>
+              <p>
+                ROYALTON TECH is a trusted HVAC company in Lagos, Nigeria,
+                providing expert heating, ventilation, and air-conditioning
+                solutions for homes and businesses. Our mission is to keep your
+                indoor spaces comfortable, energy-efficient, and safe all year
+                round. From AC installation and repair to duct cleaning,
+                maintenance, and indoor air-quality improvement, we deliver
+                dependable and affordable HVAC services tailored to your exact
+                needs
+              </p>
+              <p>
+                At ROYALTON TECH, we combine advanced technology, skilled
+                technicians, and exceptional customer care to ensure every
+                project meets the highest standards of performance and
+                reliability. Whether it’s a home, office, or commercial building
+                — we keep your air clean, cool, and consistently comfortable.
+              </p>
             </div>
           </div>
         </div>
@@ -985,198 +800,6 @@
           <p>Maintenances</p>
         </div>
       </div>
-
-      <!-- SERVICES / SAMPLES (3-column grid, 5 items) -->
-      <section class="py-5">
-        <div class="container">
-          <div class="d-flex justify-content-between align-items-center mb-4">
-            <h3 class="mb-0">Our Services</h3>
-            <a href="services.html" class="text-muted">See all services →</a>
-          </div>
-
-          <div class="row g-4">
-            <!-- Card 1 -->
-            <div class="col-md-4" data-aos="fade-up">
-              <div class="service-card">
-                <div class="card">
-                  <div class="position-relative">
-                    <img
-                      class="card-img-top card-service"
-                      src="images/split.png"
-                      alt="Split & Central AC Installation"
-                    />
-                    <div class="service-date">AC Installation</div>
-                  </div>
-                  <div class="card-body service-desc">
-                    <h5 class="service-title">
-                      Split & Central AC Installation
-                    </h5>
-                    <p class="text-muted small">
-                      Our certified technicians install split, ducted, and
-                      central air conditioning systems safely and efficiently...
-                    </p>
-                  </div>
-                  <div class="service-bottom">
-                    <small class="text-muted">By Royalton tech</small>
-                    <a class="service-btn" href="services.html#web"
-                      >Learn More
-                      <i class="fas fa-long-arrow-alt-right ms-2"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
-              <div class="service-card">
-                <div class="card">
-                  <div class="position-relative">
-                    <img
-                      class="card-img-top card-service"
-                      src="images/Air Conditioner Installation.jpg"
-                      alt="Air Condition Repairs"
-                    />
-                    <div class="service-date">AC Repairs</div>
-                  </div>
-                  <div class="card-body service-desc">
-                    <h5 class="service-title">Air Conditioner Repairs</h5>
-                    <p class="text-muted small">
-                      We diagnose and fix all types of AC issues — from cooling
-                      inefficiency to system breakdowns...
-                    </p>
-                  </div>
-                  <div class="service-bottom">
-                    <small class="text-muted">By Royalton tech</small>
-                    <a class="service-btn" href="services.html#branding"
-                      >Learn More
-                      <i class="fas fa-long-arrow-alt-right ms-2"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
-              <div class="service-card">
-                <div class="card">
-                  <div class="position-relative">
-                    <img
-                      class="card-img-top card-service"
-                      src="images/HVAC Maintenance & Servicing.jpg"
-                      alt="Maintenance & Servicing"
-                    />
-                    <div class="service-date">Maintenance</div>
-                  </div>
-                  <div class="card-body service-desc">
-                    <h5 class="service-title">HVAC Maintenance & Servicing</h5>
-                    <p class="text-muted small">
-                      Regular maintenance keeps your cooling system efficient
-                      and extends its lifespan. We provide full cleaning...
-                    </p>
-                  </div>
-
-                  <div class="service-bottom">
-                    <small class="text-muted">By Royalton tech</small>
-                    <a class="service-btn" href="services.html#seo"
-                      >Learn More
-                      <i class="fas fa-long-arrow-alt-right ms-2"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 4 (second row, centered) -->
-            <div class="col-md-6 mt-4" data-aos="fade-up" data-aos-delay="80">
-              <div class="service-card">
-                <div class="card">
-                  <div class="position-relative">
-                    <img
-                      class="card-img-top card-service"
-                      src="images/Indoor Air Quality Improvement.jpg"
-                      alt="Air Quality Improvement"
-                    />
-                    <div class="service-date">Indoor Air Quality</div>
-                  </div>
-                  <div class="card-body service-desc">
-                    <h5 class="service-title">
-                      Indoor Air Quality Improvement
-                    </h5>
-                    <p class="text-muted small">
-                      We offer air filtration, duct cleaning, and ventilation
-                      upgrades to keep your indoor air...
-                    </p>
-                  </div>
-                  <div class="service-bottom">
-                    <small class="text-muted">By Royalton tech</small>
-                    <a class="service-btn" href="portfolio.html"
-                      >View Project
-                      <i class="fas fa-long-arrow-alt-right ms-2"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="col-md-6 mt-4" data-aos="fade-up" data-aos-delay="160">
-              <div class="service-card">
-                <div class="card">
-                  <div class="position-relative">
-                    <img
-                      class="card-img-top card-service"
-                      src="images/installation.jpg"
-                      alt="Installation"
-                    />
-                    <div class="service-date">AC Installation</div>
-                  </div>
-                  <div class="card-body service-desc">
-                    <h5 class="service-title">Air ConditionerInstallation</h5>
-                    <p class="text-muted small">
-                      Our certified technicians professionally install all types
-                      of air conditioning systems — from split units...
-                    </p>
-                  </div>
-                  <div class="service-bottom">
-                    <small class="text-muted">By Royalton tech</small>
-                    <a class="service-btn" href="services.html#web"
-                      >Learn More
-                      <i class="fas fa-long-arrow-alt-right ms-2"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /.row -->
-        </div>
-      </section>
-
-<!-- BRANDS (Corrected classes) -->
-      <section class="brand-logos-section py-5" data-aos="fade-up">
-        <div class="container text-center mb-4">
-          <h2 class="fw-bold">Our Projects
-</h2>
-          <p>
-            Works done for clients by Royalton Tech.
-          </p>
-        </div>
-
-        <div class="project">
-          <div class="project-track">
-            <img src="images/jl.png" alt="hisense company" />
-            <img src="images/kkkl.png" alt="verits plc" />
-            <img src="images/knkk.png" alt="chip company" />
-            <img src="images/hanber.png" alt="raenest inc" />
-            <img src="images/split.jpg" alt="LG company" />
-            <img src="images/ggjkl.png" alt="Brand 6" />
-            <img src="images/lllk.png" alt="fidelity plc" />
-          </div>
-        </div>
-      </section>
-
 
       <div class="team-section py-5">
         <h2 class="text-center mb-5">
@@ -1237,246 +860,54 @@
     </div>
     <!-- END page-wrapper -->
 
- <!-- LATEST BLOGS -->
-      <section class="py-5">
-        <div class="container">
-          <div class="d-flex justify-content-between align-items-center mb-4">
-            <h3 class="mb-0">Latest from Our Blog</h3>
-            <a href="blog.html" class="text-muted">View More →</a>
+    <!-- What We Offer -->
+    <section class="offer-section">
+      <div class="container">
+        <h2 class="text-center mb-5 fw-bold">What We Offer</h2>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="offer-box text-center">
+              <i class="fas fa-tools"></i>
+              <h5>AC Installation</h5>
+              <p>
+                Our certified technicians install split, ducted, and central air
+                conditioning systems.
+              </p>
+            </div>
           </div>
-
-          <div class="row g-4">
-            <!-- Blog 1 -->
-            <div class="col-md-4" data-aos="fade-up">
-              <div class="card h-100 shadow-sm border-0">
-                <img
-                  src="images/How to Improve indoor air quality.jpg"
-                  class="card-img-top"
-                  alt="Blog 1"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">
-                    How To Install Split System Air Conditioning
-                  </h5>
-                  <p class="card-text text-muted small">
-                    Understand how split systems are installed so you can choose
-                    the right installer for your job
-                  </p>
-                  <a href="blog.html" class="service-btn">Read More →</a>
-                </div>
-              </div>
+          <div class="col-md-3">
+            <div class="offer-box text-center">
+              <i class="fas fa-cogs"></i>
+              <h5>AC Repairs</h5>
+              <p>
+                We diagnose and fix all types of AC issues — from cooling
+                inefficiency to system breakdowns.
+              </p>
             </div>
-
-            <!-- Blog 2 -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
-              <div class="card h-100 shadow-sm border-0">
-                <img
-                  src="images/HVAC list of good companyis.jpg"
-                  class="card-img-top"
-                  alt="Blog 2"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">
-                    A Guide to Hiring the Best HVAC Company
-                  </h5>
-                  <p class="card-text text-muted small">
-                    Short guide to help make selecting the right HVAC contractor
-                    easier
-                  </p>
-                  <a href="blog.html" class="service-btn">Read More →</a>
-                </div>
-              </div>
+          </div>
+          <div class="col-md-3">
+            <div class="offer-box text-center">
+              <i class="fas fa-wind"></i>
+              <h5>Indoor Air Quality Improvement</h5>
+              <p>
+                We offer air filtration, duct cleaning, and ventilation upgrades
+                to keep your indoor air clean and fresh.
+              </p>
             </div>
-
-            <!-- Blog 3 -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
-              <div class="card h-100 shadow-sm border-0">
-                <img
-                  src="images/Company list in lagos.jpg"
-                  class="card-img-top"
-                  alt="Blog 3"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">List of HVAC Companies In Lagos</h5>
-                  <p class="card-text text-muted small">
-                    A compact list of HVAC companies to help you begin your
-                    search
-                  </p>
-                  <a href="blog.html" class="service-btn">Read More →</a>
-                </div>
-              </div>
+          </div>
+          <div class="col-md-3">
+            <div class="offer-box text-center">
+              <i class="fas fa-tools"></i>
+              <h5>Maintenance</h5>
+              <p>
+                Regular maintenance keeps your cooling system efficient and
+                extends its lifespan.
+              </p>
             </div>
           </div>
         </div>
-      </section>
-
-      <section id="choose-us" aria-labelledby="choose-us-title">
-        <h2 id="choose-us-title" class="choose-section-title">Why Choose Us</h2>
-
-        <div class="container choose-grid">
-          <div class="choose-card">
-            <div class="icon-box">
-              <i class="fas fa-bell"></i>
-            </div>
-            <p>
-              <strong>Certified HVAC Technicians:</strong> Experienced
-              professionals trained in modern HVAC systems.
-            </p>
-          </div>
-
-          <div class="choose-card">
-            <div class="icon-box">
-              <i class="fas fa-bell"></i>
-            </div>
-            <p>
-              <strong>Fast Response Time:</strong> Immediate support for
-              emergencies and breakdowns.
-            </p>
-          </div>
-
-          <div class="choose-card">
-            <div class="icon-box">
-              <i class="fas fa-bell"></i>
-            </div>
-            <p>
-              <strong>Energy-Efficient Solutions:</strong> Systems designed to
-              reduce power consumption and save costs.
-            </p>
-          </div>
-
-          <div class="choose-card">
-            <div class="icon-box">
-              <i class="fas fa-bell"></i>
-            </div>
-            <p>
-              <strong>Durable Installations:</strong> High-quality equipment
-              from trusted HVAC manufacturers.
-            </p>
-          </div>
-
-          <div class="choose-card">
-            <div class="icon-box">
-              <i class="fas fa-bell"></i>
-            </div>
-            <p>
-              <strong>24/7 Maintenance Support:</strong> We ensure your system
-              runs smoothly all year.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      
-      <!-- CLIENT REVIEWS -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h3 class="mb-3">What Our Clients Say</h3>
-      <p class="text-muted">
-        Real feedback from businesses that trusted
-        <span class="text-accent">Royalton Tech</span>.
-      </p>
-    </div>
-
-    <!-- SLIDER -->
-    <div class="review-slider">
-      <div class="review-track">
-        
-        <!-- REVIEW 1 -->
-        <div class="review-card">
-          <div class="d-flex align-items-center mb-3">
-            <img src="images/analyze1101.png" class="rounded-circle me-3" width="60" height="60">
-            <div>
-              <h6 class="mb-0">Mrs. Ada U., Lagos</h6>
-              <small class="text-muted">CEO, GreenGlow</small>
-            </div>
-          </div>
-          <p class="text-muted">
-           ⭐⭐⭐⭐⭐
-Royalton Tech exceeded my expectations. Their team installed my air-conditioning system quickly and professionally. The unit works perfectly, and they even took the time to explain maintenance tips. Highly recommended!
-          </p>
-        </div>
-
-        <!-- REVIEW 2 -->
-        <div class="review-card">
-          <div class="d-flex align-items-center mb-3">
-            <img src="images/hey.jpg" class="rounded-circle me-3" width="60" height="60">
-            <div>
-              <h6 class="mb-0">Mr. Chuka M., Lekki</h6>
-              <small class="text-muted">Founder, NaijaStyle</small>
-            </div>
-          </div>
-          <p class="text-muted">
-            ⭐⭐⭐⭐⭐
-Very reliable and responsive service. I called Royalton Tech for an urgent AC repair at my office, and they arrived the same day. The technician diagnosed the issue immediately and had everything running within an hour.
-          </p>
-        </div>
-
-        <!-- REVIEW 3 -->
-        <div class="review-card">
-          <div class="d-flex align-items-center mb-3">
-            <img src="images/checking.png" class="rounded-circle me-3" width="60" height="60">
-            <div>
-              <h6 class="mb-0">Faith O., Ikeja</h6>
-              <small class="text-muted">Marketing Lead, BrightPath</small>
-            </div>
-          </div>
-          <p class="text-muted">
-            ⭐⭐⭐⭐⭐
-Great experience from start to finish. They upgraded our ventilation system, and the difference in air quality is noticeable. Friendly team, clean work, and fair pricing.
-          </p>
-        </div>
-
-        <!-- REVIEW 4 -->
-        <div class="review-card">
-          <div class="d-flex align-items-center mb-3">
-            <img src="images/mnn.jpg" class="rounded-circle me-3" width="60" height="60">
-            <div>
-              <h6 class="mb-0">Emeka O., Surulere</h6>
-              <small class="text-muted">Homeowner</small>
-            </div>
-          </div>
-          <p class="text-muted">
-           ⭐⭐⭐
-Royalton Tech has been handling the HVAC units in our apartment complex for months now, and they’ve been nothing but professional. Their maintenance service keeps everything running smoothly—zero complaints.
-          </p>
-        </div>
-
-        <!-- REVIEW 5 -->
-        <div class="review-card">
-          <div class="d-flex align-items-center mb-3">
-            <img src="images/client2.jpg" class="rounded-circle me-3" width="60" height="60">
-            <div>
-              <h6 class="mb-0">Mrs. Juliet A., Ajah</h6>
-              <small class="text-muted">Store Owner</small>
-            </div>
-          </div>
-          <p class="text-muted">
-            ⭐⭐⭐⭐⭐
-I appreciate the honesty and transparency. They inspected my AC and instead of pushing a replacement, they repaired it at a reasonable cost. Good people, excellent service.
-          </p>
-        </div>
-
-        <!-- REVIEW 6 -->
-        <div class="review-card">
-          <div class="d-flex align-items-center mb-3">
-            <img src="images/mnn.jpg" class="rounded-circle me-3" width="60" height="60">
-            <div>
-              <h6 class="mb-0">Samuel E., VI</h6>
-              <small class="text-muted">Business Analyst</small>
-            </div>
-          </div>
-          <p class="text-muted">
-            ⭐⭐⭐⭐
-Our warehouse needed a complete HVAC overhaul, and Royalton Tech delivered perfectly. Efficient, knowledgeable, and very organized. We’re impressed with the performance of the new system.
-          </p>
-        </div>
-
       </div>
-    </div>
-
-  </div>
-</section>
+    </section>
 
     <div class="wa-panel" id="waPanel" aria-live="polite">
       <div
@@ -1565,8 +996,7 @@ Our warehouse needed a complete HVAC overhaul, and Royalton Tech delivered perfe
     <!-- CTA -->
     <section class="cta-section">
       <div class="container">
-        <h3>Ready to start your project?</h3>
-        <p>Get an estimate cost and a consultation from Royalton Tech</p>
+        <h3>Schedule An Appointment For Any Of Our Services</h3>
         <a href="contact.html" class="btn mt-3">Contact Us Now</a>
       </div>
     </section>
@@ -1654,6 +1084,10 @@ Our warehouse needed a complete HVAC overhaul, and Royalton Tech delivered perfe
     </footer>
 
   <a class="contact-btn" href="contact.html">Get a Quote</a>
+    </div>
+
+
+
     </div>
 
     <!-- Bootstrap JS -->

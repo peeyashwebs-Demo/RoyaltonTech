@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Royalton Tech - About</title>
-
-    <!-- Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
+    <!-- meta -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <title>Peeyashwebs — Home</title>
+    <meta
+      name="description"
+      content="Peeyashwebs — Professional web design, branding and digital growth solutions."
     />
 
+    <!-- Fav icon (optional) -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+
+    <!-- CSS: Bootstrap 5 + FontAwesome + AOS -->
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-
-    <!-- Icons -->
-    <script
-      src="https://kit.fontawesome.com/9589f65be9.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- AOS CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-    <style>
-      /* GENERAL RESET */
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        scroll-behavior: smooth;
-        font-family: "Arial", sans-serif;
-      }
+    <!-- Site CSS (you can keep the inline styles, or move to assets/css/style.css) -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 
+    <style>
+      /* Core theme colors: blue, green, orange */
+      :root {
+        --brand-blue: #0b63d4;
+        --brand-green: #2bb673;
+        --brand-orange: #ff7a2d;
+        --muted: #6c757d;
+        font-weight: 700;
+      }
+      body {
+        font-family: Rubik, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        color: #222;
+      }
       .top-bar {
         background: #f8f9fb;
         font-size: 0.95rem;
@@ -48,159 +56,145 @@
       .navbar-brand img {
         max-height: 64px;
       }
-
-      /* FOOTER FIX */
-      body {
-        display: flex;
-        flex-direction: column;
-      }
-      footer,
-      .footer {
-        margin-top: auto;
-      }
-
-      /* HERO SECTION */
-      .inner-hero {
-        background-image: url("images/ac all.jpg");
-        background-size: cover;
-        background-position: center;
-        height: 260px;
-        position: relative;
-      }
-
-      .inner-hero-overlay {
-        background: rgba(0, 0, 0, 0.7);
-        height: 100%;
-      }
-
-      /* BRAND SLIDER (corrected classes) */
-      .brand-slider {
-        overflow: hidden;
-        white-space: nowrap;
-      }
-
-      .brand-track {
-        display: inline-flex;
-        animation: scroll 25s linear infinite;
-      }
-
-      .brand-track img {
-        height: 100px;
-        margin-right: 45px;
-        opacity: 0.8;
-      }
-
-      /* project slider */
-      .project-slider {
-        overflow: hidden;
-        white-space: nowrap;
-      }
-
-      .project-track {
-        display: inline-flex;
-        animation: scroll 25s linear infinite;
-      }
-
-      .project-track img {
-        height: 160px;
-        margin-right: 45px;
-        opacity: 0.8;
-      }
-
-      @keyframes scroll {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-100%);
-        }
-      }
-.team-section {
-  background: #121217;
-}
-
-.team-row {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 10px;
-
-  scrollbar-width: none; 
-}
-
-.team-row::-webkit-scrollbar {
-  display: none;
-}
-
-.team-card {
-  background: #1a1a1f;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-  flex: 0 0 280px; /* Perfect fit for Android */
-  transition: 0.3s ease;
-}
-
-.team-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 22px rgba(255, 122, 45, 0.25);
-}
-
-.team-img img {
-  border-radius: 12px;
-  height: 220px;
-  width: 80%;
-  object-fit: cover;
-  box-shadow: 0 6px 12px rgba(255, 122, 45, 0.2);
-}
-
-@media (min-width: 768px) {
-  .team-card {
-    flex: 0 0 300px;
-  }
-}
-
-      .text-brand-white {
-        color: #f3f4f6;
-      }
-      /* FOOTER CSS */
-      .footer {
-        background: #121217;
-        color: #cfcfcf;
-        padding-top: 36px;
+      .bg-primary-custom {
+        background: url("images/ac.jpg") center/cover no-repeat;
+        padding: 120px 20px;
+        color: white;
       }
 
       .text-accent {
         color: var(--brand-orange);
       }
-
-      .footer a {
-        color: #cfcfcf;
-        text-decoration: none;
+      .card-service img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
       }
-      .counter-section {
+      .service-date {
+        position: absolute;
+        left: 12px;
+        top: 12px;
+        background: rgba(11, 99, 212, 0.95);
+        color: #fff;
+        padding: 6px 10px;
+        font-size: 0.85rem;
+        border-radius: 4px;
+      }
+      .blog-classic,
+      .service-card {
+        margin-bottom: 20px;
+      }
+      .post,
+      .service-card .card {
+        background: #fff;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+        position: relative;
+      }
+      .post-desc,
+      .service-desc {
+        padding: 18px;
+      }
+      .post-title h5,
+      .service-title {
+        margin: 0 0 8px 0;
+        font-size: 1.05rem;
+      }
+      .post-bottom,
+      .service-bottom {
         display: flex;
-        justify-content: space-around;
         align-items: center;
-        padding: 50px 0;
-        background: #f8f9fa;
+        justify-content: space-between;
+        padding: 12px 18px 18px;
+      }
+      .post-btn,
+      .service-btn {
+        color: var(--brand-blue);
+        text-decoration: none;
+        font-weight: 600;
       }
 
-      .counter-box {
+      .brand-section-title,
+      .about-section-title,
+      .choose-section-title,
+      .specialize-section-title {
+        text-align: center;
+        font-weight: 700;
+        font-size: 2.3rem;
+        margin-top: 80px;
+        margin-bottom: 40px;
+      }
+      .brand-logos img {
+        width: 120px;
+        height: auto;
+        margin: 20px;
+        filter: grayscale(100%);
+        opacity: 0.8;
+        transition: 0.3s;
+      }
+      .brand-logos img:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+      .about-box,
+      .choose-box,
+      .specialize-box {
+        padding: 40px;
+        border-radius: 15px;
+        background: #f9f9f9;
+        margin-bottom: 40px;
+      }
+      .specialize-item {
+        padding: 30px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+        margin-bottom: 30px;
         text-align: center;
       }
+      .specialize-item i {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        color: #0d6efd;
+      }
 
-      @media (max-width: 600px) {
-  .counter-section {
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 30px 10px;
-  }
-
-  .counter-box h2 {
-    font-size: 28px;
-  }
-}
-
+      .brand-slider {
+        overflow: hidden;
+        position: relative;
+        padding: 20px 0;
+      }
+      .brand-track {
+        display: flex;
+        gap: 25px;
+        animation: slideRight 22s linear infinite;
+      }
+      .brand-card {
+        background: #fff;
+        padding: 18px 28px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease-in-out;
+      }
+      .brand-card img {
+        width: 110px;
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: 0.3s;
+      }
+      .brand-card:hover img {
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+      @keyframes slideRight {
+        0% {
+          transform: translateX(-20%);
+        }
+        100% {
+          transform: translateX(20%);
+        }
+      }
       .wa-panel {
         position: fixed;
         right: 20px;
@@ -261,156 +255,6 @@
         border: none;
         font-weight: 600;
         cursor: pointer;
-      }
-
-      .stat-box {
-        text-align: center;
-        padding: 20px;
-        border-radius: 10px;
-        background: #f8f9fa;
-        transition: 0.3s;
-      }
-      .stat-box:hover {
-        background: var(--brand-blue);
-        color: #fff;
-        transform: translateY(-6px);
-      }
-      .stat-box h3 {
-        font-size: 2rem;
-        font-weight: 700;
-      }
-
-      .offer-section {
-        background: #f8f9fa;
-        padding: 80px 0;
-      }
-      .offer-box {
-        background: #fff;
-        border-radius: 10px;
-        padding: 25px;
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-        transition: 0.3s;
-      }
-      .offer-box:hover {
-        transform: translateY(-5px);
-      }
-      .offer-box i {
-        font-size: 2rem;
-        color: var(--brand-orange);
-        margin-bottom: 10px;
-      }
-      .counter-box h2 {
-        font-size: 40px;
-        font-weight: 700;
-        color: #000;
-      }
-      .working-hours h5 {
-        color: #fff;
-        font-size: 1rem;
-        margin-bottom: 0.6rem;
-      }
-
-      .media-icon li {
-        display: inline-block;
-        margin-right: 12px;
-      }
-      .cta-section a {
-        background: var(--brand-orange);
-        color: #fff;
-        font-weight: 600;
-      }
-      .cta-section {
-        background: var(--brand-blue);
-        color: #fff;
-        padding: 50px 0;
-        text-align: center;
-      }
-      .cta-section a {
-        background: var(--brand-orange);
-        color: #fff;
-        font-weight: 600;
-      }
-      .text-accent {
-        color: var(--brand-orange);
-      }
-
-      :root {
-        --brand-blue: #0b63d4;
-        --brand-green: #2bb673;
-        --brand-orange: #ff7a2d;
-      }
-      body {
-        font-family: Rubik, system-ui, -apple-system, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial;
-        color: #222;
-      }
-      .top-bar {
-        background: #f8f9fb;
-        font-size: 0.95rem;
-        padding: 0.45rem 0;
-      }
-      .top-bar a {
-        color: #333;
-        text-decoration: none;
-      }
-      .navbar-brand img {
-        max-height: 64px;
-      }
-
-
-.choose-section-title{
-    text-align: center;
-}
-
-      .hero-home {
-        min-height: 340px;
-        display: flex;
-        align-items: center;
-        color: #fff;
-        background-size: cover;
-        background-position: center;
-        animation: heroSlide 12s infinite linear;
-      }
-      .hero-home h1 {
-        font-weight: 700;
-      }
-
-      @keyframes heroSlide {
-        0% {
-          background-image: linear-gradient(
-              rgba(11, 99, 212, 0.85),
-              rgba(43, 182, 115, 0.6)
-            ),
-            url("images/ac.jpg");
-        }
-        33% {
-          background-image: linear-gradient(
-              rgba(11, 99, 212, 0.85),
-              rgba(43, 182, 115, 0.6)
-            ),
-            url("images/Air\ Conditioner\ Installation.jpg");
-        }
-        66% {
-          background-image: linear-gradient(
-              rgba(11, 99, 212, 0.85),
-              rgba(43, 182, 115, 0.6)
-            ),
-            url("images/Cool\ system\ replacement.jpg");
-        }
-        100% {
-          background-image: linear-gradient(
-              rgba(11, 99, 212, 0.85),
-              rgba(43, 182, 115, 0.6)
-            ),
-            url("images/plumbing.jpg");
-        }
-      }
-
-
-      .section-title {
-        font-weight: 700;
-        color: var(--brand-blue);
-        margin-bottom: 20px;
       }
 
       .about-section {
@@ -474,57 +318,89 @@
         color: #fff;
       }
 
-
-      .stat-box {
-        text-align: center;
-        padding: 20px;
-        border-radius: 10px;
-        background: #f8f9fa;
-        transition: 0.3s;
-      }
-      .stat-box:hover {
-        background: var(--brand-blue);
-        color: #fff;
-        transform: translateY(-6px);
-      }
-      .stat-box h3 {
-        font-size: 2rem;
-        font-weight: 700;
+      .image-slider {
+        width: 100%;
+        overflow: hidden;
+        background: #fff;
+        padding: 20px 0;
       }
 
-      .cta-section {
-        background: var(--brand-blue);
-        color: #fff;
-        padding: 50px 0;
-        text-align: center;
-      }
-      .cta-section a {
-        background: var(--brand-orange);
-        color: #fff;
-        font-weight: 600;
-      }
-      .text-accent {
-        color: var(--brand-orange);
-      }
-
-      .counter-section {
+      .image-track {
         display: flex;
-        justify-content: space-around;
+        animation: slide-left 18s linear infinite;
+      }
+
+      .image-track img {
+        width: 260px;
+        height: 180px;
+        object-fit: cover;
+        margin: 0 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      @keyframes slide-left {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .hero-home {
+        min-height: 340px;
+        display: flex;
         align-items: center;
-        padding: 50px 0;
-        background: #f8f9fa;
+        color: #fff;
+        background-size: cover;
+        background-position: center;
+        animation: heroSlide 12s infinite linear;
       }
-
-      .counter-box {
-        text-align: center;
-      }
-
-      .counter-box h2 {
-        font-size: 40px;
+      .hero-home h1 {
         font-weight: 700;
-        color: #000;
       }
-      
+
+      @keyframes heroSlide {
+        0% {
+          background-image: linear-gradient(
+              rgba(11, 99, 212, 0.85),
+              rgba(43, 182, 115, 0.6)
+            ),
+            url("images/ac.jpg");
+        }
+        33% {
+          background-image: linear-gradient(
+              rgba(11, 99, 212, 0.85),
+              rgba(43, 182, 115, 0.6)
+            ),
+            url("images/Air\ Conditioner\ Installation.jpg");
+        }
+        66% {
+          background-image: linear-gradient(
+              rgba(11, 99, 212, 0.85),
+              rgba(43, 182, 115, 0.6)
+            ),
+            url("images/Cool\ system\ replacement.jpg");
+        }
+        100% {
+          background-image: linear-gradient(
+              rgba(11, 99, 212, 0.85),
+              rgba(43, 182, 115, 0.6)
+            ),
+            url("images/plumbing.jpg");
+        }
+      }
+
+      .service-card .card-body p {
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 767px) {
+        .card-service img {
+          height: 160px;
+        }
+      }
+
       .choose-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -536,8 +412,7 @@
         display: flex;
         align-items: flex-start;
         background: #ffffff;
-        margin-bottom: 40px;
-        padding: 36px;
+        padding: 20px;
         border-radius: 12px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         transition: 0.3s ease;
@@ -580,17 +455,16 @@
 .review-track {
   display: flex;
   gap: 25px;
-  animation: slideReviews 13s linear infinite;
+  animation: slideReviews 22s linear infinite;
 }
 
 .review-card {
-  min-width: 400px; /* Adjust width here */
+  min-width: 350px; /* Adjust width here */
   background: #fff;
   border-radius: 14px;
-  padding: 30px;
-  padding-bottom: 80px;
+  padding: 25px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-  transition: 1ms ease;
+  transition: 0.3s ease;
 }
 
 .review-card:hover {
@@ -614,49 +488,40 @@
 }
 
 
-      /* FOOTER FIX */
-      body {
-        display: flex;
-        flex-direction: column;
-      }
-      footer,
-      .footer {
-        margin-top: auto;
+      #specialize,
+      h2 {
+        text-align: center;
+        padding-bottom: 44px;
       }
 
-      .counter-box p {
-        font-size: 16px;
-        color: #555;
+      @media (max-width: 768px) {
+        .choose-grid {
+          grid-template-columns: 1fr;
+        }
       }
-
-      /* FOOTER CSS */
+      
       .footer {
         background: #121217;
         color: #cfcfcf;
         padding-top: 36px;
       }
-
       .text-accent {
         color: var(--brand-orange);
       }
-
       .footer a {
         color: #cfcfcf;
         text-decoration: none;
       }
-
       .working-hours h5 {
         color: #fff;
         font-size: 1rem;
         margin-bottom: 0.6rem;
       }
-
       .media-icon li {
         display: inline-block;
         margin-right: 12px;
       }
-
-   .contact-btn {
+      .contact-btn {
         position: fixed;
         right: 20px;
         bottom: 20px;
@@ -668,65 +533,100 @@
         box-shadow: 0 10px 24px rgba(255, 122, 45, 0.18);
         text-decoration: none;
       }
+/* ================================
+   ROYALTON FOOTER (Professional)
+================================ */
 
-      .text-brand-orange{
-        color: var(--brand-orange);
-      }
-      .card-service img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        display: block;
-      }
-      .service-date {
-        position: absolute;
-        left: 12px;
-        top: 12px;
-        background: rgba(11, 99, 212, 0.95);
-        color: #fff;
-        padding: 6px 10px;
-        font-size: 0.85rem;
-        border-radius: 4px;
-      }
-      .blog-classic,
-      .service-card {
-        margin-bottom: 20px;
-      }
-      .post,
-      .service-card .card {
-        background: #fff;
-        border-radius: 6px;
-        overflow: hidden;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-        position: relative;
-      }
-      .post-desc,
-      .service-desc {
-        padding: 18px;
-      }
-      .post-title h5,
-      .service-title {
-        margin: 0 0 8px 0;
-        font-size: 1.05rem;
-      }
-      .post-bottom,
-      .service-bottom {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 12px 18px 18px;
-      }
-      .post-btn,
-      .service-btn {
-        color: var(--brand-blue);
-        text-decoration: none;
-        font-weight: 600;
-      }
+.rt-footer {
+  background: #0d0d0d;
+  color: #bfbfbf;
+  font-size: 15px;
+  margin-top: 60px;
+}
+
+.footer-top {
+  padding: 60px 0;
+}
+
+.rt-footer .footer-logo img {
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.rt-footer .footer-title {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.rt-footer .footer-text {
+  line-height: 1.6;
+}
+
+.footer-links,
+.footer-hours,
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li,
+.footer-hours li,
+.footer-contact li {
+  margin-bottom: 10px;
+}
+
+.footer-links li a {
+  color: #bfbfbf;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links li a:hover {
+  color: #ff7b00; /* Royalton Orange */
+  padding-left: 4px;
+}
+
+.footer-hours span {
+  color: #fff;
+  font-weight: 600;
+}
+
+.footer-contact a {
+  color: #ff7b00;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  background: #111;
+  padding: 15px 0;
+  border-top: 1px solid #222;
+  color: #888;
+  font-size: 13px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .rt-footer {
+    text-align: center;
+  }
+
+  .footer-logo img {
+    margin: auto;
+  }
+}
 
 
-</style>
+    </style>
   </head>
-
   <body>
     <div class="page-wrapper">
       <!-- TOP BAR -->
@@ -743,7 +643,7 @@
                     >
                   </li>
                   <li class="list-inline-item">
-                    <a href="tel:+234803-7157-380"
+                    <a href="tel:+2348037157380"
                       ><i class="fas fa-mobile-alt"></i> +234 803-7157-380</a
                     >
                   </li>
@@ -755,10 +655,7 @@
               <!-- logo center on larger screens -->
               <a class="navbar-brand" href="index.html">
                 <!-- replace with your logo file -->
-                <img
-                  src="images/ChatGPT_Image_Dec_10__2025__05_48_43_AM-removebg-preview.png"
-                  alt="royaltontech logo"
-                />
+                <img height="800%" width="60%" src="images/ChatGPT_Image_Dec_10__2025__05_48_43_AM-removebg-preview.png" alt="Royaltontech logo" />
               </a>
             </div>
 
@@ -801,7 +698,7 @@
             <a class="navbar-brand d-lg-none" href="index.html">
               <img
                 src="images/ChatGPT_Image_Dec_10__2025__05_48_43_AM-removebg-preview.png"
-                alt="royaltontech"
+                alt="Royaltontech"
                 style="height: 44px"
               />
             </a>
@@ -817,10 +714,10 @@
             <div class="collapse navbar-collapse" id="mainNav">
               <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home</a>
+                  <a class="nav-link active" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="about.html">About</a>
+                  <a class="nav-link" href="about.html">About</a>
                 </li>
 
                 <!-- Services dropdown (collapsing arrow works on mobile) -->
@@ -941,50 +838,23 @@
         </div>
       </section>
 
-      <!-- BRANDS (Corrected classes) -->
-      <section class="brand-logos-section py-5" data-aos="fade-up">
-        <div class="container text-center mb-4">
-          <h2 class="fw-bold">Brands We Work With</h2>
-          <p>
-            We repair, service, and install all major AC brands across Nigeria.
-          </p>
-        </div>
-
-        <div class="brand-slider">
-          <div class="brand-track">
-            <img src="images/hicense.png" alt="hisense company" />
-            <img src="images/veri.png" alt="verits plc" />
-            <img src="images/chp.png" alt="chip company" />
-            <img src="images/rae-removebg-preview.png" alt="raenest inc" />
-            <img src="images/lgg-removebg-preview.png" alt="LG company" />
-            <img src="images/helium.png" alt="Brand 6" />
-            <img src="images/hg.png" alt="fidelity plc" />
+<!-- BRANDS WE WORK WITH -->
+      <section id="brands">
+        <h2 class="brand-section-title">Brands We Work With</h2>
+        <div class="container">
+          <div class="logo-slider">
+            <div class="logo-track">
+              <img src="images/hicense.png" alt="hisense company" />
+              <img src="images/veri.png" alt="verits plc" />
+              <img src="images/chp.png" alt="chip company" />
+              <img src="images/rae-removebg-preview.png" alt="raenest inc" />
+              <img src="images/lgg-removebg-preview.png" alt="LG company" />
+              <img src="images/helium.png" alt="Brand 6" />
+              <img src="images/hg.png" alt="fidelity plc" />
+            </div>
           </div>
         </div>
       </section>
-
-      <!-- Happy clients -->
-      <div class="counter-section">
-        <div class="counter-box">
-          <h2 class="counter" data-target="195">195</h2>
-          <p>Happy Clients</p>
-        </div>
-
-        <div class="counter-box">
-          <h2 class="counter" data-target="275">275</h2>
-          <p>Projects Done</p>
-        </div>
-
-        <div class="counter-box">
-          <h2 class="counter" data-target="435">435</h2>
-          <p>AC Installed</p>
-        </div>
-
-        <div class="counter-box">
-          <h2 class="counter" data-target="234">234</h2>
-          <p>Maintenances</p>
-        </div>
-      </div>
 
       <!-- SERVICES / SAMPLES (3-column grid, 5 items) -->
       <section class="py-5">
@@ -1154,90 +1024,8 @@
         </div>
       </section>
 
-<!-- BRANDS (Corrected classes) -->
-      <section class="brand-logos-section py-5" data-aos="fade-up">
-        <div class="container text-center mb-4">
-          <h2 class="fw-bold">Our Projects
-</h2>
-          <p>
-            Works done for clients by Royalton Tech.
-          </p>
-        </div>
-
-        <div class="project">
-          <div class="project-track">
-            <img src="images/jl.png" alt="hisense company" />
-            <img src="images/kkkl.png" alt="verits plc" />
-            <img src="images/knkk.png" alt="chip company" />
-            <img src="images/hanber.png" alt="raenest inc" />
-            <img src="images/split.jpg" alt="LG company" />
-            <img src="images/ggjkl.png" alt="Brand 6" />
-            <img src="images/lllk.png" alt="fidelity plc" />
-          </div>
-        </div>
-      </section>
-
-
-      <div class="team-section py-5">
-        <h2 class="text-center mb-5">
-          <span class="text-brand-white">Meet Our </span
-          ><span class="text-brand-orange">Expert Team</span>
-        </h2>
-
-        <div class="team-row">
-          <div class="team-card p-4">
-            <div class="team-img mb-3">
-              <img src="images/team1.jpg" alt="Team Member" />
-            </div>
-            <h5 class="text-white text-center">Engr. Michael Johnson</h5>
-            <p class="text-brand-orange text-center">Senior HVAC Technician</p>
-            <p class="text-secondary text-center mt-2">
-              10+ years experience in commercial and residential AC engineering.
-            </p>
-          </div>
-
-          <div class="team-card p-4">
-            <div class="team-img mb-3">
-              <img src="images/team2.jpg" alt="Team Member" />
-            </div>
-            <h5 class="text-white text-center">Sarah Williams</h5>
-            <p class="text-brand-orange text-center">Operations Manager</p>
-            <p class="text-secondary text-center mt-2">
-              Ensuring seamless workflow and exceptional customer service.
-            </p>
-          </div>
-
-          <div class="team-card p-4">
-            <div class="team-img mb-3">
-              <img src="images/team3.jpg" alt="Team Member" />
-            </div>
-            <h5 class="text-white text-center">Sarah Williams</h5>
-            <p class="text-brand-orange text-center">Operations Manager</p>
-            <p class="text-secondary text-center mt-2">
-              Ensuring seamless workflow and exceptional customer service.
-            </p>
-          </div>
-
-          <div class="team-card p-4">
-            <div class="team-img mb-3">
-              <img src="images/team4.jpg" alt="Team Member" />
-            </div>
-            <h5 class="text-white text-center">Samuel Adeyemi</h5>
-            <p class="text-brand-orange text-center">Cooling Systems Expert</p>
-            <p class="text-secondary text-center mt-2">
-              Specialized in AC installation, diagnostics, and system
-              optimization.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- SPACING FIX -->
-      <div style="height: 60px"></div>
-    </div>
-    <!-- END page-wrapper -->
-
- <!-- LATEST BLOGS -->
+      
+      <!-- LATEST BLOGS -->
       <section class="py-5">
         <div class="container">
           <div class="d-flex justify-content-between align-items-center mb-4">
@@ -1310,6 +1098,32 @@
         </div>
       </section>
 
+<!-- WORKS DONE. -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h3 class="mb-3">Our Projects</h3>
+            <p class="text-muted">
+              Works done for clients
+              <span class="text-accent"> by Royalton Tech</span>.
+            </p>
+          </div>
+
+      <div class="image-slider">
+        <div class="image-track">
+          <img src="images/split.png" />
+          <img src="images/ggjkl.png" />
+          <img src="images/hanber.png" />
+          <img src="images/knkk.png" />
+
+          <!-- duplicate for smooth infinite loop -->
+          <img src="images/jjjug.png" />
+          <img src="images/jl.png" />
+          <img src="images/lllk.png" />
+          <img src="images/kkkl.png" />
+        </div>
+      </div>
+
       <section id="choose-us" aria-labelledby="choose-us-title">
         <h2 id="choose-us-title" class="choose-section-title">Why Choose Us</h2>
 
@@ -1366,7 +1180,6 @@
         </div>
       </section>
 
-      
       <!-- CLIENT REVIEWS -->
 <section class="py-5 bg-light">
   <div class="container">
@@ -1392,8 +1205,7 @@
             </div>
           </div>
           <p class="text-muted">
-           ⭐⭐⭐⭐⭐
-Royalton Tech exceeded my expectations. Their team installed my air-conditioning system quickly and professionally. The unit works perfectly, and they even took the time to explain maintenance tips. Highly recommended!
+            I called ROYALTON TECH when my air conditioner stopped working...
           </p>
         </div>
 
@@ -1407,8 +1219,7 @@ Royalton Tech exceeded my expectations. Their team installed my air-conditioning
             </div>
           </div>
           <p class="text-muted">
-            ⭐⭐⭐⭐⭐
-Very reliable and responsive service. I called Royalton Tech for an urgent AC repair at my office, and they arrived the same day. The technician diagnosed the issue immediately and had everything running within an hour.
+            ROYALTON TECH handled the installation of our new split system...
           </p>
         </div>
 
@@ -1422,23 +1233,21 @@ Very reliable and responsive service. I called Royalton Tech for an urgent AC re
             </div>
           </div>
           <p class="text-muted">
-            ⭐⭐⭐⭐⭐
-Great experience from start to finish. They upgraded our ventilation system, and the difference in air quality is noticeable. Friendly team, clean work, and fair pricing.
+            We’ve used ROYALTON TECH for both regular maintenance and air-quality checks...
           </p>
         </div>
 
         <!-- REVIEW 4 -->
         <div class="review-card">
           <div class="d-flex align-items-center mb-3">
-            <img src="images/mnn.jpg" class="rounded-circle me-3" width="60" height="60">
+            <img src="images/client1.jpg" class="rounded-circle me-3" width="60" height="60">
             <div>
               <h6 class="mb-0">Emeka O., Surulere</h6>
               <small class="text-muted">Homeowner</small>
             </div>
           </div>
           <p class="text-muted">
-           ⭐⭐⭐
-Royalton Tech has been handling the HVAC units in our apartment complex for months now, and they’ve been nothing but professional. Their maintenance service keeps everything running smoothly—zero complaints.
+            Their maintenance service is top-notch. My AC has been working perfectly...
           </p>
         </div>
 
@@ -1452,23 +1261,21 @@ Royalton Tech has been handling the HVAC units in our apartment complex for mont
             </div>
           </div>
           <p class="text-muted">
-            ⭐⭐⭐⭐⭐
-I appreciate the honesty and transparency. They inspected my AC and instead of pushing a replacement, they repaired it at a reasonable cost. Good people, excellent service.
+            Their technician was very respectful and knowledgeable. Highly recommended.
           </p>
         </div>
 
         <!-- REVIEW 6 -->
         <div class="review-card">
           <div class="d-flex align-items-center mb-3">
-            <img src="images/mnn.jpg" class="rounded-circle me-3" width="60" height="60">
+            <img src="images/client3.jpg" class="rounded-circle me-3" width="60" height="60">
             <div>
               <h6 class="mb-0">Samuel E., VI</h6>
               <small class="text-muted">Business Analyst</small>
             </div>
           </div>
           <p class="text-muted">
-            ⭐⭐⭐⭐
-Our warehouse needed a complete HVAC overhaul, and Royalton Tech delivered perfectly. Efficient, knowledgeable, and very organized. We’re impressed with the performance of the new system.
+            Fast responsee, skilled team, and great pricing. Royalton Tech is reliable.
           </p>
         </div>
 
@@ -1478,218 +1285,331 @@ Our warehouse needed a complete HVAC overhaul, and Royalton Tech delivered perfe
   </div>
 </section>
 
-    <div class="wa-panel" id="waPanel" aria-live="polite">
-      <div
-        class="header"
-        id="waHeader"
-        role="button"
-        aria-expanded="false"
-        tabindex="0"
-      >
-        <svg
-          width="28"
-          height="28"
-          viewBox="0 0 24 24"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path
-            d="M20.52 3.48A11.95 11.95 0 0 0 12 0C5.373 0 .001 5.373.001 12c0 2.11.553 4.163 1.6 5.98L0 24l6.377-1.665A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12 0-3.2-1.19-6.193-3.48-8.52Z"
-            fill="#fff"
-          />
-          <path
-            d="M17.24 14.98c-.29-.14-1.7-.84-1.96-.94-.26-.11-.44-.16-.62.15-.18.3-.7.94-.86 1.13-.16.19-.33.22-.61.07-.28-.15-1.19-.44-2.27-1.4-.84-.74-1.4-1.66-1.57-1.94-.17-.29-.02-.44.13-.59.13-.13.29-.33.43-.5.14-.17.19-.28.29-.46.1-.18.05-.34-.02-.48-.07-.14-.62-1.5-.85-2.05-.22-.54-.45-.47-.62-.48-.16-.01-.35-.01-.53-.01-.18 0-.48.07-.73.34-.25.27-.96.93-.96 2.27 0 1.34.98 2.64 1.12 2.82.14.18 1.94 2.9 4.7 4.06 3.05 1.35 3.05.9 3.6.83.55-.07 1.7-.69 1.94-1.36.25-.67.25-1.24.17-1.36-.08-.12-.29-.18-.58-.32Z"
-            fill="#128C7E"
-          />
-        </svg>
-        <div class="title">Chat with us</div>
-      </div>
 
-      <div class="body" id="waBody">
-        <div>Hi! Choose a quick topic:</div>
-        <div>
-          <button class="quick-btn" data-msg="Hello, I'd like pricing info.">
-            Pricing
-          </button>
-          <button class="quick-btn" data-msg="I need support with my order.">
-            Support
-          </button>
-          <button class="quick-btn" data-msg="I want to schedule a demo.">
-            Demo
-          </button>
+
+      <!-- OUR SPECIALIZE -->
+      <section id="specialize" data-aos="fade-up" data-aos-duration="1200">
+        <br /><br /><br /><br /><br />
+        <h2>
+          <i class="fas fa-fan"></i>
+          We Specialize In
+        </h2>
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up">
+              <div class="specialize-item">
+                <i class="fas fa-snowflake"></i>
+                <h5>Residential & Commercial AC Installation</h5>
+                <p>
+                  Split units, ducted systems, VRV/VRF installations — for
+                  homes, offices and commercial buildings.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="specialize-item">
+                <i class="fas fa-wrench"></i>
+                <h5>AC Repair & Maintenance</h5>
+                <p>
+                  Comprehensive repair, routine maintenance, gas top-up and
+                  preventive servicing to keep your system efficient.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="specialize-item">
+                <i class="fas fa-wind"></i>
+                <h5>Ventilation & Air Quality Improvement</h5>
+                <p>
+                  Duct cleaning, ventilation upgrades, air-filtration and indoor
+                  air quality solutions for healthier spaces.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="specialize-item">
+                <i class="fas fa-cogs"></i>
+                <h5>Central Cooling & HVAC Systems</h5>
+                <p>
+                  Design and installation of central chillers, AHUs, and
+                  building-scale HVAC systems for large facilities.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+              <div class="specialize-item">
+                <i class="fas fa-tools"></i>
+                <h5>System Upgrade & Retrofit</h5>
+                <p>
+                  Modernizing old HVAC systems for better efficiency —
+                  energy-saving upgrades, inverter systems, and controls.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+              <div class="specialize-item">
+                <i class="fas fa-shield-alt"></i>
+                <h5>Emergency Repairs & 24/7 Support</h5>
+                <p>
+                  Rapid response for breakdowns, urgent repairs and after-sales
+                  support to ensure uninterrupted comfort.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+
+      <div class="wa-panel" id="waPanel" aria-live="polite">
+        <div
+          class="header"
+          id="waHeader"
+          role="button"
+          aria-expanded="false"
+          tabindex="0"
+        >
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20.52 3.48A11.95 11.95 0 0 0 12 0C5.373 0 .001 5.373.001 12c0 2.11.553 4.163 1.6 5.98L0 24l6.377-1.665A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12 0-3.2-1.19-6.193-3.48-8.52Z"
+              fill="#fff"
+            />
+            <path
+              d="M17.24 14.98c-.29-.14-1.7-.84-1.96-.94-.26-.11-.44-.16-.62.15-.18.3-.7.94-.86 1.13-.16.19-.33.22-.61.07-.28-.15-1.19-.44-2.27-1.4-.84-.74-1.4-1.66-1.57-1.94-.17-.29-.02-.44.13-.59.13-.13.29-.33.43-.5.14-.17.19-.28.29-.46.1-.18.05-.34-.02-.48-.07-.14-.62-1.5-.85-2.05-.22-.54-.45-.47-.62-.48-.16-.01-.35-.01-.53-.01-.18 0-.48.07-.73.34-.25.27-.96.93-.96 2.27 0 1.34.98 2.64 1.12 2.82.14.18 1.94 2.9 4.7 4.06 3.05 1.35 3.05.9 3.6.83.55-.07 1.7-.69 1.94-1.36.25-.67.25-1.24.17-1.36-.08-.12-.29-.18-.58-.32Z"
+              fill="#128C7E"
+            />
+          </svg>
+          <div class="title">Chat with us</div>
         </div>
 
-        <button class="open-chat" id="waOpenChat">Open in WhatsApp</button>
+        <div class="body" id="waBody">
+          <div>Hi! Choose a quick topic:</div>
+          <div>
+            <button class="quick-btn" data-msg="Hello, I'd like pricing info.">
+              Pricing
+            </button>
+            <button class="quick-btn" data-msg="I need support with my order.">
+              Support
+            </button>
+            <button class="quick-btn" data-msg="I want to schedule a demo.">
+              Demo
+            </button>
+          </div>
+
+          <button class="open-chat" id="waOpenChat">Open in WhatsApp</button>
+        </div>
       </div>
-    </div>
 
-    <script>
-      const WA_PANEL = document.getElementById("waPanel");
-      const HEADER = document.getElementById("waHeader");
-      const BODY = document.getElementById("waBody");
-      const OPEN_CHAT = document.getElementById("waOpenChat");
-      const WA_NUMBER = "2348037157380";
-      const DEFAULT_TEXT = "Hello, I found you on the website and need help.";
+      <script>
+        const WA_PANEL = document.getElementById("waPanel");
+        const HEADER = document.getElementById("waHeader");
+        const BODY = document.getElementById("waBody");
+        const OPEN_CHAT = document.getElementById("waOpenChat");
+        const WA_NUMBER = "2348037157380";
+        const DEFAULT_TEXT = "Hello, I found you on the website and need help.";
 
-      let chosenText = DEFAULT_TEXT;
+        let chosenText = DEFAULT_TEXT;
 
-      HEADER.addEventListener("click", togglePanel);
-      HEADER.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") togglePanel();
-      });
+        HEADER.addEventListener("click", togglePanel);
+        HEADER.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") togglePanel();
+        });
 
-      function togglePanel() {
-        const open = WA_PANEL.classList.toggle("open");
-        HEADER.setAttribute("aria-expanded", open ? "true" : "false");
-      }
+        function togglePanel() {
+          const open = WA_PANEL.classList.toggle("open");
+          HEADER.setAttribute("aria-expanded", open ? "true" : "false");
+        }
 
-      document.querySelectorAll(".quick-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          chosenText = btn.getAttribute("data-msg") || DEFAULT_TEXT;
-          // open right away or let user confirm
+        document.querySelectorAll(".quick-btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            chosenText = btn.getAttribute("data-msg") || DEFAULT_TEXT;
+            // open right away or let user confirm
+            const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
+              chosenText
+            )}`;
+            window.open(url, "_blank", "noopener");
+          });
+        });
+
+        OPEN_CHAT.addEventListener("click", () => {
           const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
             chosenText
           )}`;
           window.open(url, "_blank", "noopener");
         });
-      });
+      </script>
 
-      OPEN_CHAT.addEventListener("click", () => {
-        const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
-          chosenText
-        )}`;
-        window.open(url, "_blank", "noopener");
-      });
-    </script>
-
-    <!-- CTA -->
-    <section class="cta-section">
-      <div class="container">
-        <h3>Ready to start your project?</h3>
-        <p>Get an estimate cost and a consultation from Royalton Tech</p>
-        <a href="contact.html" class="btn mt-3">Contact Us Now</a>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="primary-footer py-5">
+      <!-- SMALL CTA -->
+      <section class="py-5 text-center bg-light">
         <div class="container">
-          <div class="row gy-4">
-            <!-- Footer columns (unchanged) -->
-            <!-- COLUMN 1 -->
-            <div class="col-lg-3 col-md-6">
-              <div class="footer-logo mb-3">
-                <img
-                  src="images/ChatGPT_Image_Dec_10__2025__05_48_43_AM-removebg-preview.png"
-                  alt="royaltontech logo"
-                  style="height: 150px"
-                />
+          <h4 data-aos="fade-up">Ready to start your project?</h4>
+          <p class="text-muted" data-aos="fade-up" data-aos-delay="80">
+            Get an estimate cost and a consultation from Royalton Tech.
+          </p>
+          <a
+            href="contact.html"
+            class="btn btn-primary btn-lg"
+            data-aos="fade-up"
+            data-aos-delay="160"
+            >Contact Us</a
+          >
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="primary-footer py-5">
+          <div class="container">
+            <div class="row gy-4">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-logo mb-3">
+                  <img
+                    src="images/ChatGPT_Image_Dec_10__2025__05_48_43_AM-removebg-preview.png"
+                    alt="Royaltontech logo"
+                    style="height: 150px"
+                  />
+                </div>
+                <p>
+                  Providing reliable HVAC installation, repair, and maintenance
+                  services to keep your home or business comfortable all year
+                  round.
+                </p>
+                <div class="footer-logo mt-3">
+                  <img
+                    src="assets/images/footer-logo.png"
+                    alt=""
+                    style="height: 34px"
+                  />
+                </div>
+                <ul class="list-unstyled working-hours mt-3">
+                  <h5>Working <span class="text-accent">hours</span></h5>
+                  <li><span>Mon - Sat</span> 8:00 to 6:00</li>
+                  <li><span>Sunday</span> Closed</li>
+                </ul>
               </div>
-              <p>
-                Providing reliable HVAC installation, repair, and maintenance
-                services to keep your home or business comfortable all year
-                round.
-              </p>
-              <ul class="list-unstyled working-hours mt-3">
-                <h5>Working <span class="text-accent">hours</span></h5>
-                <li><span>Mon - Sat</span> 8:00 to 6:00</li>
-                <li><span>Sunday</span> Closed</li>
-              </ul>
-            </div>
 
-            <!-- COLUMN 2 -->
-            <div class="col-lg-3 col-md-6">
-              <h5>Quick <span class="text-accent">Links</span></h5>
-              <ul class="list-unstyled">
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolios</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-              </ul>
-            </div>
+              <div class="col-lg-3 col-md-6">
+                <h5>Quick <span class="text-accent">Links</span></h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="about.html"
+                      ><i class="fas fa-angle-right me-2"></i>About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a href="services.html"
+                      ><i class="fas fa-angle-right me-2"></i>Services</a
+                    >
+                  </li>
+                  <li>
+                    <a href="portfolio.html"
+                      ><i class="fas fa-angle-right me-2"></i>Portfolios</a
+                    >
+                  </li>
+                  <li>
+                    <a href="blog.html"
+                      ><i class="fas fa-angle-right me-2"></i>Blog</a
+                    >
+                  </li>
+                  <li>
+                    <a href="contact.html"
+                      ><i class="fas fa-angle-right me-2"></i>Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </div>
 
-            <!-- COLUMN 3 -->
-            <div class="col-lg-3 col-md-6">
-              <h5>Our <span class="text-accent">Solutions</span></h5>
-              <ul class="list-unstyled">
-                <li><a href="services.html#web">AC Installation</a></li>
-                <li><a href="services.html#branding">AC Repair</a></li>
-                <li><a href="services.html#seo">Maintenance</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-              </ul>
-            </div>
+              <div class="col-lg-3 col-md-6">
+                <h5>Our <span class="text-accent">Solutions</span></h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="services.html#web"
+                      ><i class="fas fa-angle-right me-2"></i>AC Installation</a
+                    >
+                  </li>
+                  <li>
+                    <a href="services.html#branding"
+                      ><i class="fas fa-angle-right me-2"></i>AC Repair</a
+                    >
+                  </li>
+                  <li>
+                    <a href="services.html#seo"
+                      ><i class="fas fa-angle-right me-2"></i>Maintenance</a
+                    >
+                  </li>
+                  <li>
+                    <a href="portfolio.html"
+                      ><i class="fas fa-angle-right me-2"></i>Portfolio</a
+                    >
+                  </li>
+                </ul>
+              </div>
 
-            <!-- COLUMN 4 -->
-            <div class="col-lg-3 col-md-6">
-              <h5>Contact <span class="text-accent">Us</span></h5>
-              <ul class="list-unstyled small">
-                <li>
-                  <strong>Address:</strong><br />
-                  92a Dolphin Estate, Ikoyi, Lagos 101222, Lagos
-                </li>
-                <li class="mt-2">
-                  <strong>Phone:</strong><br />
-                  <a href="tel:+2348037157380">+234803-7157-380</a>
-                </li>
-                <li class="mt-2">
-                  <strong>Email:</strong><br />
-                  <a href="mailto:Royaltontech@gmail.com"
-                    >Royaltontech@gmail.com</a
-                  >
-                </li>
-              </ul>
+              <div class="col-lg-3 col-md-6">
+                <h5>Contact <span class="text-accent">Us</span></h5>
+                <ul class="list-unstyled small">
+                  <li><strong>Address:</strong><br />92a Dolphin Estate, Ikoyi, Lagos 101222, Lagos</li>
+                  <li class="mt-2">
+                    <strong>Phone:</strong><br /><a href="tel:+2348037157380"
+                      >+234 803 715 7380</a
+                    >
+                  </li>
+                  <li class="mt-2">
+                    <strong>Email:</strong><br /><a
+                      href="mailto:Royaltontech@gmail.com"
+                      >Royaltontech@gmail.com</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div
-        class="secondary-footer py-3 border-top text-center small"
-        style="border-color: rgba(255, 255, 255, 0.08) !important"
-      >
-        © <span id="siteYear"></span> ROYALTON TECH • All Rights Reserved
-      </div>
-    </footer>
+        <div
+          class="secondary-footer py-3 border-top"
+          style="border-color: rgba(255, 255, 255, 0.03) !important"
+        >
+          <div class="container text-center small">
+            <div>
+              © <span id="siteYear"></span> ROYALTON TECH • All Rights Reserved
+            </div>
+          </div>
+        </div>
+      </footer>
 
-  <a class="contact-btn" href="contact.html">Get a Quote</a>
+      <!-- Get a Quote floating button -->
+      <a class="contact-btn" href="contact.html">Get a Quote</a>
     </div>
+    <!-- page-wrapper end -->
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- AOS Script -->
+    <!-- JS: Bootstrap bundle, AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init();
 
+    <script>
+      // Init AOS
+      if (window.AOS) AOS.init({ duration: 650, once: true });
+
+      // Set year
       document.getElementById("siteYear").textContent =
         new Date().getFullYear();
-    </script>
-    <script>
-      const counters = document.querySelectorAll(".counter");
-
-      counters.forEach((counter) => {
-        counter.innerText = "0";
-
-        const updateCounter = () => {
-          const target = +counter.getAttribute("data-target");
-          const current = +counter.innerText;
-          const speed = 100; // lower = faster
-
-          const increment = target / speed;
-
-          if (current < target) {
-            counter.innerText = Math.ceil(current + increment);
-            setTimeout(updateCounter, 20);
-          } else {
-            counter.innerText = target + "+";
-          }
-        };
-
-        updateCounter();
-      });
     </script>
   </body>
 </html>
