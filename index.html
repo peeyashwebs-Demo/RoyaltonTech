@@ -86,10 +86,28 @@
 
       .brand-track img {
         height: 70px;
-        margin-right: 20px;
+        margin-right: 45px;
         opacity: 0.8;
       }
 
+      .brand-section {
+  overflow-x: auto;
+}
+
+.brand-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
       /* project slider */
       .project-slider {
         overflow: hidden;
@@ -102,7 +120,7 @@
       }
 
       .project-track img {
-        height: 160px;
+        height: 70px;
         margin-right: 45px;
         opacity: 0.8;
       }
@@ -700,6 +718,35 @@
         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
         position: relative;
       }
+      .post-desc,
+      .service-desc {
+        padding: 18px;
+      }
+      .post-title h5,
+      .service-title {
+        margin: 0 0 8px 0;
+        font-size: 1.05rem;
+      }
+      .post-bottom,
+      .service-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 18px 18px;
+      }
+      .post-btn,
+      .service-btn {
+        color: var(--brand-blue);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 </style>
   </head>
 
