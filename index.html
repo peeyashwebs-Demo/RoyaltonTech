@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <title>Peeyashwebs — Home</title>
+    <meta
+      name="description"
+      content="Peeyashwebs — Professional web design, branding and digital growth solutions."
+    />
+
+    <!-- Fav icon (optional) -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+
+    <!-- CSS: Bootstrap 5 + FontAwesome + AOS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Site CSS (you can keep the inline styles, or move to assets/css/style.css) -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+      /* Core theme colors: blue, green, orange */
+      :root {
+        --brand-blue: #0b63d4;
+        --brand-green: #2bb673;
+        --brand-orange: #ff7a2d;
+        --muted: #6c757d;
+      }
+      body {
+        font-family: Rubik, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        color: #222;
+      }
+      .top-bar {
+        background: #f8f9fb;
+        font-size: 0.95rem;
+        padding: 0.45rem 0;
+      }
+      .top-bar a {
+        color: #333;
+        text-decoration: none;
+      }
+      .navbar-brand img {
+        max-height: 64px;
+      }
+      .bg-primary-custom {
+        background: linear-gradient(90deg, var(--brand-blue), #1b6fb8);
+      }
+      .text-accent {
+        color: var(--brand-orange);
+      }
+      .card-service img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+      }
+      .service-date {
+        position: absolute;
+        left: 12px;
+        top: 12px;
+        background: rgba(11, 99, 212, 0.95);
+        color: #fff;
+        padding: 6px 10px;
+        font-size: 0.85rem;
+        border-radius: 4px;
+      }
+      .blog-classic,
+      .service-card {
+        margin-bottom: 20px;
+      }
+      .post,
+      .service-card .card {
+        background: #fff;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+        position: relative;
+      }
+      .post-desc,
+      .service-desc {
+        padding: 18px;
+      }
+      .post-title h5,
+      .service-title {
+        margin: 0 0 8px 0;
+        font-size: 1.05rem;
+      }
+      .post-bottom,
+      .service-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 18px 18px;
+      }
+      .post-btn,
+      .service-btn {
+        color: var(--brand-blue);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .footer {
+        background: #121217;
+        color: #cfcfcf;
+        padding-top: 36px;
+      }
+      .footer a {
+        color: #cfcfcf;
+        text-decoration: none;
+      }
+      .working-hours h5 {
+        color: #fff;
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+      }
+      .media-icon li {
+        display: inline-block;
+        margin-right: 12px;
+      }
+      .contact-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 999;
+        background: var(--brand-orange);
+        color: #fff;
+        padding: 12px 18px;
+        border-radius: 999px;
+        box-shadow: 0 10px 24px rgba(255, 122, 45, 0.18);
+        text-decoration: none;
+      }
+
+      .hero-home {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background-image: linear-gradient(
+            rgba(11, 99, 212, 0.85),
+            rgba(43, 182, 115, 0.6)
+          ),
+          url("assets/images/hero-placeholder.jpg");
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+      }
+      .hero-home h1 {
+        font-weight: 700;
+      }
+      .service-card .card-body p {
+        margin-bottom: 0;
+      }
+
+      /* Adjust text alignment on smaller screens */
+      @media (max-width: 768px) {
+        .hero,
+        .hero-section,
+        .banner,
+        .header {
+          padding: 40px 20px;
+          text-align: center;
+        }
+      }
+
+      /* ========== RESPONSIVENESS FIXES ========== */
+
+      /* HERO SECTION — make sure it fits mobile screen fully */
+      .hero-home {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 80px 20px;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .hero-home h1 {
+        font-size: clamp(1.8rem, 4vw, 3rem);
+        line-height: 1.3;
+      }
+
+      .hero-home p {
+        font-size: clamp(0.95rem, 2vw, 1.25rem);
+        margin-top: 1rem;
+      }
+
+      /* Make buttons wrap and space evenly */
+      .hero-home .btn {
+        margin: 6px;
+      }
+
+      /* Ensure navbar fits small devices properly */
+      .navbar-nav .nav-link {
+        font-size: 1rem;
+        padding: 8px 14px;
+      }
+
+      .navbar-brand img {
+        max-width: 140px;
+        height: auto;
+      }
+
+      /* Prevent overflow on small devices */
+      .container,
+      .container-fluid {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      /* Services section responsive grid fix */
+      @media (max-width: 991px) {
+        .top-bar .col-md-2 {
+          display: none; /* Hide middle logo for smaller devices */
+        }
+
+        .top-bar .col-md-5 {
+          text-align: center !important;
+        }
+
+        .navbar .btn {
+          margin-top: 10px;
+        }
+
+        .service-card .card img {
+          height: auto;
+        }
+
+        .service-card {
+          margin-bottom: 30px;
+        }
+
+        .service-bottom {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 6px;
+        }
+      }
+
+      /* Make hero image fit perfectly on all screen sizes */
+      @media (max-width: 768px) {
+        .hero-home {
+          min-height: 90vh;
+          background-position: top center;
+          background-attachment: scroll;
+          padding-top: 100px;
+        }
+
+        .top-bar ul {
+          flex-wrap: wrap;
+          justify-content: center;
+          text-align: center;
+        }
+
+        /* === HERO SLIDESHOW BACKGROUND === */
+        .hero-home {
+          position: relative;
+          min-height: 100vh;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          animation: heroSlide 20s infinite alternate ease-in-out;
+        }
+
+        /* Change background image every few seconds */
+        @keyframes heroSlide {
+          0% {
+            background-image: url("images/hero\ 1.jpg");
+          }
+          33% {
+            background-image: url("images/hero\ 2.jpg");
+          }
+          66% {
+            background-image: url("images/hero\ 3.png");
+          }
+          100% {
+            background-image: url("images/hero\ 4.jpg");
+          }
+        }
+
+        .footer .row > div {
+          text-align: center;
+        }
+
+        .footer img {
+          margin: 0 auto;
+        }
+
+        .footer ul {
+          padding-left: 0;
+        }
+
+        .footer ul li {
+          list-style: none;
+        }
+      }
+
+      /* Tablets & mid-screens */
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .hero-home {
+          min-height: 85vh;
+        }
+
+        .service-card .card img {
+          height: 200px;
+        }
+
+        .footer .col-md-6 {
+          margin-bottom: 30px;
+        }
+      }
+
+      /* Smaller phones (portrait) */
+      @media (max-width: 576px) {
+        .hero-home {
+          padding: 70px 16px;
+          min-height: 100vh;
+        }
+
+        .hero-home h1 {
+          font-size: 1.8rem;
+        }
+
+        .hero-home p {
+          font-size: 1rem;
+        }
+
+        .service-card .card-body {
+          padding: 1rem;
+        }
+
+        .contact-btn {
+          right: 10px;
+          bottom: 10px;
+          padding: 10px 16px;
+          font-size: 0.9rem;
+        }
+      }
+
+      /* Blog and testimonials spacing fix */
+      .card img {
+        object-fit: cover;
+        height: auto;
+        width: 100%;
+      }
+
+      /* Adjust footer for all devices */
+      .footer {
+        text-align: left;
+      }
+      @media (max-width: 768px) {
+        .footer {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- TOP BAR -->
+      <div class="top-bar">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-5 col-sm-12">
+              <div class="topbar-link">
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a href="mailto:info@peeyashwebs.com"
+                      ><i class="far fa-envelope-open"></i>
+                      info@peeyashwebs.com</a
+                    >
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="tel:+2348120001111"
+                      ><i class="fas fa-mobile-alt"></i> +234 812 000 1111</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-2 d-none d-md-block text-center">
+              <!-- logo center on larger screens -->
+              <a class="navbar-brand" href="index.html">
+                <!-- replace with your logo file -->
+                <img
+                  src="assets/images/logo-placeholder.png"
+                  alt="Peeyashwebs logo"
+                />
+              </a>
+            </div>
+
+            <div class="col-md-5 col-sm-12 text-end">
+              <div class="social-icons">
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HEADER / NAV -->
+      <header id="site-header" class="header">
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-white border-bottom"
+        >
+          <div class="container">
+            <a class="navbar-brand d-lg-none" href="index.html">
+              <img
+                src="assets/images/logo-placeholder.png"
+                alt="Peeyashwebs"
+                style="height: 44px"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+                <li class="nav-item">
+                  <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <!-- Services dropdown (collapsing arrow works on mobile) -->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="servicesDrop"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Services
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="servicesDrop">
+                    <li>
+                      <a class="dropdown-item" href="services.html#web"
+                        >AC Installation</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="services.html#branding"
+                        >AC Repair</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="services.html#seo"
+                        >Maintenance</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="services.html#seo"
+                        >Indoor Air Quality</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+
+              <div class="d-none d-lg-block ms-lg-3">
+                <a class="btn btn-outline-primary" href="contact.html"
+                  >Get a Quote</a
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- HERO (converted to homepage) -->
+      <section class="hero-home text-center">
+        <div class="container" data-aos="fade-up">
+          <h1 class="display-4">
+            Trusted HVAC Experts for Cooling, Heating & Air Quality.
+          </h1>
+          <p class="lead mt-3 text-white-50">
+            Professional AC installation, maintenance, and repair services
+            designed to improve comfort and efficiency
+          </p>
+          <div class="mt-4">
+            <a class="btn btn-light btn-lg me-2" href="portfolio.html"
+              >View Portfolio</a
+            >
+            <a class="btn btn-outline-light btn-lg" href="contact.html"
+              >Get a Quote</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES / SAMPLES (3-column grid, 5 items) -->
+      <section class="py-5">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="mb-0">Our Services</h3>
+            <a href="services.html" class="text-muted">See all services →</a>
+          </div>
+
+          <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-4" data-aos="fade-up">
+              <div class="service-card">
+                <div class="card">
+                  <div class="position-relative">
+                    <img
+                      class="card-img-top card-service"
+                      src="images/split.jpg"
+                      alt="Split & Central AC Installation"
+                    />
+                    <div class="service-date">AC Installation</div>
+                  </div>
+                  <div class="card-body service-desc">
+                    <h5 class="service-title">
+                      Split & Central AC Installation
+                    </h5>
+                    <p class="text-muted small">
+                      Our certified technicians install split, ducted, and
+                      central air conditioning systems safely and efficiently...
+                    </p>
+                  </div>
+                  <div class="service-bottom">
+                    <small class="text-muted">By Peeyashwebs</small>
+                    <a class="service-btn" href="services.html#web"
+                      >Learn More
+                      <i class="fas fa-long-arrow-alt-right ms-2"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+              <div class="service-card">
+                <div class="card">
+                  <div class="position-relative">
+                    <img
+                      class="card-img-top card-service"
+                      src="repairing.jpg"
+                      alt="Air Condition Repairs"
+                    />
+                    <div class="service-date">AC Repairs</div>
+                  </div>
+                  <div class="card-body service-desc">
+                    <h5 class="service-title">Air Conditioner Repairs</h5>
+                    <p class="text-muted small">
+                      We diagnose and fix all types of AC issues — from cooling
+                      inefficiency to system breakdowns...
+                    </p>
+                  </div>
+                  <div class="service-bottom">
+                    <small class="text-muted">By Peeyashwebs</small>
+                    <a class="service-btn" href="services.html#branding"
+                      >Learn More
+                      <i class="fas fa-long-arrow-alt-right ms-2"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+              <div class="service-card">
+                <div class="card">
+                  <div class="position-relative">
+                    <img
+                      class="card-img-top card-service"
+                      src="images/repairr.jpg"
+                      alt="Maintenance & Servicing"
+                    />
+                    <div class="service-date">Maintenance</div>
+                  </div>
+                  <div class="card-body service-desc">
+                    <h5 class="service-title">HVAC Maintenance & Servicing</h5>
+                    <p class="text-muted small">
+                      Regular maintenance keeps your cooling system efficient
+                      and extends its lifespan. We provide full cleaning...
+                    </p>
+                  </div>
+
+                  <div class="service-bottom">
+                    <small class="text-muted">By Peeyashwebs</small>
+                    <a class="service-btn" href="services.html#seo"
+                      >Learn More
+                      <i class="fas fa-long-arrow-alt-right ms-2"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 (second row, centered) -->
+            <div class="col-md-6 mt-4" data-aos="fade-up" data-aos-delay="80">
+              <div class="service-card">
+                <div class="card">
+                  <div class="position-relative">
+                    <img
+                      class="card-img-top card-service"
+                      src="images/air-conditioner.jpg"
+                      alt="Air Quality Improvement"
+                    />
+                    <div class="service-date">Indoor Air Quality</div>
+                  </div>
+                  <div class="card-body service-desc">
+                    <h5 class="service-title">
+                      Indoor Air Quality Improvement
+                    </h5>
+                    <p class="text-muted small">
+                      We offer air filtration, duct cleaning, and ventilation
+                      upgrades to keep your indoor air...
+                    </p>
+                  </div>
+                  <div class="service-bottom">
+                    <small class="text-muted">By Peeyashwebs</small>
+                    <a class="service-btn" href="portfolio.html"
+                      >View Project
+                      <i class="fas fa-long-arrow-alt-right ms-2"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-6 mt-4" data-aos="fade-up" data-aos-delay="160">
+              <div class="service-card">
+                <div class="card">
+                  <div class="position-relative">
+                    <img
+                      class="card-img-top card-service"
+                      src="images/install.png"
+                      alt="Installation"
+                    />
+                    <div class="service-date">AC Installation</div>
+                  </div>
+                  <div class="card-body service-desc">
+                    <h5 class="service-title">Air ConditionerInstallation</h5>
+                    <p class="text-muted small">
+                      Our certified technicians professionally install all types
+                      of air conditioning systems — from split units...
+                    </p>
+                  </div>
+                  <div class="service-bottom">
+                    <small class="text-muted">By Peeyashwebs</small>
+                    <a class="service-btn" href="services.html#web"
+                      >Learn More
+                      <i class="fas fa-long-arrow-alt-right ms-2"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.row -->
+        </div>
+      </section>
+
+      <!-- CLIENT REVIEWS -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h3 class="mb-3">What Our Clients Say</h3>
+            <p class="text-muted">
+              Real feedback from businesses that trusted
+              <span class="text-accent">Peeyashwebs</span>.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <!-- Testimonial 1 -->
+            <div class="col-md-4" data-aos="fade-up">
+              <div class="card border-0 shadow-sm p-4 h-100">
+                <div class="d-flex align-items-center mb-3">
+                  <div>
+                    <h6 class="mb-0">Mrs. Ada U., Lagos</h6>
+                    <small class="text-muted">CEO, GreenGlow</small>
+                  </div>
+                </div>
+                <p class="text-muted mb-0">
+                  I called Peeyash HVAC when my air conditioner stopped working
+                  in the middle of a hot afternoon. Their technician arrived the
+                  same day, diagnosed the issue quickly, and had it running
+                  within an hour. Very professional and polite. I highly
+                  recommend them!
+                </p>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+              <div class="card border-0 shadow-sm p-4 h-100">
+                <div class="d-flex align-items-center mb-3">
+                  <div>
+                    <h6 class="mb-0">Mr. Chuka M., Lekki</h6>
+                    <small class="text-muted">Founder, NaijaStyle</small>
+                  </div>
+                </div>
+                <p class="text-muted mb-0">
+                  Peeyash HVAC handled the installation of our new split system
+                  flawlessly. They explained everything clearly, gave us a fair
+                  price, and even followed up after installation to make sure
+                  everything was perfect. Truly dependable service.
+                </p>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+              <div class="card border-0 shadow-sm p-4 h-100">
+                <div class="d-flex align-items-center mb-3">
+                  <div>
+                    <h6 class="mb-0">Faith O., Ikeja</h6>
+                    <small class="text-muted">Marketing Lead, BrightPath</small>
+                  </div>
+                </div>
+                <p class="text-muted mb-0">
+                  We’ve used Peeyash HVAC for both regular maintenance and
+                  indoor air quality checks. Our office feels fresher, and
+                  energy bills have dropped since their visit. Their team is
+                  knowledgeable and friendly.We’ll definitely keep using them.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LATEST BLOGS -->
+      <section class="py-5">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="mb-0">Latest from Our Blog</h3>
+            <a href="blog.html" class="text-muted">View More →</a>
+          </div>
+
+          <div class="row g-4">
+            <!-- Blog 1 -->
+            <div class="col-md-4" data-aos="fade-up">
+              <div class="card h-100 shadow-sm border-0">
+                <img src="images/learn.jpg" class="card-img-top" alt="Blog 1" />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    How To Install Split System Air Conditioning
+                  </h5>
+                  <p class="card-text text-muted small">
+                    Understand how split systems are installed so you can choose
+                    the right installer for your job
+                  </p>
+                  <a href="blog.html" class="service-btn">Read More →</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blog 2 -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+              <div class="card h-100 shadow-sm border-0">
+                <img
+                  src="images/company.jpg"
+                  class="card-img-top"
+                  alt="Blog 2"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    A Guide to Hiring the Best HVAC Company
+                  </h5>
+                  <p class="card-text text-muted small">
+                    Short guide to help make selecting the right HVAC contractor
+                    easier
+                  </p>
+                  <a href="blog.html" class="service-btn">Read More →</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blog 3 -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+              <div class="card h-100 shadow-sm border-0">
+                <img src="images/ANC.jpg" class="card-img-top" alt="Blog 3" />
+                <div class="card-body">
+                  <h5 class="card-title">List of HVAC Companies In Lagos</h5>
+                  <p class="card-text text-muted small">
+                    A compact list of HVAC companies to help you begin your
+                    search
+                  </p>
+                  <a href="blog.html" class="service-btn">Read More →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SMALL CTA -->
+      <section class="py-5 text-center bg-light">
+        <div class="container">
+          <h4 data-aos="fade-up">Ready to start your project?</h4>
+          <p class="text-muted" data-aos="fade-up" data-aos-delay="80">
+            Get an estimate and a free site review from Peeyashwebs.
+          </p>
+          <a
+            href="contact.html"
+            class="btn btn-primary btn-lg"
+            data-aos="fade-up"
+            data-aos-delay="160"
+            >Contact Us</a
+          >
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="primary-footer py-5">
+          <div class="container">
+            <div class="row gy-4">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-logo mb-3">
+                  <img
+                    src="assets/images/logo-placeholder.png"
+                    alt="Peeyashwebs logo"
+                    style="height: 56px"
+                  />
+                </div>
+                <p>
+                  Providing reliable HVAC installation, repair, and maintenance
+                  services to keep your home or business comfortable all year
+                  round.
+                </p>
+                <div class="footer-logo mt-3">
+                  <img
+                    src="assets/images/footer-logo.png"
+                    alt=""
+                    style="height: 34px"
+                  />
+                </div>
+                <ul class="list-unstyled working-hours mt-3">
+                  <h5>Working <span class="text-accent">hours</span></h5>
+                  <li><span>Mon - Sat</span> 8:00 to 6:00</li>
+                  <li><span>Sunday</span> Closed</li>
+                </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <h5>Quick <span class="text-accent">Links</span></h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="about.html"
+                      ><i class="fas fa-angle-right me-2"></i>About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a href="services.html"
+                      ><i class="fas fa-angle-right me-2"></i>Services</a
+                    >
+                  </li>
+                  <li>
+                    <a href="portfolio.html"
+                      ><i class="fas fa-angle-right me-2"></i>Portfolios</a
+                    >
+                  </li>
+                  <li>
+                    <a href="blog.html"
+                      ><i class="fas fa-angle-right me-2"></i>Blog</a
+                    >
+                  </li>
+                  <li>
+                    <a href="contact.html"
+                      ><i class="fas fa-angle-right me-2"></i>Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <h5>Our <span class="text-accent">Solutions</span></h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="services.html#web"
+                      ><i class="fas fa-angle-right me-2"></i>AC Installation</a
+                    >
+                  </li>
+                  <li>
+                    <a href="services.html#branding"
+                      ><i class="fas fa-angle-right me-2"></i>AC Repair</a
+                    >
+                  </li>
+                  <li>
+                    <a href="services.html#seo"
+                      ><i class="fas fa-angle-right me-2"></i>Maintenance</a
+                    >
+                  </li>
+                  <li>
+                    <a href="portfolio.html"
+                      ><i class="fas fa-angle-right me-2"></i>Portfolio</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <h5>Contact <span class="text-accent">Us</span></h5>
+                <ul class="list-unstyled small">
+                  <li><strong>Address:</strong><br />Lagos, Nigeria</li>
+                  <li class="mt-2">
+                    <strong>Phone:</strong><br /><a href="tel:+2348120001111"
+                      >+234 812 000 1111</a
+                    >
+                  </li>
+                  <li class="mt-2">
+                    <strong>Email:</strong><br /><a
+                      href="mailto:info@peeyashwebs.com"
+                      >info@peeyashwebs.com</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="secondary-footer py-3 border-top"
+          style="border-color: rgba(255, 255, 255, 0.03) !important"
+        >
+          <div class="container text-center small">
+            <div>
+              © <span id="siteYear"></span> Peeyashwebs • All Rights Reserved
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Get a Quote floating button -->
+      <a class="contact-btn" href="contact.html">Get a Quote</a>
+    </div>
+    <!-- page-wrapper end -->
+
+    <!-- JS: Bootstrap bundle, AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      // Init AOS
+      if (window.AOS) AOS.init({ duration: 650, once: true });
+
+      // Set year
+      document.getElementById("siteYear").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
