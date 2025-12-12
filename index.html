@@ -642,6 +642,72 @@
           width: 220px;
         }
       }
+
+      .image-slider {
+        width: 100%;
+        overflow: hidden;
+        background: #fff;
+        padding: 20px 0;
+      }
+
+      .image-track {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: nowrap;
+        animation: slide-left 20s linear infinite;
+      }
+
+      .image-track img {
+        flex-shrink: 0;
+        width: 260px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Smooth scroll */
+      @keyframes slide-left {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* Tablet */
+      @media (max-width: 992px) {
+        .image-track img {
+          width: 220px;
+          height: 150px;
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 768px) {
+        .image-track img {
+          width: 180px;
+          height: 120px;
+        }
+      }
+
+      /* Small phones */
+      @media (max-width: 480px) {
+        .image-track img {
+          width: 150px;
+          height: 100px;
+        }
+      }
+
+      /* Very small screens (≤360px) */
+      @media (max-width: 360px) {
+        .image-track img {
+          width: 130px;
+          height: 90px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1085,7 +1151,7 @@
           <div class="review-card">
             <div class="d-flex align-items-center mb-3">
               <img
-                src="images/client1.jpg"
+                src="images/jhjkm.jpg"
                 class="rounded-circle me-3"
                 width="60"
                 height="60"
@@ -1104,7 +1170,7 @@
           <div class="review-card">
             <div class="d-flex align-items-center mb-3">
               <img
-                src="images/client2.jpg"
+                src="images/hyh.jpg"
                 class="rounded-circle me-3"
                 width="60"
                 height="60"
@@ -1123,7 +1189,7 @@
           <div class="review-card">
             <div class="d-flex align-items-center mb-3">
               <img
-                src="images/client3.jpg"
+                src="images/hgh.jpg"
                 class="rounded-circle me-3"
                 width="60"
                 height="60"
@@ -1268,6 +1334,33 @@
           </div>
         </div>
       </section>
+
+<!-- WORKS DONE. -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h3 class="mb-3">Our Projects</h3>
+            <p class="text-muted">
+              Works done for clients
+              <span class="text-accent"> by Royalton Tech</span>.
+            </p>
+          </div>
+
+      <div class="image-slider">
+        <div class="image-track">
+          <!-- ORIGINAL IMAGES -->
+          <img src="images/split.png" />
+          <img src="images/ggjkl.png" />
+          <img src="images/hanber.png" />
+          <img src="images/knkk.png" />
+
+          <!-- DUPLICATE for seamless loop -->
+          <img src="images/split.png" />
+          <img src="images/ggjkl.png" />
+          <img src="images/hanber.png" />
+          <img src="images/knkk.png" />
+        </div>
+      </div>
 
       <!-- SMALL CTA -->
       <section class="py-5 text-center bg-light">
