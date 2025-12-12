@@ -582,6 +582,66 @@
           width: 70px;
         }
       }
+
+      .review-slider {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+      }
+
+      .review-track {
+        display: flex;
+        align-items: stretch;
+        gap: 25px;
+        flex-wrap: nowrap;
+        animation: slideReviews 28s linear infinite;
+      }
+
+      .review-card {
+        flex-shrink: 0;
+        width: 350px;
+        background: #fff;
+        border-radius: 14px;
+        padding: 25px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        transition: 0.3s ease;
+      }
+
+      .review-card:hover {
+        transform: translateY(-4px);
+      }
+
+      /* Smooth infinite scrolling */
+      @keyframes slideReviews {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* Tablet */
+      @media (max-width: 992px) {
+        .review-card {
+          width: 300px;
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 768px) {
+        .review-card {
+          width: 250px;
+          padding: 20px;
+        }
+      }
+
+      /* Small phones */
+      @media (max-width: 480px) {
+        .review-card {
+          width: 220px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -898,7 +958,7 @@
                   <div class="position-relative">
                     <img
                       class="card-img-top card-service"
-                      src="repairing.jpg"
+                      src="images/repairing.jpg"
                       alt="Air Condition Repairs"
                     />
                     <div class="service-date">AC Repairs</div>
@@ -1018,75 +1078,123 @@
         </div>
       </section>
 
-      <!-- CLIENT REVIEWS -->
-      <section class="py-5 bg-light">
-        <div class="container">
-          <div class="text-center mb-5">
-            <h3 class="mb-3">What Our Clients Say</h3>
+      <div class="review-slider">
+        <div class="review-track">
+          <!-- ORIGINAL 6 REVIEWS -->
+
+          <div class="review-card">
+            <div class="d-flex align-items-center mb-3">
+              <img
+                src="images/client1.jpg"
+                class="rounded-circle me-3"
+                width="60"
+                height="60"
+              />
+              <div>
+                <h6 class="mb-0">Emeka O., Surulere</h6>
+                <small class="text-muted">Homeowner</small>
+              </div>
+            </div>
             <p class="text-muted">
-              Real feedback from businesses that trusted
-              <span class="text-accent">Peeyashwebs</span>.
+              Their maintenance service is top-notch. My AC has been working
+              perfectly...
             </p>
           </div>
 
-          <div class="row g-4">
-            <!-- Testimonial 1 -->
-            <div class="col-md-4" data-aos="fade-up">
-              <div class="card border-0 shadow-sm p-4 h-100">
-                <div class="d-flex align-items-center mb-3">
-                  <div>
-                    <h6 class="mb-0">Mrs. Ada U., Lagos</h6>
-                    <small class="text-muted">CEO, GreenGlow</small>
-                  </div>
-                </div>
-                <p class="text-muted mb-0">
-                  I called Peeyash HVAC when my air conditioner stopped working
-                  in the middle of a hot afternoon. Their technician arrived the
-                  same day, diagnosed the issue quickly, and had it running
-                  within an hour. Very professional and polite. I highly
-                  recommend them!
-                </p>
+          <div class="review-card">
+            <div class="d-flex align-items-center mb-3">
+              <img
+                src="images/client2.jpg"
+                class="rounded-circle me-3"
+                width="60"
+                height="60"
+              />
+              <div>
+                <h6 class="mb-0">Mrs. Juliet A., Ajah</h6>
+                <small class="text-muted">Store Owner</small>
               </div>
             </div>
+            <p class="text-muted">
+              Their technician was very respectful and knowledgeable. Highly
+              recommended.
+            </p>
+          </div>
 
-            <!-- Testimonial 2 -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
-              <div class="card border-0 shadow-sm p-4 h-100">
-                <div class="d-flex align-items-center mb-3">
-                  <div>
-                    <h6 class="mb-0">Mr. Chuka M., Lekki</h6>
-                    <small class="text-muted">Founder, NaijaStyle</small>
-                  </div>
-                </div>
-                <p class="text-muted mb-0">
-                  Peeyash HVAC handled the installation of our new split system
-                  flawlessly. They explained everything clearly, gave us a fair
-                  price, and even followed up after installation to make sure
-                  everything was perfect. Truly dependable service.
-                </p>
+          <div class="review-card">
+            <div class="d-flex align-items-center mb-3">
+              <img
+                src="images/client3.jpg"
+                class="rounded-circle me-3"
+                width="60"
+                height="60"
+              />
+              <div>
+                <h6 class="mb-0">Samuel E., VI</h6>
+                <small class="text-muted">Business Analyst</small>
               </div>
             </div>
+            <p class="text-muted">
+              Fast responsee, skilled team, and great pricing. Royalton Tech is
+              reliable.
+            </p>
+          </div>
 
-            <!-- Testimonial 3 -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
-              <div class="card border-0 shadow-sm p-4 h-100">
-                <div class="d-flex align-items-center mb-3">
-                  <div>
-                    <h6 class="mb-0">Faith O., Ikeja</h6>
-                    <small class="text-muted">Marketing Lead, BrightPath</small>
-                  </div>
-                </div>
-                <p class="text-muted mb-0">
-                  We’ve used Peeyash HVAC for both regular maintenance and
-                  indoor air quality checks. Our office feels fresher, and
-                  energy bills have dropped since their visit. Their team is
-                  knowledgeable and friendly.We’ll definitely keep using them.
-                </p>
+          <!-- DUPLICATE REVIEWS FOR SEAMLESS LOOP -->
+          <div class="review-card">
+            <div class="d-flex align-items-center mb-3">
+              <img
+                src="images/analyze1101.png"
+                class="rounded-circle me-3"
+                width="60"
+                height="60"
+              />
+              <div>
+                <h6 class="mb-0">Mrs. Ada U., Lagos</h6>
+                <small class="text-muted">CEO, GreenGlow</small>
               </div>
             </div>
+            <p class="text-muted">
+              I called ROYALTON TECH when my air conditioner stopped working...
+            </p>
+          </div>
+
+          <div class="review-card">
+            <div class="d-flex align-items-center mb-3">
+              <img
+                src="images/hey.jpg"
+                class="rounded-circle me-3"
+                width="60"
+                height="60"
+              />
+              <div>
+                <h6 class="mb-0">Mr. Chuka M., Lekki</h6>
+                <small class="text-muted">Founder, NaijaStyle</small>
+              </div>
+            </div>
+            <p class="text-muted">
+              ROYALTON TECH handled the installation of our new split system...
+            </p>
+          </div>
+
+          <div class="review-card">
+            <div class="d-flex align-items-center mb-3">
+              <img
+                src="images/checking.png"
+                class="rounded-circle me-3"
+                width="60"
+                height="60"
+              />
+              <div>
+                <h6 class="mb-0">Faith O., Ikeja</h6>
+                <small class="text-muted">Marketing Lead, BrightPath</small>
+              </div>
+            </div>
+            <p class="text-muted">
+              We’ve used ROYALTON TECH for both regular maintenance...
+            </p>
           </div>
         </div>
-      </section>
+      </div>
 
       <!-- LATEST BLOGS -->
       <section class="py-5">
@@ -1100,7 +1208,11 @@
             <!-- Blog 1 -->
             <div class="col-md-4" data-aos="fade-up">
               <div class="card h-100 shadow-sm border-0">
-                <img src="images/learn.jpg" class="card-img-top" alt="Blog 1" />
+                <img
+                  src="images/Guide split installation.jpg"
+                  class="card-img-top"
+                  alt="Blog 1"
+                />
                 <div class="card-body">
                   <h5 class="card-title">
                     How To Install Split System Air Conditioning
@@ -1118,7 +1230,7 @@
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
               <div class="card h-100 shadow-sm border-0">
                 <img
-                  src="images/company.jpg"
+                  src="images/Company list in lagos.jpg"
                   class="card-img-top"
                   alt="Blog 2"
                 />
@@ -1138,7 +1250,11 @@
             <!-- Blog 3 -->
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
               <div class="card h-100 shadow-sm border-0">
-                <img src="images/ANC.jpg" class="card-img-top" alt="Blog 3" />
+                <img
+                  src="images/HVAC list of good companyis.jpg"
+                  class="card-img-top"
+                  alt="Blog 3"
+                />
                 <div class="card-body">
                   <h5 class="card-title">List of HVAC Companies In Lagos</h5>
                   <p class="card-text text-muted small">
@@ -1397,22 +1513,5 @@
         window.open(url, "_blank", "noopener");
       });
     </script>
-
-    <!-- SMALL CTA -->
-    <section class="py-5 text-center bg-light">
-      <div class="container">
-        <h4 data-aos="fade-up">Ready to start your project?</h4>
-        <p class="text-muted" data-aos="fade-up" data-aos-delay="80">
-          Get an estimate cost and a consultation from Royalton Tech.
-        </p>
-        <a
-          href="contact.html"
-          class="btn btn-primary btn-lg"
-          data-aos="fade-up"
-          data-aos-delay="160"
-          >Contact Us</a
-        >
-      </div>
-    </section>
   </body>
 </html>
