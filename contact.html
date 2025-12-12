@@ -166,6 +166,15 @@
         text-decoration: none;
         box-shadow: 0 10px 24px rgba(255, 122, 45, 0.18);
       }
+
+      html,
+      body {
+        overflow-x: hidden;
+      }
+      .map-wrapper iframe {
+        display: block; /* removes inline whitespace */
+        max-width: 100%; /* prevents overflow */
+      }
     </style>
   </head>
   <body>
