@@ -44,12 +44,12 @@
         color: #222;
       }
       .top-bar {
-        background: #f8f9fb;
+        background: var(--brand-blue);
         font-size: 0.95rem;
         padding: 0.45rem 0;
       }
       .top-bar a {
-        color: #333;
+        color: white;
         text-decoration: none;
       }
       .navbar-brand img {
@@ -142,19 +142,37 @@
         text-decoration: none;
       }
 
+      /* HERO BASE IMAGE (fallback) */
       .hero-home {
         min-height: 100vh;
         display: flex;
         align-items: center;
-        background-image: linear-gradient(
-            rgba(11, 99, 212, 0.85),
-            rgba(43, 182, 115, 0.6)
-          ),
-          url("assets/images/hero-placeholder.jpg");
+        justify-content: center;
+        padding: 80px 20px;
+        text-align: center;
         background-size: cover;
         background-position: center;
-        color: #fff;
+        background-repeat: no-repeat;
+        animation: heroSlide 20s infinite alternate ease-in-out;
+        color: var(--brand-blue);
       }
+
+      /* SLIDESHOW FOR ALL DEVICES */
+      @keyframes heroSlide {
+        0% {
+          background-image: url("images/hero 1 (4).jpg");
+        }
+        33% {
+          background-image: url("images/hero 2 (2).jpg");
+        }
+        66% {
+          background-image: url("images/hero 3.png");
+        }
+        100% {
+          background-image: url("images/hero 4 (1).jpg");
+        }
+      }
+
       .hero-home h1 {
         font-weight: 700;
       }
@@ -195,6 +213,11 @@
       .hero-home p {
         font-size: clamp(0.95rem, 2vw, 1.25rem);
         margin-top: 1rem;
+        font-size: xx-large;
+      }
+
+      .text {
+        color: #ff7a2d;
       }
 
       /* Make buttons wrap and space evenly */
@@ -277,32 +300,16 @@
         /* Change background image every few seconds */
         @keyframes heroSlide {
           0% {
-            background-image: linear-gradient(
-                rgba(11, 99, 212, 0.85),
-                rgba(43, 182, 115, 0.6)
-              ),
-              url("images/ac.jpg");
+            background-image: url("images/hero\ 1\ \(4\).jpg");
           }
           33% {
-            background-image: linear-gradient(
-                rgba(11, 99, 212, 0.85),
-                rgba(43, 182, 115, 0.6)
-              ),
-              url("images/Air\ Conditioner\ Installation.jpg");
+            background-image: url("images/hero\ 2\ \(2\).jpg");
           }
           66% {
-            background-image: linear-gradient(
-                rgba(11, 99, 212, 0.85),
-                rgba(43, 182, 115, 0.6)
-              ),
-              url("images/Cool\ system\ replacement.jpg");
+            background-image: url("images/hero\ 3.png");
           }
           100% {
-            background-image: linear-gradient(
-                rgba(11, 99, 212, 0.85),
-                rgba(43, 182, 115, 0.6)
-              ),
-              url("images/plumbing.jpg");
+            background-image: url("images/hero\ 4\ \(1\).jpg");
           }
         }
 
@@ -456,14 +463,14 @@
               <div class="topbar-link">
                 <ul class="list-inline mb-0">
                   <li class="list-inline-item">
-                    <a href="mailto:info@peeyashwebs.com"
+                    <a href="mailto:Royaltontech@gmail.com"
                       ><i class="far fa-envelope-open"></i>
-                      info@peeyashwebs.com</a
+                      Royaltontech@gmail.com</a
                     >
                   </li>
                   <li class="list-inline-item">
-                    <a href="tel:+2348120001111"
-                      ><i class="fas fa-mobile-alt"></i> +234 812 000 1111</a
+                    <a href="tel:+234803 715 7380"
+                      ><i class="fas fa-mobile-alt"></i> +234 803 715 7380</a
                     >
                   </li>
                 </ul>
@@ -475,8 +482,8 @@
               <a class="navbar-brand" href="index.html">
                 <!-- replace with your logo file -->
                 <img
-                  src="assets/images/logo-placeholder.png"
-                  alt="Peeyashwebs logo"
+                  src="images/ChatGPT_Image_Dec_10__2025__05_48_43_AM-removebg-preview.png"
+                  alt="royalton tech logo"
                 />
               </a>
             </div>
@@ -519,8 +526,8 @@
           <div class="container">
             <a class="navbar-brand d-lg-none" href="index.html">
               <img
-                src="assets/images/logo-placeholder.png"
-                alt="Peeyashwebs"
+                src="images/ChatGPT_Image_Dec_10__2025__05_48_43_AM-removebg-preview.png"
+                alt="royaltontech"
                 style="height: 44px"
               />
             </a>
@@ -606,8 +613,12 @@
             Trusted Royalton Tech Experts for Cooling, Heating & Air Quality.
           </h1>
           <p class="lead mt-3 text-white-50">
-            Professional AC installation, maintenance, and repair services
-            designed to improve comfort and efficiency
+            <span class="text">
+              <strong
+                >AC installation, maintenance, and repair services designed to
+                improve comfort and efficiency</strong
+              >
+            </span>
           </p>
           <div class="mt-4">
             <a class="btn btn-light btn-lg me-2" href="portfolio.html"
@@ -646,7 +657,7 @@
                       Split & Central AC Installation
                     </h5>
                     <p class="text-muted small">
-                      Our certified technicians install split, ducted, and
+                      >Our certified technicians install split, ducted, and
                       central air conditioning systems safely and efficiently...
                     </p>
                   </div>
