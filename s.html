@@ -402,49 +402,91 @@
       }
 
       .choose-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-        margin-top: 30px;
-      }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
 
-      .choose-card {
-        display: flex;
-        align-items: flex-start;
-        background: #ffffff;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        transition: 0.3s ease;
-      }
+/* Card styling */
+.choose-card {
+  display: flex;
+  align-items: flex-start;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
 
-      .choose-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-      }
+.choose-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
 
-      .icon-box {
-        width: 45px;
-        height: 45px;
-        background: #fff4d9;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-        margin-right: 15px;
-      }
+/* Icon box */
+.icon-box {
+  width: 45px;
+  height: 45px;
+  background: #fff4d9;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 15px;
+}
 
-      .icon-box i {
-        color: #ff9800;
-        font-size: 20px;
-      }
+.icon-box i {
+  color: #ff9800;
+  font-size: 20px;
+}
 
-      .choose-card p {
-        margin: 0;
-        font-size: 16px;
-        line-height: 1.5;
-      }
+.choose-card p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* ----------------------------------------
+   📱 RESPONSIVE FIXES (Very Important)
+   ---------------------------------------- */
+
+/* Large tablets (≤ 992px) */
+@media (max-width: 992px) {
+  .choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablets & Small devices (≤ 768px) */
+@media (max-width: 768px) {
+  .choose-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .choose-card {
+    padding: 18px;
+  }
+}
+
+/* Small mobile screens (≤ 480px) */
+@media (max-width: 480px) {
+  .choose-card {
+    padding: 16px;
+    flex-direction: column;
+  }
+
+  .icon-box {
+    margin: 0 0 10px 0;
+  }
+
+  .choose-card p {
+    font-size: 15px;
+  }
+}
+
 
       .review-slider {
   overflow: hidden;

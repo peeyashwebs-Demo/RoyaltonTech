@@ -708,6 +708,120 @@
           height: 90px;
         }
       }
+      .choose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* Card styling */
+.choose-card {
+  display: flex;
+  align-items: flex-start;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+  margin: 20px;
+}
+
+.choose-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon box */
+.icon-box {
+  width: 45px;
+  height: 45px;
+  background: #fff4d9;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 15px;
+}
+
+.icon-box i {
+  color: #ff9800;
+  font-size: 20px;
+}
+
+.choose-card p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Center the last card when it's alone */
+.choose-card:last-child {
+  grid-column: 1 / -1;
+  max-width: 600px;
+  justify-self: center;
+}
+
+@media (max-width: 768px) {
+  .choose-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .choose-card:last-child {
+    grid-column: auto;
+    max-width: 100%;
+  }
+}
+
+.choose-section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 40px;
+}
+
+/* ----------------------------------------
+   📱 RESPONSIVE FIXES (Very Important)
+   ---------------------------------------- */
+
+/* Large tablets (≤ 992px) */
+@media (max-width: 992px) {
+  .choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablets & Small devices (≤ 768px) */
+@media (max-width: 768px) {
+  .choose-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .choose-card {
+    padding: 18px;
+  }
+}
+
+/* Small mobile screens (≤ 480px) */
+@media (max-width: 480px) {
+  .choose-card {
+    padding: 16px;
+    flex-direction: column;
+  }
+
+  .icon-box {
+    margin: 0 0 10px 0;
+  }
+
+  .choose-card p {
+    font-size: 15px;
+  }
+}
+
+.center{
+  text-align: center;
+}
     </style>
   </head>
   <body>
@@ -1361,6 +1475,63 @@
           <img src="images/knkk.png" />
         </div>
       </div>
+
+
+<section id="choose-us" aria-labelledby="choose-us-title">
+        <h2 id="choose-us-title" class="choose-section-title"><span class="center">Why Choose Us</span></h2>
+
+        <div class="container choose-grid">
+          <div class="choose-card">
+            <div class="icon-box">
+              <i class="fas fa-bell"></i>
+            </div>
+            <p>
+              <strong>Certified HVAC Technicians:</strong> Experienced
+              professionals trained in modern HVAC systems.
+            </p>
+          </div>
+
+          <div class="choose-card">
+            <div class="icon-box">
+              <i class="fas fa-bell"></i>
+            </div>
+            <p>
+              <strong>Fast Response Time:</strong> Immediate support for
+              emergencies and breakdowns.
+            </p>
+          </div>
+
+          <div class="choose-card">
+            <div class="icon-box">
+              <i class="fas fa-bell"></i>
+            </div>
+            <p>
+              <strong>Energy-Efficient Solutions:</strong> Systems designed to
+              reduce power consumption and save costs.
+            </p>
+          </div>
+
+          <div class="choose-card">
+            <div class="icon-box">
+              <i class="fas fa-bell"></i>
+            </div>
+            <p>
+              <strong>Durable Installations:</strong> High-quality equipment
+              from trusted HVAC manufacturers.
+            </p>
+          </div>
+
+          <div class="choose-card">
+            <div class="icon-box">
+              <i class="fas fa-bell"></i>
+            </div>
+            <p>
+              <strong>24/7 Maintenance Support:</strong> We ensure your system
+              runs smoothly all year.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <!-- SMALL CTA -->
       <section class="py-5 text-center bg-light">
