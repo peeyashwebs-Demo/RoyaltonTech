@@ -258,20 +258,48 @@
         }
       }
 
-      .footer .row > div {
-        text-align: center;
+      /* FOOTER CSS */
+      .footer {
+        background: #121217;
+        color: #cfcfcf;
+        padding-top: 36px;
       }
 
-      .footer img {
-        margin: 0 auto;
+      .text-accent {
+        color: var(--brand-orange);
       }
 
-      .footer ul {
-        padding-left: 0;
+      .footer a {
+        color: #cfcfcf;
+        text-decoration: none;
       }
 
-      .footer ul li {
-        list-style: none;
+      .working-hours h5 {
+        color: #fff;
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .media-icon li {
+        display: inline-block;
+        margin-right: 12px;
+      }
+
+      .contact-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 999;
+        background: var(--brand-orange);
+        color: #fff;
+        padding: 12px 18px;
+        border-radius: 999px;
+        box-shadow: 0 10px 24px rgba(255, 122, 45, 0.18);
+        text-decoration: none;
+      }
+
+      .text-brand-orange {
+        color: var(--brand-orange);
       }
 
       /* Tablets & mid-screens */
@@ -643,10 +671,99 @@
         }
       }
 
+      .video-section {
+        max-width: 900px;
+        margin: 60px auto;
+        padding: 40px 20px;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #0b5ed7, #0a3d91);
+        border-radius: 24px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+        text-align: center;
+      }
+
+      /* VIDEO FIX */
+      .video-section video {
+        width: 100%;
+        max-width: 420px; /* prevents huge desktop stretch */
+        height: auto;
+        aspect-ratio: 9 / 16; /* handles portrait videos */
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+        border-radius: 12px;
+      }
+
+      .video-section video {
+        width: 100%;
+        max-width: 420px;
+        aspect-ratio: 9 / 16;
+        object-fit: cover;
+        border-radius: 16px;
+        margin: 0 auto;
+        display: block;
+      }
+      .video-description {
+        margin: 15px 0;
+        color: var(--brand-orange);
+        line-height: 1.6;
+      }
+
+      .steps-list {
+        margin-top: 10px;
+        padding-left: 20px;
+        text-align: left;
+      }
+
+      .steps-list li {
+        margin-bottom: 8px;
+        color: white;
+      }
+
+      .counter-section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        padding: 50px 15px;
+        background: #f8f9fa;
+        text-align: center;
+      }
+
+      .counter-box h2 {
+        font-size: 40px;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 5px;
+      }
+
+      .counter-box p {
+        margin: 0;
+        font-size: 15px;
+        color: #555;
+      }
+
+      /* Tablet */
+      @media (max-width: 992px) {
+        .counter-section {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 576px) {
+        .counter-section {
+          grid-template-columns: 1fr;
+        }
+
+        .counter-box h2 {
+          font-size: 32px;
+        }
+      }
+
       .image-slider {
         width: 100%;
         overflow: hidden;
-        background: #fff;
+        background: transparent; /* FIX 1 */
         padding: 20px 0;
       }
 
@@ -654,8 +771,8 @@
         display: flex;
         align-items: center;
         gap: 20px;
-        flex-wrap: nowrap;
-        animation: slide-left 20s linear infinite;
+        width: max-content; /* FIX 2 */
+        animation: slide-left 25s linear infinite;
       }
 
       .image-track img {
@@ -669,10 +786,10 @@
 
       /* Smooth scroll */
       @keyframes slide-left {
-        0% {
+        from {
           transform: translateX(0);
         }
-        100% {
+        to {
           transform: translateX(-50%);
         }
       }
@@ -700,192 +817,6 @@
           height: 100px;
         }
       }
-
-      /* Very small screens (≤360px) */
-      @media (max-width: 360px) {
-        .image-track img {
-          width: 130px;
-          height: 90px;
-        }
-      }
-      .choose-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-  margin-top: 30px;
-}
-
-/* Card styling */
-.choose-card {
-  display: flex;
-  align-items: flex-start;
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: 0.3s ease;
-  margin: 20px;
-}
-
-.choose-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-}
-
-/* Icon box */
-.icon-box {
-  width: 45px;
-  height: 45px;
-  background: #fff4d9;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-  margin-right: 15px;
-}
-
-.icon-box i {
-  color: #ff9800;
-  font-size: 20px;
-}
-
-.choose-card p {
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-/* Center the last card when it's alone */
-.choose-card:last-child {
-  grid-column: 1 / -1;
-  max-width: 600px;
-  justify-self: center;
-}
-
-@media (max-width: 768px) {
-  .choose-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .choose-card:last-child {
-    grid-column: auto;
-    max-width: 100%;
-  }
-}
-
-.choose-section-title {
-  text-align: center;
-  margin-bottom: 30px;
-  padding-top: 40px;
-}
-
-/* ----------------------------------------
-   📱 RESPONSIVE FIXES (Very Important)
-   ---------------------------------------- */
-
-/* Large tablets (≤ 992px) */
-@media (max-width: 992px) {
-  .choose-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Tablets & Small devices (≤ 768px) */
-@media (max-width: 768px) {
-  .choose-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .choose-card {
-    padding: 18px;
-  }
-}
-
-/* Small mobile screens (≤ 480px) */
-@media (max-width: 480px) {
-  .choose-card {
-    padding: 16px;
-    flex-direction: column;
-  }
-
-  .icon-box {
-    margin: 0 0 10px 0;
-  }
-
-  .choose-card p {
-    font-size: 15px;
-  }
-}
-
-.center{
-  text-align: center;
-}
-
-.counter-section {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-  padding: 50px 15px;
-  background: #f8f9fa;
-  text-align: center;
-}
-
-.counter-box h2 {
-  font-size: 40px;
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 5px;
-}
-
-.counter-box p {
-  margin: 0;
-  font-size: 15px;
-  color: #555;
-}
-
-/* Tablet */
-@media (max-width: 992px) {
-  .counter-section {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Mobile */
-@media (max-width: 576px) {
-  .counter-section {
-    grid-template-columns: 1fr;
-  }
-
-  .counter-box h2 {
-    font-size: 32px;
-  }
-}
-
-  .video-section {
-    max-width: 800px;
-    margin: 40px auto;
-    font-family: Arial, sans-serif;
-  }
-
-  .video-description {
-    margin: 15px 0;
-    color: #555;
-    line-height: 1.6;
-  }
-
-  .steps-list {
-    margin-top: 10px;
-    padding-left: 20px;
-  }
-
-  .steps-list li {
-    margin-bottom: 8px;
-    color: #333;
-  }
-</style>
-
     </style>
   </head>
   <body>
@@ -1099,7 +1030,7 @@
 
             <div class="about-image">
               <img
-                src="images/jl.png"
+                src="assets/images/about-hvac.jpg"
                 alt="About Royalton Tech HVAC"
               />
             </div>
@@ -1107,37 +1038,36 @@
         </div>
       </section>
 
+      <!--- video-section-->
+      <section class="video-section">
+        <h2>Professional Electrical Meter Installation</h2>
+
+        <video controls width="100%" poster="thumbnail.jpg">
+          <source src="images/original.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <p class="video-description">
+          This video demonstrates a professional electricity meter installation
+          process, focusing on safety, correct wiring, and secure connections to
+          ensure reliable power supply.
+        </p>
+
+        <ol class="steps-list">
+          <li>Power is switched off to ensure safety.</li>
+          <li>Incoming and outgoing cables are identified.</li>
+          <li>Cables are connected and tightened on the meter.</li>
+          <li>All connections are checked before restoring power.</li>
+        </ol>
+      </section>
+
       <section class="brand-logos-section py-5" data-aos="fade-up">
         <div class="container text-center mb-4">
-          <h2 class="fw-bold">Just jow we work</h2>
+          <h2 class="fw-bold">Brands We Work With</h2>
           <p>
             We repair, service, and install all major AC brands across Nigeria.
           </p>
         </div>
-
-<section class="video-section">
-  <h2>Professional Electrical Meter Installation</h2>
-
-  <video controls width="100%" poster="thumbnail.jpg">
-    <source src="images/original.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-  <p class="video-description">
-    This video demonstrates a professional electricity meter installation process,
-    focusing on safety, correct wiring, and secure connections to ensure reliable power supply.
-  </p>
-
-  <ol class="steps-list">
-    <li>Power is switched off to ensure safety.</li>
-    <li>Incoming and outgoing cables are identified.</li>
-    <li>Cables are connected and tightened on the meter.</li>
-    <li>All connections are checked before restoring power.</li>
-  </ol>
-</section>
- <section class="brand-logos-section py-5" data-aos="fade-up">
-        <div class="container text-center mb-4">
-          <h2 class="fw-bold">Brands We Work With</h2>
 
         <div class="brand-slider">
           <div class="brand-track">
@@ -1352,12 +1282,8 @@
 
           <div class="review-card">
             <div class="d-flex align-items-center mb-3">
-              <img
-                src="images/jhjkm.jpg"
-                class="rounded-circle me-3"
-                width="60"
-                height="60"
-              />
+              <img src="images/client1.jpgz class="rounded-circle me-3"
+              width="60" height="60" />
               <div>
                 <h6 class="mb-0">Emeka O., Surulere</h6>
                 <small class="text-muted">Homeowner</small>
@@ -1372,7 +1298,7 @@
           <div class="review-card">
             <div class="d-flex align-items-center mb-3">
               <img
-                src="images/hyh.jpg"
+                src="images/client2.jpg"
                 class="rounded-circle me-3"
                 width="60"
                 height="60"
@@ -1391,7 +1317,7 @@
           <div class="review-card">
             <div class="d-flex align-items-center mb-3">
               <img
-                src="images/hgh.jpg"
+                src="images/client3.jpg"
                 class="rounded-circle me-3"
                 width="60"
                 height="60"
@@ -1537,33 +1463,30 @@
         </div>
       </section>
 
-<div class="counter-section">
-  <div class="counter-box">
-    <h2><span class="counter" data-target="195">0</span>+</h2>
-    <p>Happy Clients</p>
-  </div>
+      <!---  clients count-->
+      <div class="counter-section">
+        <div class="counter-box">
+          <h2><span class="counter" data-target="195">0</span>+</h2>
+          <p>Happy Clients</p>
+        </div>
 
-  <div class="counter-box">
-    <h2><span class="counter" data-target="275">0</span>+</h2>
-    <p>Projects Done</p>
-  </div>
+        <div class="counter-box">
+          <h2><span class="counter" data-target="275">0</span>+</h2>
+          <p>Projects Done</p>
+        </div>
 
-  <div class="counter-box">
-    <h2><span class="counter" data-target="435">0</span>+</h2>
-    <p>AC Installed</p>
-  </div>
+        <div class="counter-box">
+          <h2><span class="counter" data-target="435">0</span>+</h2>
+          <p>AC Installed</p>
+        </div>
 
-  <div class="counter-box">
-    <h2><span class="counter" data-target="234">0</span>+</h2>
-    <p>Maintenances</p>
-  </div>
-</div>
+        <div class="counter-box">
+          <h2><span class="counter" data-target="234">0</span>+</h2>
+          <p>Maintenances</p>
+        </div>
+      </div>
 
-
-
-
-
-<!-- WORKS DONE. -->
+      <!-- WORKS DONE -->
       <section class="py-5 bg-light">
         <div class="container">
           <div class="text-center mb-5">
@@ -1574,75 +1497,20 @@
             </p>
           </div>
 
-      <div class="image-slider">
-        <div class="image-track">
-          <!-- ORIGINAL IMAGES -->
-          <img src="images/split.png" />
-          <img src="images/ggjkl.png" />
-          <img src="images/hanber.png" />
-          <img src="images/knkk.png" />
+          <div class="image-slider">
+            <div class="image-track">
+              <!-- ORIGINAL IMAGES -->
+              <img src="images/split.png" alt="" />
+              <img src="images/ggjkl.png" alt="" />
+              <img src="images/hanber.png" alt="" />
+              <img src="images/knkk.png" alt="" />
 
-          <!-- DUPLICATE for seamless loop -->
-          <img src="images/split.png" />
-          <img src="images/ggjkl.png" />
-          <img src="images/hanber.png" />
-          <img src="images/knkk.png" />
-        </div>
-      </div>
-
-
-<section id="choose-us" aria-labelledby="choose-us-title">
-        <h2 id="choose-us-title" class="choose-section-title"><span class="center">Why Choose Us</span></h2>
-
-        <div class="container choose-grid">
-          <div class="choose-card">
-            <div class="icon-box">
-              <i class="fas fa-bell"></i>
+              <!-- DUPLICATE FOR LOOP -->
+              <img src="images/split.png" alt="" />
+              <img src="images/ggjkl.png" alt="" />
+              <img src="images/hanber.png" alt="" />
+              <img src="images/knkk.png" alt="" />
             </div>
-            <p>
-              <strong>Certified HVAC Technicians:</strong> Experienced
-              professionals trained in modern HVAC systems.
-            </p>
-          </div>
-
-          <div class="choose-card">
-            <div class="icon-box">
-              <i class="fas fa-bell"></i>
-            </div>
-            <p>
-              <strong>Fast Response Time:</strong> Immediate support for
-              emergencies and breakdowns.
-            </p>
-          </div>
-
-          <div class="choose-card">
-            <div class="icon-box">
-              <i class="fas fa-bell"></i>
-            </div>
-            <p>
-              <strong>Energy-Efficient Solutions:</strong> Systems designed to
-              reduce power consumption and save costs.
-            </p>
-          </div>
-
-          <div class="choose-card">
-            <div class="icon-box">
-              <i class="fas fa-bell"></i>
-            </div>
-            <p>
-              <strong>Durable Installations:</strong> High-quality equipment
-              from trusted HVAC manufacturers.
-            </p>
-          </div>
-
-          <div class="choose-card">
-            <div class="icon-box">
-              <i class="fas fa-bell"></i>
-            </div>
-            <p>
-              <strong>24/7 Maintenance Support:</strong> We ensure your system
-              runs smoothly all year.
-            </p>
           </div>
         </div>
       </section>
@@ -1664,17 +1532,19 @@
         </div>
       </section>
 
-      <!-- Footer -->
+      <!-- FOOTER -->
       <footer class="footer">
         <div class="primary-footer py-5">
           <div class="container">
             <div class="row gy-4">
+              <!-- Footer columns (unchanged) -->
+              <!-- COLUMN 1 -->
               <div class="col-lg-3 col-md-6">
                 <div class="footer-logo mb-3">
                   <img
-                    src="assets/images/logo-placeholder.png"
-                    alt="Peeyashwebs logo"
-                    style="height: 56px"
+                    src="images/ChatGPT_Image_Dec_10__2025__05_48_43_AM-removebg-preview.png"
+                    alt="royaltontech logo"
+                    style="height: 150px"
                   />
                 </div>
                 <p>
@@ -1682,13 +1552,6 @@
                   services to keep your home or business comfortable all year
                   round.
                 </p>
-                <div class="footer-logo mt-3">
-                  <img
-                    src="assets/images/footer-logo.png"
-                    alt=""
-                    style="height: 34px"
-                  />
-                </div>
                 <ul class="list-unstyled working-hours mt-3">
                   <h5>Working <span class="text-accent">hours</span></h5>
                   <li><span>Mon - Sat</span> 8:00 to 6:00</li>
@@ -1696,76 +1559,45 @@
                 </ul>
               </div>
 
+              <!-- COLUMN 2 -->
               <div class="col-lg-3 col-md-6">
                 <h5>Quick <span class="text-accent">Links</span></h5>
                 <ul class="list-unstyled">
-                  <li>
-                    <a href="about.html"
-                      ><i class="fas fa-angle-right me-2"></i>About Us</a
-                    >
-                  </li>
-                  <li>
-                    <a href="services.html"
-                      ><i class="fas fa-angle-right me-2"></i>Services</a
-                    >
-                  </li>
-                  <li>
-                    <a href="portfolio.html"
-                      ><i class="fas fa-angle-right me-2"></i>Portfolios</a
-                    >
-                  </li>
-                  <li>
-                    <a href="blog.html"
-                      ><i class="fas fa-angle-right me-2"></i>Blog</a
-                    >
-                  </li>
-                  <li>
-                    <a href="contact.html"
-                      ><i class="fas fa-angle-right me-2"></i>Contact Us</a
-                    >
-                  </li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="portfolio.html">Portfolios</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
                 </ul>
               </div>
 
+              <!-- COLUMN 3 -->
               <div class="col-lg-3 col-md-6">
                 <h5>Our <span class="text-accent">Solutions</span></h5>
                 <ul class="list-unstyled">
-                  <li>
-                    <a href="services.html#web"
-                      ><i class="fas fa-angle-right me-2"></i>AC Installation</a
-                    >
-                  </li>
-                  <li>
-                    <a href="services.html#branding"
-                      ><i class="fas fa-angle-right me-2"></i>AC Repair</a
-                    >
-                  </li>
-                  <li>
-                    <a href="services.html#seo"
-                      ><i class="fas fa-angle-right me-2"></i>Maintenance</a
-                    >
-                  </li>
-                  <li>
-                    <a href="portfolio.html"
-                      ><i class="fas fa-angle-right me-2"></i>Portfolio</a
-                    >
-                  </li>
+                  <li><a href="services.html#web">AC Installation</a></li>
+                  <li><a href="services.html#branding">AC Repair</a></li>
+                  <li><a href="services.html#seo">Maintenance</a></li>
+                  <li><a href="portfolio.html">Portfolio</a></li>
                 </ul>
               </div>
 
+              <!-- COLUMN 4 -->
               <div class="col-lg-3 col-md-6">
                 <h5>Contact <span class="text-accent">Us</span></h5>
                 <ul class="list-unstyled small">
-                  <li><strong>Address:</strong><br />Lagos, Nigeria</li>
-                  <li class="mt-2">
-                    <strong>Phone:</strong><br /><a href="tel:+2348120001111"
-                      >+234 812 000 1111</a
-                    >
+                  <li>
+                    <strong>Address:</strong><br />
+                    92a Dolphin Estate, Ikoyi, Lagos 101222, Lagos
                   </li>
                   <li class="mt-2">
-                    <strong>Email:</strong><br /><a
-                      href="mailto:info@peeyashwebs.com"
-                      >info@peeyashwebs.com</a
+                    <strong>Phone:</strong><br />
+                    <a href="tel:+2348037157380">+234803-7157-380</a>
+                  </li>
+                  <li class="mt-2">
+                    <strong>Email:</strong><br />
+                    <a href="mailto:Royaltontech@gmail.com"
+                      >Royaltontech@gmail.com</a
                     >
                   </li>
                 </ul>
@@ -1775,14 +1607,10 @@
         </div>
 
         <div
-          class="secondary-footer py-3 border-top"
-          style="border-color: rgba(255, 255, 255, 0.03) !important"
+          class="secondary-footer py-3 border-top text-center small"
+          style="border-color: rgba(255, 255, 255, 0.08) !important"
         >
-          <div class="container text-center small">
-            <div>
-              © <span id="siteYear"></span> Peeyashwebs • All Rights Reserved
-            </div>
-          </div>
+          © <span id="siteYear"></span> ROYALTON TECH • All Rights Reserved
         </div>
       </footer>
 
@@ -1891,35 +1719,39 @@
         window.open(url, "_blank", "noopener");
       });
     </script>
-<script>
-  const counters = document.querySelectorAll(".counter");
+    <script>
+      const counters = document.querySelectorAll(".counter");
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !entry.target.classList.contains("done")) {
-        entry.target.classList.add("done");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (
+              entry.isIntersecting &&
+              !entry.target.classList.contains("done")
+            ) {
+              entry.target.classList.add("done");
 
-        let count = 0;
-        const target = +entry.target.dataset.target;
-        const increment = Math.ceil(target / 100);
+              let count = 0;
+              const target = +entry.target.dataset.target;
+              const increment = Math.ceil(target / 100);
 
-        const update = () => {
-          count += increment;
-          if (count < target) {
-            entry.target.innerText = count;
-            setTimeout(update, 20);
-          } else {
-            entry.target.innerText = target;
-          }
-        };
-        update();
-      }
-    });
-  }, { threshold: 0.6 });
+              const update = () => {
+                count += increment;
+                if (count < target) {
+                  entry.target.innerText = count;
+                  setTimeout(update, 20);
+                } else {
+                  entry.target.innerText = target;
+                }
+              };
+              update();
+            }
+          });
+        },
+        { threshold: 0.6 }
+      );
 
-  counters.forEach(counter => observer.observe(counter));
-</script>
-
-
+      counters.forEach((counter) => observer.observe(counter));
+    </script>
   </body>
 </html>
