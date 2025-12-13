@@ -822,6 +822,70 @@
 .center{
   text-align: center;
 }
+
+.counter-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 50px 15px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.counter-box h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.counter-box p {
+  margin: 0;
+  font-size: 15px;
+  color: #555;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .counter-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .counter-section {
+    grid-template-columns: 1fr;
+  }
+
+  .counter-box h2 {
+    font-size: 32px;
+  }
+}
+
+  .video-section {
+    max-width: 800px;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+  }
+
+  .video-description {
+    margin: 15px 0;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .steps-list {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+
+  .steps-list li {
+    margin-bottom: 8px;
+    color: #333;
+  }
+</style>
+
     </style>
   </head>
   <body>
@@ -1045,11 +1109,35 @@
 
       <section class="brand-logos-section py-5" data-aos="fade-up">
         <div class="container text-center mb-4">
-          <h2 class="fw-bold">Brands We Work With</h2>
+          <h2 class="fw-bold">Just jow we work</h2>
           <p>
             We repair, service, and install all major AC brands across Nigeria.
           </p>
         </div>
+
+<section class="video-section">
+  <h2>Professional Electrical Meter Installation</h2>
+
+  <video controls width="100%" poster="thumbnail.jpg">
+    <source src="images/original.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <p class="video-description">
+    This video demonstrates a professional electricity meter installation process,
+    focusing on safety, correct wiring, and secure connections to ensure reliable power supply.
+  </p>
+
+  <ol class="steps-list">
+    <li>Power is switched off to ensure safety.</li>
+    <li>Incoming and outgoing cables are identified.</li>
+    <li>Cables are connected and tightened on the meter.</li>
+    <li>All connections are checked before restoring power.</li>
+  </ol>
+</section>
+ <section class="brand-logos-section py-5" data-aos="fade-up">
+        <div class="container text-center mb-4">
+          <h2 class="fw-bold">Brands We Work With</h2>
 
         <div class="brand-slider">
           <div class="brand-track">
@@ -1449,6 +1537,32 @@
         </div>
       </section>
 
+<div class="counter-section">
+  <div class="counter-box">
+    <h2><span class="counter" data-target="195">0</span>+</h2>
+    <p>Happy Clients</p>
+  </div>
+
+  <div class="counter-box">
+    <h2><span class="counter" data-target="275">0</span>+</h2>
+    <p>Projects Done</p>
+  </div>
+
+  <div class="counter-box">
+    <h2><span class="counter" data-target="435">0</span>+</h2>
+    <p>AC Installed</p>
+  </div>
+
+  <div class="counter-box">
+    <h2><span class="counter" data-target="234">0</span>+</h2>
+    <p>Maintenances</p>
+  </div>
+</div>
+
+
+
+
+
 <!-- WORKS DONE. -->
       <section class="py-5 bg-light">
         <div class="container">
@@ -1777,5 +1891,35 @@
         window.open(url, "_blank", "noopener");
       });
     </script>
+<script>
+  const counters = document.querySelectorAll(".counter");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains("done")) {
+        entry.target.classList.add("done");
+
+        let count = 0;
+        const target = +entry.target.dataset.target;
+        const increment = Math.ceil(target / 100);
+
+        const update = () => {
+          count += increment;
+          if (count < target) {
+            entry.target.innerText = count;
+            setTimeout(update, 20);
+          } else {
+            entry.target.innerText = target;
+          }
+        };
+        update();
+      }
+    });
+  }, { threshold: 0.6 });
+
+  counters.forEach(counter => observer.observe(counter));
+</script>
+
+
   </body>
 </html>
