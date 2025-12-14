@@ -861,6 +861,38 @@
       .text-brand-orange {
         color: var(--brand-orange);
       }
+
+      /* FOOTER MOBILE ALIGNMENT FIX */
+      @media (max-width: 768px) {
+        .footer .row {
+          text-align: right;
+        }
+
+        .footer ul,
+        .footer li,
+        .footer p,
+        .footer h5 {
+          text-align: left;
+        }
+
+        .footer .footer-logo img {
+          margin-left: auto;
+          margin-right: 0;
+          display: block;
+        }
+      }
+
+      /* FIX FOOTER LOGO POSITION ON MOBILE */
+      @media (max-width: 768px) {
+        .footer .footer-logo {
+          text-align: left;
+        }
+
+        .footer .footer-logo img {
+          display: inline-block;
+          margin: 0;
+        }
+      }
     </style>
   </head>
   <body>
