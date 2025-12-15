@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Royalton Tech - About</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/9589f65be9.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      /* GENERAL RESET */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+        font-family: "Arial", sans-serif;
+      }
+
+      .top-bar {
+        background: #f8f9fb;
+        font-size: 0.95rem;
+        padding: 0.45rem 0;
+      }
+      .top-bar a {
+        color: #333;
+        text-decoration: none;
+      }
+      .navbar-brand img {
+        max-height: 64px;
+      }
+
+      /* FOOTER FIX */
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      footer,
+      .footer {
+        margin-top: auto;
+      }
+
+      /* HERO SECTION */
+      .inner-hero {
+        background-image: url("images/ac all.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 260px;
+        position: relative;
+      }
+
+      .inner-hero-overlay {
+        background: rgba(0, 0, 0, 0.7);
+        height: 100%;
+      }
+
+      /* BRAND SLIDER (corrected classes) */
+      .brand-slider {
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .brand-track {
+        display: inline-flex;
+        animation: scroll 25s linear infinite;
+      }
+
+      .brand-track img {
+        height: 70px;
+        margin-right: 45px;
+        opacity: 0.8;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+.team-section {
+  background: #121217;
+}
+
+.team-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+
+  scrollbar-width: none; 
+}
+
+.team-row::-webkit-scrollbar {
+  display: none;
+}
+
+.team-card {
+  background: #1a1a1f;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  flex: 0 0 280px; /* Perfect fit for Android */
+  transition: 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(255, 122, 45, 0.25);
+}
+
+.team-img img {
+  border-radius: 12px;
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 6px 12px rgba(255, 122, 45, 0.2);
+}
+
+@media (min-width: 768px) {
+  .team-card {
+    flex: 0 0 300px;
+  }
+}
+
+      .text-brand-white {
+        color: #f3f4f6;
+      }
+      /* FOOTER CSS */
+      .footer {
+        background: #121217;
+        color: #cfcfcf;
+        padding-top: 36px;
+      }
+
+      .text-accent {
+        color: var(--brand-orange);
+      }
+
+      .footer a {
+        color: #cfcfcf;
+        text-decoration: none;
+      }
+      .counter-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 50px 0;
+        background: #f8f9fa;
+      }
+
+      .counter-box {
+        text-align: center;
+      }
+
+      @media (max-width: 600px) {
+  .counter-section {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px 10px;
+  }
+
+  .counter-box h2 {
+    font-size: 28px;
+  }
+}
+
+      .wa-panel {
+        position: fixed;
+        right: 20px;
+        bottom: 80px;
+        z-index: 9999;
+        width: 74px;
+        transition: width 220ms ease;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      }
+      .wa-panel.open {
+        width: 320px;
+      }
+      .wa-panel .header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #25d366, #128c7e);
+        color: white;
+        cursor: pointer;
+      }
+      .wa-panel .header .title {
+        font-weight: 700;
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .wa-panel .body {
+        background: #ffffff;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        margin-top: 8px;
+        padding: 12px;
+        display: none;
+      }
+      .wa-panel.open .body {
+        display: block;
+      }
+      .quick-btn {
+        display: inline-block;
+        padding: 8px 10px;
+        margin: 6px 6px 0 0;
+        border-radius: 8px;
+        background: #f3f4f6;
+        cursor: pointer;
+        font-size: 13px;
+      }
+      .open-chat {
+        margin-top: 12px;
+        display: block;
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #25d366, #128c7e);
+        color: white;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .stat-box {
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        background: #f8f9fa;
+        transition: 0.3s;
+      }
+      .stat-box:hover {
+        background: var(--brand-blue);
+        color: #fff;
+        transform: translateY(-6px);
+      }
+      .stat-box h3 {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .offer-section {
+        background: #f8f9fa;
+        padding: 80px 0;
+      }
+      .offer-box {
+        background: #fff;
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+        transition: 0.3s;
+      }
+      .offer-box:hover {
+        transform: translateY(-5px);
+      }
+      .offer-box i {
+        font-size: 2rem;
+        color: var(--brand-orange);
+        margin-bottom: 10px;
+      }
+      .counter-box h2 {
+        font-size: 40px;
+        font-weight: 700;
+        color: #000;
+      }
+      .working-hours h5 {
+        color: #fff;
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .media-icon li {
+        display: inline-block;
+        margin-right: 12px;
+      }
+      .cta-section a {
+        background: var(--brand-orange);
+        color: #fff;
+        font-weight: 600;
+      }
+      .offer-section {
+        background: #f8f9fa;
+        padding: 80px 0;
+      }
+      .offer-box {
+        background: #fff;
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+        transition: 0.3s;
+      }
+      .offer-box:hover {
+        transform: translateY(-5px);
+      }
+      .offer-box i {
+        font-size: 2rem;
+        color: var(--brand-orange);
+        margin-bottom: 10px;
+      }
+
+      .cta-section {
+        background: var(--brand-blue);
+        color: #fff;
+        padding: 50px 0;
+        text-align: center;
+      }
+      .cta-section a {
+        background: var(--brand-orange);
+        color: #fff;
+        font-weight: 600;
+      }
+      .text-accent {
+        color: var(--brand-orange);
+      }
+
+      :root {
+        --brand-blue: #0b63d4;
+        --brand-green: #2bb673;
+        --brand-orange: #ff7a2d;
+      }
+      body {
+        font-family: Rubik, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        color: #222;
+      }
+     .top-bar {
+        background: var(--brand-blue);
+        font-size: 0.95rem;
+        padding: 0.45rem 0;
+      }
+      .top-bar a {
+        color: white;
+        text-decoration: none;
+      }
+      .navbar-brand img {
+        max-height: 64px;
+      }
+      .bg-primary-custom {
+        background: linear-gradient(90deg, var(--brand-blue), #1b6fb8);
+      }
+      .text-accent {
+        color: var(--brand-orange);
+      }
+      .navbar-brand img {
+        max-height: 64px;
+      }
+
+      .hero-about {
+        background: linear-gradient(
+            rgba(11, 99, 212, 0.8),
+            rgba(43, 182, 115, 0.7)
+          ),
+          url("images/ac\ all.jpg") center/cover no-repeat;
+        min-height: 320px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+      }
+
+      .section-title {
+        font-weight: 700;
+        color: var(--brand-blue);
+        margin-bottom: 20px;
+      }
+
+      .about-content img {
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      }
+
+      .stat-box {
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        background: #f8f9fa;
+        transition: 0.3s;
+      }
+      .stat-box:hover {
+        background: var(--brand-blue);
+        color: #fff;
+        transform: translateY(-6px);
+      }
+      .stat-box h3 {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .offer-section {
+        background: #f8f9fa;
+        padding: 80px 0;
+      }
+      .offer-box {
+        background: #fff;
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+        transition: 0.3s;
+      }
+      .offer-box:hover {
+        transform: translateY(-5px);
+      }
+      .offer-box i {
+        font-size: 2rem;
+        color: var(--brand-orange);
+        margin-bottom: 10px;
+      }
+
+      .cta-section {
+        background: var(--brand-blue);
+        color: #fff;
+        padding: 50px 0;
+        text-align: center;
+      }
+      .cta-section a {
+        background: var(--brand-orange);
+        color: #fff;
+        font-weight: 600;
+      }
+      .text-accent {
+        color: var(--brand-orange);
+      }
+
+      .counter-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 50px 0;
+        background: #f8f9fa;
+      }
+
+      .counter-box {
+        text-align: center;
+      }
+
+      .counter-box h2 {
+        font-size: 40px;
+        font-weight: 700;
+        color: #000;
+      }
+      
+
+      /* FOOTER FIX */
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      footer,
+      .footer {
+        margin-top: auto;
+      }
+
+      .counter-box p {
+        font-size: 16px;
+        color: #555;
+      }
+
+      /* FOOTER CSS */
+      .footer {
+        background: #121217;
+        color: #cfcfcf;
+        padding-top: 36px;
+      }
+
+      .text-accent {
+        color: var(--brand-orange);
+      }
+
+      .footer a {
+        color: #cfcfcf;
+        text-decoration: none;
+      }
+
+      .working-hours h5 {
+        color: #fff;
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .media-icon li {
+        display: inline-block;
+        margin-right: 12px;
+      }
+
+   .contact-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 999;
+        background: var(--brand-orange);
+        color: #fff;
+        padding: 12px 18px;
+        border-radius: 999px;
+        box-shadow: 0 10px 24px rgba(255, 122, 45, 0.18);
+        text-decoration: none;
+      }
+
+      .text-brand-orange{
+        color: var(--brand-orange);
+      }
+
+.top-bar > .container {
+  max-width: 100% !important;
+}
+
+
+</style>
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!-- TOP BAR -->
+      <div class="top-bar">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-5 col-sm-12">
+              <div class="topbar-link">
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a href="mailto:Royaltontech@gmail.com"
+                      ><i class="far fa-envelope-open"></i>
+                      Royaltontech@gmail.com</a
+                    >
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="tel:+234803-7157-380"
+                      ><i class="fas fa-mobile-alt"></i> +234 803-7157-380</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-2 d-none d-md-block text-center">
+              <!-- logo center on larger screens -->
+              <a class="navbar-brand" href="index.html">
+                <!-- replace with your logo file -->
+                <img
+                  src="images/ChatGPT_Image_Dec_10__2025__05_48_43_AM-removebg-preview.png"
+                  alt="royaltontech logo"
+                />
+              </a>
+            </div>
+
+            <div class="col-md-5 col-sm-12 text-end">
+              <div class="social-icons">
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HEADER / NAV -->
+      <header id="site-header" class="header">
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-white border-bottom"
+        >
+          <div class="container">
+            <a class="navbar-brand d-lg-none" href="index.html">
+              <img
+                src="images/ChatGPT_Image_Dec_10__2025__05_48_43_AM-removebg-preview.png"
+                alt="royaltontech"
+                style="height: 44px"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="about.html">About</a>
+                </li>
+
+                <!-- Services dropdown (collapsing arrow works on mobile) -->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="servicesDrop"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Services
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="servicesDrop">
+                    <li>
+                      <a class="dropdown-item" href="services.html#web"
+                        >AC Installation</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="services.html#branding"
+                        >AC Repair</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="services.html#seo"
+                        >Maintenance</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="services.html#seo"
+                        >Indoor Air Quality</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+
+              <div class="d-none d-lg-block ms-lg-3">
+                <a class="btn btn-outline-primary" href="contact.html"
+                  >Get a Quote</a
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Hero -->
+      <section class="hero-about">
+        <div class="container">
+          <h1 class="display-5 fw-bold">About Royalton Tech Service</h1>
+          <p class="lead text-white-50">
+            We deliver smart, reliable heating and cooling solutions.
+          </p>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section class="about-content py-5">
+        <div class="container">
+          <div class="row align-items-center gy-4">
+            <div class="col-lg-6" data-aos="fade-right">
+              <img
+                src="images/knkk.png"
+                class="img-fluid rounded shadow"
+                alt="AC technician"
+              />
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+              <h2 class="fw-bold">About Our Company</h2>
+              <p>
+                ROYALTON TECH is a leading HVAC solutions provider dedicated to
+                delivering reliable, energy-efficient, and high-performance
+                climate systems for residential, commercial, and industrial
+                spaces. With a commitment to excellence, we specialize in
+                air-conditioning installation, maintenance, repairs, ventilation
+                systems, and indoor air-quality improvement services tailored to
+                the unique needs of our clients.
+              </p>
+              <p>
+                At ROYALTON TECH, we believe comfort should never be
+                compromised. Our team of certified technicians combines advanced
+                technology, modern diagnostics, and industry-best practices to
+                ensure every project meets the highest standards of safety,
+                efficiency, and durability. Whether we’re cooling a home,
+                optimizing airflow in an office, or upgrading a complex
+                commercial facility, we approach every task with precision and
+                professionalism. Driven by integrity, innovation, and
+                outstanding customer care, ROYALTON TECH continues to set the
+                benchmark for HVAC reliability in Nigeria. We don’t just install
+                systems — we build long-lasting comfort, trust, and value. Your
+                comfort. Our expertise. Always reliable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHO WE ARE -->
+      <section class="about-content py-5">
+        <div class="container">
+          <div class="row align-items-center gy-4 flex-lg-row-reverse">
+            <div class="col-lg-6" data-aos="fade-left">
+              <img
+                src="images/kkkl.png"
+                class="img-fluid rounded shadow"
+                alt="Technician working"
+              />
+            </div>
+            <div class="col-lg-6" data-aos="fade-right">
+              <h2 class="fw-bold">Who We Are</h2>
+              <p>
+                ROYALTON TECH is a trusted HVAC company in Lagos, Nigeria,
+                providing expert heating, ventilation, and air-conditioning
+                solutions for homes and businesses. Our mission is to keep your
+                indoor spaces comfortable, energy-efficient, and safe all year
+                round. From AC installation and repair to duct cleaning,
+                maintenance, and indoor air-quality improvement, we deliver
+                dependable and affordable HVAC services tailored to your exact
+                needs
+              </p>
+              <p>
+                At ROYALTON TECH, we combine advanced technology, skilled
+                technicians, and exceptional customer care to ensure every
+                project meets the highest standards of performance and
+                reliability. Whether it’s a home, office, or commercial building
+                — we keep your air clean, cool, and consistently comfortable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BRANDS (Corrected classes) -->
+      <section class="brand-logos-section py-5" data-aos="fade-up">
+        <div class="container text-center mb-4">
+          <h2 class="fw-bold">Brands We Work With</h2>
+          <p>
+            We repair, service, and install all major AC brands across Nigeria.
+          </p>
+        </div>
+
+        <div class="brand-slider">
+          <div class="brand-track">
+            <img src="images/hicense.png" alt="hisense company" />
+            <img src="images/veri.png" alt="verits plc" />
+            <img src="images/chp.png" alt="chip company" />
+            <img src="images/rae-removebg-preview.png" alt="raenest inc" />
+            <img src="images/lgg-removebg-preview.png" alt="LG company" />
+            <img src="images/helium.png" alt="Brand 6" />
+            <img src="images/hg.png" alt="fidelity plc" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Happy clients -->
+      <div class="counter-section">
+        <div class="counter-box">
+          <h2 class="counter" data-target="195">195</h2>
+          <p>Happy Clients</p>
+        </div>
+
+        <div class="counter-box">
+          <h2 class="counter" data-target="275">275</h2>
+          <p>Projects Done</p>
+        </div>
+
+        <div class="counter-box">
+          <h2 class="counter" data-target="435">435</h2>
+          <p>AC Installed</p>
+        </div>
+
+        <div class="counter-box">
+          <h2 class="counter" data-target="234">234</h2>
+          <p>Maintenances</p>
+        </div>
+      </div>
+
+      <div class="team-section py-5">
+        <h2 class="text-center mb-5">
+          <span class="text-brand-white">Meet Our </span
+          ><span class="text-brand-orange">Expert Team</span>
+        </h2>
+
+        <div class="team-row">
+          <div class="team-card p-4">
+            <div class="team-img mb-3">
+              <img src="images/team1.jpg" alt="Team Member" />
+            </div>
+            <h5 class="text-white text-center">Engr. Michael Johnson</h5>
+            <p class="text-brand-orange text-center">Senior HVAC Technician</p>
+            <p class="text-secondary text-center mt-2">
+              10+ years experience in commercial and residential AC engineering.
+            </p>
+          </div>
+
+          <div class="team-card p-4">
+            <div class="team-img mb-3">
+              <img src="images/team2.jpg" alt="Team Member" />
+            </div>
+            <h5 class="text-white text-center">Sarah Williams</h5>
+            <p class="text-brand-orange text-center">Operations Manager</p>
+            <p class="text-secondary text-center mt-2">
+              Ensuring seamless workflow and exceptional customer service.
+            </p>
+          </div>
+
+          <div class="team-card p-4">
+            <div class="team-img mb-3">
+              <img src="images/team3.jpg" alt="Team Member" />
+            </div>
+            <h5 class="text-white text-center">Sarah Williams</h5>
+            <p class="text-brand-orange text-center">Operations Manager</p>
+            <p class="text-secondary text-center mt-2">
+              Ensuring seamless workflow and exceptional customer service.
+            </p>
+          </div>
+
+          <div class="team-card p-4">
+            <div class="team-img mb-3">
+              <img src="images/team4.jpg" alt="Team Member" />
+            </div>
+            <h5 class="text-white text-center">Samuel Adeyemi</h5>
+            <p class="text-brand-orange text-center">Cooling Systems Expert</p>
+            <p class="text-secondary text-center mt-2">
+              Specialized in AC installation, diagnostics, and system
+              optimization.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPACING FIX -->
+      <div style="height: 60px"></div>
+    </div>
+    <!-- END page-wrapper -->
+
+    <!-- What We Offer -->
+    <section class="offer-section">
+      <div class="container">
+        <h2 class="text-center mb-5 fw-bold">What We Offer</h2>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="offer-box text-center">
+              <i class="fas fa-tools"></i>
+              <h5>AC Installation</h5>
+              <p>
+                Our certified technicians install split, ducted, and central air
+                conditioning systems.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="offer-box text-center">
+              <i class="fas fa-cogs"></i>
+              <h5>AC Repairs</h5>
+              <p>
+                We diagnose and fix all types of AC issues — from cooling
+                inefficiency to system breakdowns.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="offer-box text-center">
+              <i class="fas fa-wind"></i>
+              <h5>Indoor Air Quality Improvement</h5>
+              <p>
+                We offer air filtration, duct cleaning, and ventilation upgrades
+                to keep your indoor air clean and fresh.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="offer-box text-center">
+              <i class="fas fa-tools"></i>
+              <h5>Maintenance</h5>
+              <p>
+                Regular maintenance keeps your cooling system efficient and
+                extends its lifespan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wa-panel" id="waPanel" aria-live="polite">
+      <div
+        class="header"
+        id="waHeader"
+        role="button"
+        aria-expanded="false"
+        tabindex="0"
+      >
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M20.52 3.48A11.95 11.95 0 0 0 12 0C5.373 0 .001 5.373.001 12c0 2.11.553 4.163 1.6 5.98L0 24l6.377-1.665A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12 0-3.2-1.19-6.193-3.48-8.52Z"
+            fill="#fff"
+          />
+          <path
+            d="M17.24 14.98c-.29-.14-1.7-.84-1.96-.94-.26-.11-.44-.16-.62.15-.18.3-.7.94-.86 1.13-.16.19-.33.22-.61.07-.28-.15-1.19-.44-2.27-1.4-.84-.74-1.4-1.66-1.57-1.94-.17-.29-.02-.44.13-.59.13-.13.29-.33.43-.5.14-.17.19-.28.29-.46.1-.18.05-.34-.02-.48-.07-.14-.62-1.5-.85-2.05-.22-.54-.45-.47-.62-.48-.16-.01-.35-.01-.53-.01-.18 0-.48.07-.73.34-.25.27-.96.93-.96 2.27 0 1.34.98 2.64 1.12 2.82.14.18 1.94 2.9 4.7 4.06 3.05 1.35 3.05.9 3.6.83.55-.07 1.7-.69 1.94-1.36.25-.67.25-1.24.17-1.36-.08-.12-.29-.18-.58-.32Z"
+            fill="#128C7E"
+          />
+        </svg>
+        <div class="title">Chat with us</div>
+      </div>
+
+      <div class="body" id="waBody">
+        <div>Hi! Choose a quick topic:</div>
+        <div>
+          <button class="quick-btn" data-msg="Hello, I'd like pricing info.">
+            Pricing
+          </button>
+          <button class="quick-btn" data-msg="I need support with my order.">
+            Support
+          </button>
+          <button class="quick-btn" data-msg="I want to schedule a demo.">
+            Demo
+          </button>
+        </div>
+
+        <button class="open-chat" id="waOpenChat">Open in WhatsApp</button>
+      </div>
+    </div>
+
+    <script>
+      const WA_PANEL = document.getElementById("waPanel");
+      const HEADER = document.getElementById("waHeader");
+      const BODY = document.getElementById("waBody");
+      const OPEN_CHAT = document.getElementById("waOpenChat");
+      const WA_NUMBER = "2348037157380";
+      const DEFAULT_TEXT = "Hello, I found you on the website and need help.";
+
+      let chosenText = DEFAULT_TEXT;
+
+      HEADER.addEventListener("click", togglePanel);
+      HEADER.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") togglePanel();
+      });
+
+      function togglePanel() {
+        const open = WA_PANEL.classList.toggle("open");
+        HEADER.setAttribute("aria-expanded", open ? "true" : "false");
+      }
+
+      document.querySelectorAll(".quick-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          chosenText = btn.getAttribute("data-msg") || DEFAULT_TEXT;
+          // open right away or let user confirm
+          const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
+            chosenText
+          )}`;
+          window.open(url, "_blank", "noopener");
+        });
+      });
+
+      OPEN_CHAT.addEventListener("click", () => {
+        const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
+          chosenText
+        )}`;
+        window.open(url, "_blank", "noopener");
+      });
+    </script>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <h3>Schedule An Appointment For Any Of Our Services</h3>
+        <a href="contact.html" class="btn mt-3">Contact Us Now</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="primary-footer py-5">
+        <div class="container">
+          <div class="row gy-4">
+            <!-- Footer columns (unchanged) -->
+            <!-- COLUMN 1 -->
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-logo mb-3">
+                <img
+                  src="images/ChatGPT_Image_Dec_10__2025__05_48_43_AM-removebg-preview.png"
+                  alt="royaltontech logo"
+                  style="height: 150px"
+                />
+              </div>
+              <p>
+                Providing reliable HVAC installation, repair, and maintenance
+                services to keep your home or business comfortable all year
+                round.
+              </p>
+              <ul class="list-unstyled working-hours mt-3">
+                <h5>Working <span class="text-accent">hours</span></h5>
+                <li><span>Mon - Sat</span> 8:00 to 6:00</li>
+                <li><span>Sunday</span> Closed</li>
+              </ul>
+            </div>
+
+            <!-- COLUMN 2 -->
+            <div class="col-lg-3 col-md-6">
+              <h5>Quick <span class="text-accent">Links</span></h5>
+              <ul class="list-unstyled">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolios</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <!-- COLUMN 3 -->
+            <div class="col-lg-3 col-md-6">
+              <h5>Our <span class="text-accent">Solutions</span></h5>
+              <ul class="list-unstyled">
+                <li><a href="services.html#web">AC Installation</a></li>
+                <li><a href="services.html#branding">AC Repair</a></li>
+                <li><a href="services.html#seo">Maintenance</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+              </ul>
+            </div>
+
+            <!-- COLUMN 4 -->
+            <div class="col-lg-3 col-md-6">
+              <h5>Contact <span class="text-accent">Us</span></h5>
+              <ul class="list-unstyled small">
+                <li>
+                  <strong>Address:</strong><br />
+                  92a Dolphin Estate, Ikoyi, Lagos 101222, Lagos
+                </li>
+                <li class="mt-2">
+                  <strong>Phone:</strong><br />
+                  <a href="tel:+2348037157380">+234803-7157-380</a>
+                </li>
+                <li class="mt-2">
+                  <strong>Email:</strong><br />
+                  <a href="mailto:Royaltontech@gmail.com"
+                    >Royaltontech@gmail.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="secondary-footer py-3 border-top text-center small"
+        style="border-color: rgba(255, 255, 255, 0.08) !important"
+      >
+        © <span id="siteYear"></span> ROYALTON TECH • All Rights Reserved
+      </div>
+    </footer>
+
+  <a class="contact-btn" href="contact.html">Get a Quote</a>
+    </div>
+
+
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      document.getElementById("siteYear").textContent =
+        new Date().getFullYear();
+    </script>
+    <script>
+      const counters = document.querySelectorAll(".counter");
+
+      counters.forEach((counter) => {
+        counter.innerText = "0";
+
+        const updateCounter = () => {
+          const target = +counter.getAttribute("data-target");
+          const current = +counter.innerText;
+          const speed = 100; // lower = faster
+
+          const increment = target / speed;
+
+          if (current < target) {
+            counter.innerText = Math.ceil(current + increment);
+            setTimeout(updateCounter, 20);
+          } else {
+            counter.innerText = target + "+";
+          }
+        };
+
+        updateCounter();
+      });
+    </script>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
