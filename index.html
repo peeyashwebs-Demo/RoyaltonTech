@@ -14,10 +14,7 @@
     />
 
     <!-- Fav icon (optional) -->
-    <link
-      rel="shortcut icon"
-      href="images/ChatGPT_Image_Dec_10__2025__05_48_43_AM-removebg-preview.png"
-    />
+    <link rel="shortcut icon" href="images/logo (2).png" />
 
     <!-- CSS: Bootstrap 5 + FontAwesome + AOS -->
     <link
@@ -566,59 +563,84 @@
         }
       }
       .brand-slider {
-        overflow: hidden;
-        position: relative;
-        padding: 20px 0;
-        width: 100%;
-      }
+  overflow: hidden;
+  position: relative;
+  padding: 30px 0;
+  width: 100%;
+}
 
-      .brand-track {
-        display: flex;
-        align-items: center;
-        gap: 35px;
-        animation: slideLogos 22s linear infinite;
-      }
+.brand-track {
+  display: flex;
+  gap: 35px;
+  animation: slideLogos 22s linear infinite;
+}
 
-      .brand-logo {
-        flex-shrink: 0;
-        width: 120px;
-        height: auto;
-        filter: grayscale(100%);
-        opacity: 0.7;
-        transition: 0.3s ease-in-out;
-      }
+.brand-item {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 140px;
+  text-align: center;
+}
 
-      .brand-logo:hover {
-        filter: grayscale(0%);
-        opacity: 1;
-      }
+.brand-logo {
+  width: 120px;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: 0.3s ease-in-out;
+}
 
-      @keyframes slideLogos {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-50%);
-        }
-      }
+.brand-item:hover .brand-logo {
+  filter: grayscale(0%);
+  opacity: 1;
+}
 
-      /* 🔥 MOBILE FIXES */
-      @media (max-width: 768px) {
-        .brand-logo {
-          width: 85px;
-          opacity: 0.8;
-        }
+.brand-name {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #777;
+  white-space: nowrap;
+}
 
-        .brand-track {
-          gap: 22px;
-        }
-      }
+/* ANIMATION */
+@keyframes slideLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
-      @media (max-width: 480px) {
-        .brand-logo {
-          width: 70px;
-        }
-      }
+/* 🔥 MOBILE FIXES */
+@media (max-width: 768px) {
+  .brand-logo {
+    width: 85px;
+  }
+
+  .brand-item {
+    min-width: 110px;
+  }
+
+  .brand-name {
+    font-size: 12px;
+  }
+
+  .brand-track {
+    gap: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-logo {
+    width: 70px;
+  }
+
+  .brand-name {
+    font-size: 11px;
+  }
+}
 
       .review-slider {
         overflow: hidden;
@@ -932,10 +954,7 @@
               <!-- logo center on larger screens -->
               <a class="navbar-brand" href="index.html">
                 <!-- replace with your logo file -->
-                <img
-                  src="images/ChatGPT_Image_Dec_10__2025__05_48_43_AM-removebg-preview.png"
-                  alt="royalton tech logo"
-                />
+                <img src="images/logo (2).png" alt="royalton tech logo" />
               </a>
             </div>
 
@@ -977,9 +996,9 @@
           <div class="container">
             <a class="navbar-brand d-lg-none" href="index.html">
               <img
-                src="images/ChatGPT_Image_Dec_10__2025__05_48_43_AM-removebg-preview.png"
+                src="images/logo (2).png"
                 alt="royaltontech"
-                style="height: 44px"
+                style="height: 200px"
               />
             </a>
             <button
@@ -1152,43 +1171,48 @@
         </div>
 
         <div class="brand-slider">
-          <div class="brand-track">
-            <!-- Original logos -->
-            <img src="images/hicense.png" class="brand-logo" alt="Hisense" />
-            <img src="images/veri.png" class="brand-logo" alt="Veritas" />
-            <img src="images/chp.png" class="brand-logo" alt="CHP" />
-            <img
-              src="images/rae-removebg-preview.png"
-              class="brand-logo"
-              alt="Raenest"
-            />
-            <img
-              src="images/lgg-removebg-preview.png"
-              class="brand-logo"
-              alt="LG"
-            />
-            <img src="images/helium.png" class="brand-logo" alt="Helium" />
-            <img src="images/hg.png" class="brand-logo" alt="Fidelity" />
+  <div class="brand-track">
 
-            <!-- Duplicate logos for seamless infinite scrolling -->
-            <img src="images/hicense.png" class="brand-logo" alt="Hisense" />
-            <img src="images/veri.png" class="brand-logo" alt="Veritas" />
-            <img src="images/chp.png" class="brand-logo" alt="CHP" />
-            <img
-              src="images/rae-removebg-preview.png"
-              class="brand-logo"
-              alt="Raenest"
-            />
-            <img
-              src="images/lgg-removebg-preview.png"
-              class="brand-logo"
-              alt="LG"
-            />
-            <img src="images/helium.png" class="brand-logo" alt="Helium" />
-            <img src="images/hg.png" class="brand-logo" alt="Fidelity" />
-          </div>
-        </div>
-      </section>
+    <!-- BRAND ITEM -->
+    <div class="brand-item">
+      <img src="images/lgg-removebg-preview.png" alt="LG" class="brand-logo" />
+      <span class="brand-name">LG</span>
+    </div>
+
+    <div class="brand-item">
+      <img src="images/klitg.png" alt="Total Energies" class="brand-logo" />
+      <span class="brand-name">Total Energies</span>
+    </div>
+
+    <div class="brand-item">
+      <img src="images/ChatGPT_Image_Dec_15__2025__04_14_25_PM-removebg-preview.png" alt="Gainville ltd" class="brand-logo" />
+      <span class="brand-name">Gainville ltd</span>
+    </div>
+
+    <!-- 🔁 DUPLICATE FOR SMOOTH LOOP -->
+    <div class="brand-item">
+      <img src="images/lgg-removebg-preview.png" alt="LG" class="brand-logo" />
+      <span class="brand-name">LG</span>
+    </div>
+
+    <div class="brand-item">
+      <img src="images/hisence.png" alt="Hisense" class="brand-logo" />
+      <span class="brand-name">Hisense</span>
+    </div>
+
+    <div class="brand-item">
+      <img src="images/veri.png" alt="Veritas Capital" class="brand-logo" />
+      <span class="brand-name">Veritas Capital</span>
+    </div>
+
+    <div class="brand-item">
+      <img src="images/hg.png" alt="Fidelity Bank" class="brand-logo" />
+      <span class="brand-name">Fidelity Bank</span>
+    </div>
+
+  </div>
+</div>
+
 
       <!-- SERVICES / SAMPLES (3-column grid, 5 items) -->
       <section class="py-5">
