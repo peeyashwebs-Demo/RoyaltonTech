@@ -913,65 +913,85 @@
         }
       }
 
-      .review-slider {
-        overflow: hidden;
-        position: relative;
-        width: 100%;
-      }
+      /* ==============================
+   REVIEWS – DRAGGABLE SLIDER
+   ============================== */
+.review-slider {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
 
-      .review-track {
-        display: flex;
-        align-items: stretch;
-        gap: 25px;
-        flex-wrap: nowrap;
-        animation: slideReviews 10s linear infinite;
-      }
+.review-slider::-webkit-scrollbar {
+  display: none;
+}
 
-      .review-card {
-        flex-shrink: 0;
-        width: 350px;
-        background: #fff;
-        border-radius: 14px;
-        padding: 25px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-        transition: 0.88s ease;
-      }
+/* Track */
+.review-track {
+  display: flex;
+  gap: 25px;
+  width: max-content;
+  padding: 10px 0;
+  animation: reviewSlide 20s linear infinite;
+}
 
-      .review-card:hover {
-        transform: translateY(-4px);
-      }
+/* Pause animation on interaction */
+.review-slider:hover .review-track,
+.review-slider:active .review-track {
+  animation-play-state: paused;
+}
 
-      /* Smooth infinite scrolling */
-      @keyframes slideReviews {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-50%);
-        }
-      }
+/* Cards */
+.review-card {
+  flex-shrink: 0;
+  width: 350px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.35s ease;
+}
 
-      /* Tablet */
-      @media (max-width: 992px) {
-        .review-card {
-          width: 300px;
-        }
-      }
+.review-card:hover {
+  transform: translateY(-4px);
+}
 
-      /* Mobile */
-      @media (max-width: 768px) {
-        .review-card {
-          width: 250px;
-          padding: 20px;
-        }
-      }
+/* Auto scroll */
+@keyframes reviewSlide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 
-      /* Small phones */
-      @media (max-width: 480px) {
-        .review-card {
-          width: 220px;
-        }
-      }
+/* Tablet */
+@media (max-width: 992px) {
+  .review-card {
+    width: 300px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .review-card {
+    width: 260px;
+    padding: 20px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .review-card {
+    width: 220px;
+  }
+}
+
       .counter-section {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
