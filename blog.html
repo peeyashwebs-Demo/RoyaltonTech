@@ -57,18 +57,44 @@
         color: white;
         text-decoration: none;
       }
-      .navbar-brand img {
-        max-height: 64px;
-      }
+
+      /* ==============================
+   NAVBAR
+   ============================== */
       .bg-primary-custom {
         background: linear-gradient(90deg, var(--brand-blue), #1b6fb8);
       }
-      .text-accent {
-        color: var(--brand-orange);
+
+      .navbar {
+        position: relative;
+        z-index: 3000;
+      }
+
+      .navbar-nav .nav-link {
+        font-size: 1rem;
+        padding: 8px 14px;
+      }
+
+      .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        z-index: 3001;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+
+      /* LOGO – SINGLE SOURCE */
+      .navbar-brand {
+        display: flex;
+        align-items: center;
       }
       .navbar-brand img {
-        max-height: 64px;
+        height: 70px;
+        width: auto;
       }
+
       .bg-primary-custom {
         background: linear-gradient(90deg, var(--brand-blue), #1b6fb8);
       }
