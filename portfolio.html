@@ -204,6 +204,28 @@
       .text-brand-orange {
         color: var(--brand-orange);
       }
+
+      /* ==============================
+   RESPONSIVE
+   ============================== */
+      @media (max-width: 768px) {
+        .hero-home {
+          padding: 40px 20px;
+        }
+        .navbar-brand img {
+          height: 60px;
+        }
+        .about-wrapper {
+          flex-direction: column;
+          text-align: center;
+        }
+        .counter-section {
+          grid-template-columns: 1fr;
+        }
+        .footer {
+          text-align: center;
+        }
+      }
       .contact-btn {
         position: fixed;
         right: 20px;
@@ -408,7 +430,7 @@
           <div class="container">
             <a class="navbar-brand d-lg-none" href="index.html">
               <img
-                src="images/ChatGPT_Image_Dec_10__2025__05_48_43_AM-removebg-preview.png"
+                src="images/logs.png"
                 alt="royaltontech"
                 style="height: 44px"
               />
