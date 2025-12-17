@@ -130,14 +130,63 @@
         cursor: pointer;
       }
 
+      /* ==============================
+   FOOTER
+   ============================== */
       .footer {
         background: #121217;
         color: #cfcfcf;
         padding-top: 36px;
       }
+
       .footer a {
         color: #cfcfcf;
         text-decoration: none;
+      }
+
+      .footer-logo img {
+        max-width: 260px;
+      }
+
+      .text-accent,
+      .text-brand-orange {
+        color: var(--brand-orange);
+      }
+
+      /* ==============================
+   FLOATING BUTTONS
+   ============================== */
+      .contact-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 999;
+        background: var(--brand-orange);
+        color: #fff;
+        padding: 12px 18px;
+        border-radius: 999px;
+      }
+
+      /* ==============================
+   RESPONSIVE
+   ============================== */
+      @media (max-width: 768px) {
+        .hero-home {
+          padding: 40px 20px;
+        }
+        .navbar-brand img {
+          height: 60px;
+        }
+        .about-wrapper {
+          flex-direction: column;
+          text-align: center;
+        }
+        .counter-section {
+          grid-template-columns: 1fr;
+        }
+        .footer {
+          text-align: center;
+        }
       }
       .contact-section {
         background: #f6f8fb;
@@ -212,10 +261,7 @@
             </div>
             <div class="col-md-2 d-none d-md-block text-center">
               <a class="navbar-brand" href="index.html">
-                <img
-                  src="images/ChatGPT_Image_Dec_10__2025__05_48_43_AM-removebg-preview.png"
-                  alt="royaltontech"
-                />
+                <img src="images/logs (1).png" alt="royaltontech" />
               </a>
             </div>
             <div class="col-md-5 text-end">
@@ -528,31 +574,22 @@
       >
       </iframe>
 
-      <!-- Footer -->
+      <!-- FOOTER -->
       <footer class="footer">
         <div class="primary-footer py-5">
           <div class="container">
             <div class="row gy-4">
+              <!-- Footer columns (unchanged) -->
+              <!-- COLUMN 1 -->
               <div class="col-lg-3 col-md-6">
                 <div class="footer-logo mb-3">
-                  <img
-                    src="images/ChatGPT_Image_Dec_10__2025__05_48_43_AM-removebg-preview.png"
-                    alt="royalton tech logo"
-                    style="height: 150px"
-                  />
+                  <img src="images/logs.png" alt="royaltontech logo" />
                 </div>
                 <p>
                   Providing reliable HVAC installation, repair, and maintenance
                   services to keep your home or business comfortable all year
                   round.
                 </p>
-                <div class="footer-logo mt-3">
-                  <img
-                    src="assets/images/footer-logo.png"
-                    alt=""
-                    style="height: 34px"
-                  />
-                </div>
                 <ul class="list-unstyled working-hours mt-3">
                   <h5>Working <span class="text-accent">hours</span></h5>
                   <li><span>Mon - Sat</span> 8:00 to 6:00</li>
@@ -560,78 +597,44 @@
                 </ul>
               </div>
 
+              <!-- COLUMN 2 -->
               <div class="col-lg-3 col-md-6">
                 <h5>Quick <span class="text-accent">Links</span></h5>
                 <ul class="list-unstyled">
-                  <li>
-                    <a href="about.html"
-                      ><i class="fas fa-angle-right me-2"></i>About Us</a
-                    >
-                  </li>
-                  <li>
-                    <a href="services.html"
-                      ><i class="fas fa-angle-right me-2"></i>Services</a
-                    >
-                  </li>
-                  <li>
-                    <a href="portfolio.html"
-                      ><i class="fas fa-angle-right me-2"></i>Portfolios</a
-                    >
-                  </li>
-                  <li>
-                    <a href="blog.html"
-                      ><i class="fas fa-angle-right me-2"></i>Blog</a
-                    >
-                  </li>
-                  <li>
-                    <a href="contact.html"
-                      ><i class="fas fa-angle-right me-2"></i>Contact Us</a
-                    >
-                  </li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="portfolio.html">Portfolios</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
                 </ul>
               </div>
 
+              <!-- COLUMN 3 -->
               <div class="col-lg-3 col-md-6">
                 <h5>Our <span class="text-accent">Solutions</span></h5>
                 <ul class="list-unstyled">
-                  <li>
-                    <a href="services.html#web"
-                      ><i class="fas fa-angle-right me-2"></i>AC Installation</a
-                    >
-                  </li>
-                  <li>
-                    <a href="services.html#branding"
-                      ><i class="fas fa-angle-right me-2"></i>AC Repair</a
-                    >
-                  </li>
-                  <li>
-                    <a href="services.html#seo"
-                      ><i class="fas fa-angle-right me-2"></i>Maintenance</a
-                    >
-                  </li>
-                  <li>
-                    <a href="portfolio.html"
-                      ><i class="fas fa-angle-right me-2"></i>Portfolio</a
-                    >
-                  </li>
+                  <li><a href="services.html#web">AC Installation</a></li>
+                  <li><a href="services.html#branding">AC Repair</a></li>
+                  <li><a href="services.html#seo">Maintenance</a></li>
+                  <li><a href="portfolio.html">Portfolio</a></li>
                 </ul>
               </div>
 
+              <!-- COLUMN 4 -->
               <div class="col-lg-3 col-md-6">
                 <h5>Contact <span class="text-accent">Us</span></h5>
                 <ul class="list-unstyled small">
                   <li>
-                    <strong>Address:</strong><br />92a Dolphin Estate, Ikoyi,
-                    Lagos 101222, Lagos
+                    <strong>Address:</strong><br />
+                    92a Dolphin Estate, Ikoyi, Lagos 101222, Lagos
                   </li>
                   <li class="mt-2">
-                    <strong>Phone:</strong><br /><a href="tel:+2348037157380"
-                      >+234 803 715 7380</a
-                    >
+                    <strong>Phone:</strong><br />
+                    <a href="tel:+2348037157380">+234803-7157-380</a>
                   </li>
                   <li class="mt-2">
-                    <strong>Email:</strong><br /><a
-                      href="mailto:Royaltontech@gmail.com"
+                    <strong>Email:</strong><br />
+                    <a href="mailto:Royaltontech@gmail.com"
                       >Royaltontech@gmail.com</a
                     >
                   </li>
@@ -642,14 +645,10 @@
         </div>
 
         <div
-          class="secondary-footer py-3 border-top"
-          style="border-color: rgba(255, 255, 255, 0.03) !important"
+          class="secondary-footer py-3 border-top text-center small"
+          style="border-color: rgba(255, 255, 255, 0.08) !important"
         >
-          <div class="container text-center small">
-            <div>
-              © <span id="siteYear"></span> ROYALTON TECH • All Rights Reserved
-            </div>
-          </div>
+          © <span id="siteYear"></span> ROYALTON TECH • All Rights Reserved
         </div>
       </footer>
 
