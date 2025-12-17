@@ -402,6 +402,146 @@
         }
       }
 
+ /* ==============================
+   WORK / BRAND SLIDER (DRAGGABLE)
+   ============================== */
+      .brand-section {
+        padding: 70px 0;
+        background: #f8f9fa;
+        overflow: hidden;
+      }
+
+      /* Scroll container */
+      .brand-slider {
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        cursor: grab;
+      }
+
+      .brand-slider::-webkit-scrollbar {
+        display: none; /* hide scrollbar */
+      }
+
+      /* Track */
+      .brand-track {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        width: max-content;
+        animation: brandSlide 15s linear infinite;
+      }
+
+      /* Pause animation when user interacts */
+      .brand-slider:hover .brand-track,
+      .brand-slider:active .brand-track {
+        animation-play-state: paused;
+      }
+
+      .brand-track img {
+        height: 70px;
+        flex-shrink: 0;
+        filter: grayscale(100%);
+        opacity: 0.8;
+        transition: 0.3s ease;
+      }
+
+      .brand-track img:hover {
+        filter: grayscale(0);
+        opacity: 1;
+      }
+
+      /* Auto slide */
+      @keyframes brandSlide {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* ==============================
+   WORKS DONE – DRAGGABLE SLIDER
+   ============================== */
+      .image-slider {
+        position: relative;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        cursor: grab;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+      }
+
+      .image-slider::-webkit-scrollbar {
+        display: none; /* Hide scrollbar */
+      }
+
+      /* Track */
+      .image-track {
+        display: flex;
+        gap: 24px;
+        width: max-content;
+        padding: 10px 0;
+        animation: workSlide 22s linear infinite;
+      }
+
+      /* Pause animation when user interacts */
+      .image-slider:hover .image-track,
+      .image-slider:active .image-track {
+        animation-play-state: paused;
+      }
+
+      /* Images */
+      .image-track img {
+        flex-shrink: 0;
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 14px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        transition: transform 0.35s ease;
+      }
+
+      .image-track img:hover {
+        transform: scale(1.04);
+      }
+
+      /* Auto sliding */
+      @keyframes workSlide {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* Tablets */
+      @media (max-width: 992px) {
+        .image-track img {
+          width: 260px;
+          height: 170px;
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 768px) {
+        .image-track img {
+          width: 220px;
+          height: 150px;
+        }
+      }
+
+      /* Small phones */
+      @media (max-width: 480px) {
+        .image-track img {
+          width: 180px;
+          height: 120px;
+        }
+      }
+
       /* ==============================
    BRANDS / LOGO SLIDER
    ============================== */
@@ -1804,7 +1944,39 @@
         { threshold: 0.6 }
       );
 
-      counters.forEach((counter) => observer.observe(counter));
+      counters.forEach((counter) => observer.observe(counter));  
     </script>
+    <script>
+  const slider = document.querySelector(".image-slider");
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  slider.addEventListener("mousedown", (e) => {
+    isDown = true;
+    slider.style.cursor = "grabbing";
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener("mouseleave", () => {
+    isDown = false;
+    slider.style.cursor = "grab";
+  });
+
+  slider.addEventListener("mouseup", () => {
+    isDown = false;
+    slider.style.cursor = "grab";
+  });
+
+  slider.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2;
+    slider.scrollLeft = scrollLeft - walk;
+  });
+</script>
+
   </body>
 </html>
