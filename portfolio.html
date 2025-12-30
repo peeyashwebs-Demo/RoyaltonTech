@@ -217,6 +217,10 @@
       .text-brand-orange {
         color: var(--brand-orange);
       }
+
+      /* ==============================
+   FLOATING BUTTONS
+   ============================== */
       .contact-btn {
         position: fixed;
         right: 20px;
@@ -226,8 +230,28 @@
         color: #fff;
         padding: 12px 18px;
         border-radius: 999px;
-        box-shadow: 0 10px 24px rgba(255, 122, 45, 0.18);
-        text-decoration: none;
+      }
+
+      /* ==============================
+   RESPONSIVE
+   ============================== */
+      @media (max-width: 768px) {
+        .hero-home {
+          padding: 40px 20px;
+        }
+        .navbar-brand img {
+          height: 60px;
+        }
+        .about-wrapper {
+          flex-direction: column;
+          text-align: center;
+        }
+        .counter-section {
+          grid-template-columns: 1fr;
+        }
+        .footer {
+          text-align: center;
+        }
       }
 
       .hero-home {
@@ -347,9 +371,6 @@
       .navbar,
       .header {
         overflow: visible !important;
-      }
-      .footer {
-        text-align: left;
       }
     </style>
   </head>
