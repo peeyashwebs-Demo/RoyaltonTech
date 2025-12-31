@@ -4,6 +4,7 @@
     { "source": "/about", "destination": "/about.html" },
     { "source": "/portfolio", "destination": "/portfolio.html" },
     { "source": "/services", "destination": "/services.html" },
+    { "source": "/blog", "destination": "/blog.html" },
     { "source": "/contact", "destination": "/contact.html" }
   ],
   "redirects": [
@@ -11,6 +12,7 @@
     { "source": "/about.html", "destination": "/about", "permanent": true },
     { "source": "/portfolio.html", "destination": "/portfolio", "permanent": true },
     { "source": "/services.html", "destination": "/services", "permanent": true },
+    { "source": "/blog.html", "destination": "/blog", "permanent": true },
     { "source": "/contact.html", "destination": "/contact", "permanent": true }
   ]
 }
