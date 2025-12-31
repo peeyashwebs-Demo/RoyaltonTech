@@ -7,7 +7,7 @@
     { "source": "/blog", "destination": "/blog.html" },
     { "source": "/contact", "destination": "/contact.html" },
 
-    { "source": "/4-ways-to-make-your-home-more-energy-efficient", "destination": "/4 Ways To Make Your Home More Energy Efficient.html" },
+    { "source": "/4 Ways To Make Your Home More Energy Efficient", "destination": "/4 Ways To Make Your Home More Energy Efficient.html" },
     { "source": "/5-signs-its-time-to-replace-your-cooling-system", "destination": "/5 Signs It's Time To Replace Your Cooling System.html" },
     { "source": "/a-guide-to-hiring-the-best-hvac-company", "destination": "/a-guide-to-hiring-the-best-hvac-company.html" },
     { "source": "/how-to-fix-common-ac-problems", "destination": "/How To Fix Common AC Problems.html" },
@@ -28,7 +28,7 @@
     { "source": "/blog.html", "destination": "/blog", "permanent": true },
     { "source": "/contact.html", "destination": "/contact", "permanent": true },
 
-    { "source": "/4 Ways To Make Your Home More Energy Efficient.html", "destination": "/4-ways-to-make-your-home-more-energy-efficient", "permanent": true },
+    { "source": "/4 Ways To Make Your Home More Energy Efficient.html", "destination": "/4 Ways To Make Your Home More Energy Efficient", "permanent": true },
     { "source": "/5 Signs It's Time To Replace Your Cooling System.html", "destination": "/5-signs-its-time-to-replace-your-cooling-system", "permanent": true },
     { "source": "/a-guide-to-hiring-the-best-hvac-company.html", "destination": "/a-guide-to-hiring-the-best-hvac-company", "permanent": true },
     { "source": "/How To Fix Common AC Problems.html", "destination": "/how-to-fix-common-ac-problems", "permanent": true },
