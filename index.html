@@ -288,6 +288,7 @@
       /* ==============================
    SLIDERS (BRAND / REVIEW / IMAGE)
    ============================== */
+      /* CONTAINERS */
       .brand-slider,
       .review-slider,
       .image-slider {
@@ -295,7 +296,7 @@
         width: 100%;
       }
 
-      .brand-track,
+      /* ONLY THESE SHOULD SLIDE */
       .review-track,
       .image-track {
         display: flex;
@@ -303,10 +304,42 @@
         animation: slideX 15s linear infinite;
       }
 
-      @keyframes slideX {
-        to {
-          transform: translateX(-50%);
-        }
+      /* STATIC BRAND LOGOS */
+      .brand-track {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        animation: none !important;
+        transform: none !important;
+      }
+
+      /* LOGO STYLE */
+      .brand-track img {
+        max-height: 80px;
+        width: auto;
+        opacity: 1;
+        filter: none;
+      }
+
+      .brand-track img {
+        filter: brightness(1.1) contrast(1.1);
+      }
+
+      /* FORCE BRAND LOGOS TO ALWAYS BE COLORED */
+      .brand-track img {
+        opacity: 1 !important;
+        filter: none !important;
+        -webkit-filter: none !important;
+      }
+
+      /* REMOVE FOCUS / ACTIVE EFFECTS */
+      .brand-track img:hover,
+      .brand-track img:focus,
+      .brand-track img:active {
+        opacity: 1;
+        filter: none;
+        outline: none;
       }
 
       /* ==============================
@@ -377,64 +410,6 @@
       @media (max-width: 768px) {
         .counter-wrapper {
           grid-template-columns: 1fr;
-        }
-      }
-      /* ==============================
-   WORK / BRAND SLIDER (DRAGGABLE)
-   ============================== */
-      .brand-section {
-        padding: 70px 0;
-        background: #f8f9fa;
-        overflow: hidden;
-      }
-
-      /* Scroll container */
-      .brand-slider {
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-        cursor: grab;
-      }
-
-      .brand-slider::-webkit-scrollbar {
-        display: none; /* hide scrollbar */
-      }
-
-      /* Track */
-      .brand-track {
-        display: flex;
-        gap: 50px;
-        align-items: center;
-        width: max-content;
-        animation: brandSlide 15s linear infinite;
-      }
-
-      /* Pause animation when user interacts */
-      .brand-slider:hover .brand-track,
-      .brand-slider:active .brand-track {
-        animation-play-state: paused;
-      }
-
-      .brand-track img {
-        height: 70px;
-        flex-shrink: 0;
-        filter: grayscale(100%);
-        opacity: 0.8;
-        transition: 0.3s ease;
-      }
-
-      .brand-track img:hover {
-        filter: grayscale(0);
-        opacity: 1;
-      }
-
-      /* Auto slide */
-      @keyframes brandSlide {
-        from {
-          transform: translateX(0);
-        }
-        to {
-          transform: translateX(-50%);
         }
       }
 
@@ -1226,27 +1201,6 @@
             <img src="images/bus.png" class="brand-logo" alt="LG" />
             <img src="images/helium.png" class="brand-logo" alt="Helium" />
             <img src="images/hg.png" class="brand-logo" alt="Fidelity" />
-
-            <!-- Duplicate logos for seamless infinite scrolling -->
-            <img
-              src="images/klitg.png"
-              class="brand-logo"
-              alt="total energies"
-            />
-            <img src="images/green.png" class="brand-logo" alt="Gainville" />
-            <img src="images/chp.png" class="brand-logo" alt="CHP" />
-            <img
-              src="images/rae-removebg-preview.png"
-              class="brand-logo"
-              alt="Raenest"
-            />
-            <img
-              src="images/lgg-removebg-preview.png"
-              class="brand-logo"
-              alt="LG"
-            />
-            <img src="images/helium.png" class="brand-logo" alt="Helium" />
-            <img src="images/hg.png" class="brand-logo" alt="Fidelity" />
           </div>
         </div>
       </section>
@@ -1893,35 +1847,38 @@
       counters.forEach((counter) => observer.observe(counter));
     </script>
     <script>
-      const slider = document.querySelector(".brand-slider");
-      let isDown = false;
-      let startX;
-      let scrollLeft;
+      const reviewSlider = document.querySelector(".review-slider");
 
-      slider.addEventListener("mousedown", (e) => {
-        isDown = true;
-        slider.style.cursor = "grabbing";
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-      });
+      if (reviewSlider) {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
 
-      slider.addEventListener("mouseleave", () => {
-        isDown = false;
-        slider.style.cursor = "grab";
-      });
+        reviewSlider.addEventListener("mousedown", (e) => {
+          isDown = true;
+          reviewSlider.style.cursor = "grabbing";
+          startX = e.pageX - reviewSlider.offsetLeft;
+          scrollLeft = reviewSlider.scrollLeft;
+        });
 
-      slider.addEventListener("mouseup", () => {
-        isDown = false;
-        slider.style.cursor = "grab";
-      });
+        reviewSlider.addEventListener("mouseleave", () => {
+          isDown = false;
+          reviewSlider.style.cursor = "grab";
+        });
 
-      slider.addEventListener("mousemove", (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2;
-        slider.scrollLeft = scrollLeft - walk;
-      });
+        reviewSlider.addEventListener("mouseup", () => {
+          isDown = false;
+          reviewSlider.style.cursor = "grab";
+        });
+
+        reviewSlider.addEventListener("mousemove", (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - reviewSlider.offsetLeft;
+          const walk = (x - startX) * 2;
+          reviewSlider.scrollLeft = scrollLeft - walk;
+        });
+      }
     </script>
   </body>
 </html>
