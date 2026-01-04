@@ -342,6 +342,42 @@
         outline: none;
       }
 
+      /* =========================
+   BRAND LOGOS – MOBILE FIX
+   ========================= */
+
+      .brand-slider {
+        padding: 20px 0;
+      }
+
+      .brand-track {
+        display: flex;
+        flex-wrap: wrap; /* ✅ allows wrapping */
+        justify-content: center; /* ✅ center on mobile */
+        align-items: center;
+        gap: 20px;
+        animation: none !important;
+        transform: none !important;
+      }
+
+      /* LOGO SIZE CONTROL */
+      .brand-track img {
+        max-width: 90px; /* ✅ mobile-friendly */
+        max-height: 50px;
+        width: auto;
+        height: auto;
+        opacity: 1 !important;
+        filter: none !important;
+      }
+
+      /* SMALLER PHONES */
+      @media (max-width: 480px) {
+        .brand-track img {
+          max-width: 75px;
+          max-height: 45px;
+        }
+      }
+
       /* ==============================
    VIDEO
    ============================== */
