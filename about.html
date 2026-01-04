@@ -310,14 +310,12 @@
       /* ==============================
    SLIDERS (BRAND / REVIEW / IMAGE)
    ============================== */
-      .brand-slider,
       .review-slider,
       .image-slider {
         overflow: hidden;
         width: 100%;
       }
 
-      .brand-track,
       .review-track,
       .image-track {
         display: flex;
@@ -401,64 +399,96 @@
           grid-template-columns: 1fr;
         }
       }
+ /* =========================
+   BRAND LOGOS – MOBILE FIX
+   ========================= */
 
- /* ==============================
-   WORK / BRAND SLIDER (DRAGGABLE)
-   ============================== */
-      .brand-section {
-        padding: 70px 0;
-        background: #f8f9fa;
-        overflow: hidden;
-      }
-
-      /* Scroll container */
       .brand-slider {
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-        cursor: grab;
+        padding: 20px 0;
       }
 
-      .brand-slider::-webkit-scrollbar {
-        display: none; /* hide scrollbar */
-      }
-
-      /* Track */
       .brand-track {
         display: flex;
-        gap: 50px;
+        flex-wrap: wrap; /* ✅ allows wrapping */
+        justify-content: center; /* ✅ center on mobile */
         align-items: center;
-        width: max-content;
-        animation: brandSlide 15s linear infinite;
+        gap: 20px;
+        animation: none !important;
+        transform: none !important;
       }
 
-      /* Pause animation when user interacts */
-      .brand-slider:hover .brand-track,
-      .brand-slider:active .brand-track {
-        animation-play-state: paused;
+      /* LOGO SIZE CONTROL */
+      .brand-track img {
+        max-width: 90px; /* ✅ mobile-friendly */
+        max-height: 50px;
+        width: auto;
+        height: auto;
+        opacity: 1 !important;
+        filter: none !important;
+      }
+
+      /* SMALLER PHONES */
+      @media (max-width: 480px) {
+        .brand-track img {
+          max-width: 75px;
+          max-height: 45px;
+        }
+      }
+      /* ==============================
+   SLIDERS (BRAND / REVIEW / IMAGE)
+   ============================== */
+      /* CONTAINERS */
+      .brand-slider,
+      .review-slider,
+      .image-slider {
+        overflow: hidden;
+        width: 100%;
+      }
+
+      /* ONLY THESE SHOULD SLIDE */
+      .review-track,
+      .image-track {
+        display: flex;
+        gap: 25px;
+        animation: slideX 15s linear infinite;
+      }
+
+      /* STATIC BRAND LOGOS */
+      .brand-track {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        animation: none !important;
+        transform: none !important;
+      }
+
+      /* LOGO STYLE */
+      .brand-track img {
+        max-height: 80px;
+        width: auto;
+        opacity: 1;
+        filter: none;
       }
 
       .brand-track img {
-        height: 70px;
-        flex-shrink: 0;
-        filter: grayscale(100%);
-        opacity: 0.8;
-        transition: 0.3s ease;
+        filter: brightness(1.1) contrast(1.1);
       }
 
-      .brand-track img:hover {
-        filter: grayscale(0);
+      /* FORCE BRAND LOGOS TO ALWAYS BE COLORED */
+      .brand-track img {
+        opacity: 1 !important;
+        filter: none !important;
+        -webkit-filter: none !important;
+      }
+
+      /* REMOVE FOCUS / ACTIVE EFFECTS */
+      .brand-track img:hover,
+      .brand-track img:focus,
+      .brand-track img:active {
         opacity: 1;
-      }
-
-      /* Auto slide */
-      @keyframes brandSlide {
-        from {
-          transform: translateX(0);
-        }
-        to {
-          transform: translateX(-50%);
-        }
+        filter: none;
+        outline: none;
       }
 
       /* ==============================
@@ -542,44 +572,7 @@
         }
       }
 
-      /* ==============================
-   BRANDS / LOGO SLIDER
-   ============================== */
-      .brand-section {
-        padding: 70px 0;
-        background: #f8f9fa;
-        overflow: hidden;
-      }
-
-      .brand-track {
-        display: flex;
-        gap: 50px;
-        align-items: center;
-        animation: brandSlide 15s linear infinite;
-      }
-
-      .brand-track img {
-        height: 70px;
-        width: auto;
-        filter: grayscale(100%);
-        opacity: 0.8;
-        transition: all 0.57s ease;
-      }
-
-      .brand-track img:hover {
-        filter: grayscale(0);
-        opacity: 1;
-      }
-
-      @keyframes brandSlide {
-        from {
-          transform: translateX(0);
-        }
-        to {
-          transform: translateX(-50%);
-        }
-      }
-
+     
       /* ==============================
    SERVICES
    ============================== */
@@ -1299,12 +1292,13 @@
                 efficiency, and durability. Whether we’re cooling a home,
                 optimizing airflow in an office, or upgrading a complex
                 commercial facility, we approach every task with precision and
-                professionalism. Driven by integrity, innovation, and
+                professionalism.
+        </p>
+        <p>Driven by integrity, innovation, and
                 outstanding customer care, ROYALTON TECH continues to set the
                 benchmark for HVAC reliability in Nigeria. We don’t just install
                 systems — we build long-lasting comfort, trust, and value. Your
-                comfort. Our expertise. Always reliable.
-        </p>
+                comfort. Our expertise. Always reliable.</p>
       </div>
 
       <div class="about-image">
@@ -1369,52 +1363,25 @@
           <div class="brand-track">
             <!-- Original logos -->
             <img src="images/klitg.png" class="brand-logo" alt="Total energy" />
-            <img
-              src="images/green.png"
-              class="brand-logo"
-              alt="Gainvile"
-            />
+            <img src="images/green.png" class="brand-logo" alt="Gainvile" />
             <img src="images/chp.png" class="brand-logo" alt="CHP" />
             <img
               src="images/rae-removebg-preview.png"
               class="brand-logo"
               alt="Raenest"
             />
+            <img src="images/bus.png" class="brand-logo" alt="LG" />
+            <img src="images/helium.png" class="brand-logo" alt="Helium" />
+            <img src="images/hg.png" class="brand-logo" alt="Fidelity" />
             <img
               src="images/lgg-removebg-preview.png"
               class="brand-logo"
               alt="LG"
             />
-            <img src="images/helium.png" class="brand-logo" alt="Helium" />
-            <img src="images/hg.png" class="brand-logo" alt="Fidelity" />
-
-            <!-- Duplicate logos for seamless infinite scrolling -->
-            <img
-              src="images/klitg.png"
-              class="brand-logo"
-              alt="total energies"
-            />
-            <img
-              src="images/green.png"
-              class="brand-logo"
-              alt="Gainville"
-            />
-            <img src="images/chp.png" class="brand-logo" alt="CHP" />
-            <img
-              src="images/rae-removebg-preview.png"
-              class="brand-logo"
-              alt="Raenest"
-            />
-            <img
-              src="images/lgg-removebg-preview.png"
-              class="brand-logo"
-              alt="LG"
-            />
-            <img src="images/helium.png" class="brand-logo" alt="Helium" />
-            <img src="images/hg.png" class="brand-logo" alt="Fidelity" />
           </div>
         </div>
       </section>
+
       <section class="offer-section">
   <div class="container">
     <div class="row g-4 justify-content-center">
